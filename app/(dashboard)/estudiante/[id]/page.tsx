@@ -7,6 +7,8 @@ import {
   ReclamoDetalleInfo,
   ReclamoTimeline,
 } from '@/components/reclamos/reclamo-timeline';
+import { ReclamoProgressTimeline } from '@/components/reclamos/reclamo-progress-timeline';
+import type { EstadoReclamo } from '@/lib/types';
 
 export default async function EstudianteDetallePage({
   params,
@@ -29,6 +31,8 @@ export default async function EstudianteDetallePage({
         </h1>
         <EstadoBadge estado={reclamo.estado} />
       </div>
+
+      <ReclamoProgressTimeline estado={reclamo.estado as EstadoReclamo} />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-4">

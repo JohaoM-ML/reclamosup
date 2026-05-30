@@ -9,6 +9,7 @@ import { VolumenPanel } from '@/components/daar/panels/volumen-panel';
 import { CalidadPanel } from '@/components/daar/panels/calidad-panel';
 import { CumplimientoPanel } from '@/components/daar/panels/cumplimiento-panel';
 import { EficienciaPanel } from '@/components/daar/panels/eficiencia-panel';
+import { DashboardPdfExport } from '@/components/daar/dashboard-pdf-export';
 import type { getDashboardDaarData } from '@/lib/services/dashboard-daar.service';
 import type { getPendientesCierre, getTodosReclamos } from '@/lib/services/reclamo.service';
 
@@ -47,7 +48,10 @@ export function DashboardClient({ initial, pendientesCierre, todos }: Props) {
 
   return (
     <div className="space-y-6">
-      <FiltrosDashboard semestre={semestre} onSemestreChange={setSemestre} />
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <FiltrosDashboard semestre={semestre} onSemestreChange={setSemestre} />
+        <DashboardPdfExport data={data} semestre={semestre} tab={tab} />
+      </div>
       <DashboardTabs active={tab} onChange={setTab} />
 
       <div className="pt-2">
