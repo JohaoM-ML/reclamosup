@@ -7,7 +7,13 @@ import type {
   Rol,
 } from '@/lib/types';
 import { logEvento } from '@/lib/services/audit.service';
-import { subirExamenEscaneado } from '@/lib/services/archivo.service';
+import {
+  confirmarExamenSubido,
+  crearUrlSubidaFirmada,
+  eliminarExamenEscaneado,
+  subirExamenEscaneado,
+  validarTamanoArchivo,
+} from '@/lib/services/archivo.service';
 import {
   sendNotification,
   sendToRole,
@@ -97,16 +103,16 @@ export async function getEvaluacionConCurso(evaluacionId: string) {
   });
 }
 
-/** Estudiante registra reclamo en CAP con PDF (representante de aula presencia el escaneo) */
-export async function crearReclamoEstudiante(input: {
+export type ReclamoEstudianteInput = {
   estudianteId: string;
   evaluacionId: string;
   motivo: MotivoReclamo;
   argumento: string;
   preguntaMarcada?: number;
   examenNoLapiz: boolean;
-  archivo: File;
-}) {
+};
+
+async function crearReclamoBase(input: ReclamoEstudianteInput) {
   await assertDentroDePlazo(input.evaluacionId);
   await assertPuedeReclamar(input.estudianteId, input.evaluacionId);
   await assertExamenNoLapiz(input.examenNoLapiz);
@@ -114,7 +120,7 @@ export async function crearReclamoEstudiante(input: {
   const evaluacion = await getEvaluacionConCurso(input.evaluacionId);
   await assertMatriculado(input.estudianteId, evaluacion.cursoId);
 
-  const reclamo = await prisma.reclamo.create({
+  return prisma.reclamo.create({
     data: {
       evaluacionId: input.evaluacionId,
       estudianteId: input.estudianteId,
@@ -127,8 +133,112 @@ export async function crearReclamoEstudiante(input: {
       semestreAcademico: evaluacion.curso.semestre,
       estado: 'ENVIADO',
     },
+    include: { evaluacion: { include: { curso: true } } },
+  });
+}
+
+async function notificarReclamoRegistrado(
+  reclamoId: string,
+  estudianteId: string,
+  evaluacion: { nombre: string; curso: { nombre: string; docenteId: string } }
+) {
+  await logEvento({
+    reclamoId,
+    actorId: estudianteId,
+    accion: 'ESTUDIANTE_REGISTRO_CON_PDF',
+    estadoNuevo: 'ENVIADO',
+    metadata: { representantePresenciado: true },
   });
 
+  await sendNotification({
+    userId: evaluacion.curso.docenteId,
+    reclamoId,
+    titulo: 'Nuevo reclamo asignado',
+    mensaje: `Reclamo registrado — ${evaluacion.nombre} (${evaluacion.curso.nombre})`,
+  });
+
+  await sendNotification({
+    userId: estudianteId,
+    reclamoId,
+    titulo: 'Reclamo registrado',
+    mensaje:
+      'Tu solicitud y examen escaneado fueron enviados al docente. Puedes seguir el estado en Mis reclamos.',
+  });
+}
+
+/** Paso 1: validar datos y reservar reclamo; devuelve URL firmada para subir PDF directo a Supabase. */
+export async function prepararReclamoConArchivo(
+  input: ReclamoEstudianteInput & { fileName: string; fileSize: number }
+) {
+  validarTamanoArchivo(input.fileSize);
+  const reclamo = await crearReclamoBase(input);
+  const upload = await crearUrlSubidaFirmada(reclamo.id, input.fileName);
+  return { reclamoId: reclamo.id, ...upload };
+}
+
+/** Paso 2: confirmar archivo subido, guardar hash y notificar. */
+export async function finalizarReclamoConArchivo(
+  reclamoId: string,
+  estudianteId: string,
+  storageKey: string
+) {
+  const reclamo = await prisma.reclamo.findUniqueOrThrow({
+    where: { id: reclamoId },
+    include: { evaluacion: { include: { curso: true } } },
+  });
+
+  if (reclamo.estudianteId !== estudianteId) {
+    throw new ValidacionError('AUTH', 'No autorizado');
+  }
+  if (reclamo.archivoPath) {
+    return reclamoId;
+  }
+
+  const { hash } = await confirmarExamenSubido(storageKey);
+
+  await prisma.reclamo.update({
+    where: { id: reclamoId },
+    data: {
+      archivoPath: storageKey,
+      archivoHash: hash,
+      escaneadoAt: new Date(),
+    },
+  });
+
+  await notificarReclamoRegistrado(reclamoId, estudianteId, reclamo.evaluacion);
+  return reclamoId;
+}
+
+/** Elimina reclamo si la subida falló antes de completarse. */
+export async function cancelarReclamoPendienteArchivo(
+  reclamoId: string,
+  estudianteId: string,
+  storageKey?: string
+) {
+  const reclamo = await prisma.reclamo.findUnique({ where: { id: reclamoId } });
+  if (!reclamo || reclamo.estudianteId !== estudianteId || reclamo.archivoPath) return;
+
+  if (storageKey) {
+    await eliminarExamenEscaneado(storageKey).catch(() => undefined);
+  }
+
+  await prisma.reclamoEvento.deleteMany({ where: { reclamoId } });
+  await prisma.notificacion.deleteMany({ where: { reclamoId } });
+  await prisma.reclamo.delete({ where: { id: reclamoId } });
+}
+
+/** Estudiante registra reclamo en CAP con PDF (representante de aula presencia el escaneo) */
+export async function crearReclamoEstudiante(input: ReclamoEstudianteInput & {
+  estudianteId: string;
+  evaluacionId: string;
+  motivo: MotivoReclamo;
+  argumento: string;
+  preguntaMarcada?: number;
+  examenNoLapiz: boolean;
+  archivo: File;
+}) {
+  validarTamanoArchivo(input.archivo.size);
+  const reclamo = await crearReclamoBase(input);
   const { path, hash } = await subirExamenEscaneado(reclamo.id, input.archivo);
 
   await prisma.reclamo.update({
@@ -148,21 +258,7 @@ export async function crearReclamoEstudiante(input: {
     metadata: { hash, representantePresenciado: true },
   });
 
-  await sendNotification({
-    userId: evaluacion.curso.docenteId,
-    reclamoId: reclamo.id,
-    titulo: 'Nuevo reclamo asignado',
-    mensaje: `Reclamo registrado — ${evaluacion.nombre} (${evaluacion.curso.nombre})`,
-  });
-
-  await sendNotification({
-    userId: input.estudianteId,
-    reclamoId: reclamo.id,
-    titulo: 'Reclamo registrado',
-    mensaje:
-      'Tu solicitud y examen escaneado fueron enviados al docente. Puedes seguir el estado en Mis reclamos.',
-  });
-
+  await notificarReclamoRegistrado(reclamo.id, input.estudianteId, reclamo.evaluacion);
   return reclamo.id;
 }
 

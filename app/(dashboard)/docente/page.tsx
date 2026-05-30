@@ -4,6 +4,10 @@ import { getSession } from '@/lib/auth';
 import { getBandejaDocente } from '@/lib/services/reclamo.service';
 import { EstadoBadge } from '@/components/reclamos/estado-badge';
 import { tomarReclamoFormAction } from '@/app/actions/reclamo.actions';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { EmptyState } from '@/components/ui/empty-state';
+import { PageHeader } from '@/components/ui/page-header';
 
 export default async function DocentePage() {
   const session = await getSession();
@@ -13,63 +17,73 @@ export default async function DocentePage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-gray-900 mb-2">Bandeja de reclamos</h1>
-      <p className="text-gray-600 mb-6 text-sm">
-        Casos asignados a tus cursos. Revisa el examen digital escaneado por DAAR.
-      </p>
+      <PageHeader
+        title="Bandeja de reclamos"
+        description="Casos asignados a tus cursos. Revisa el examen digital escaneado por DAAR."
+      />
 
       {reclamos.length === 0 ? (
-        <div className="rounded-lg border border-dashed border-gray-300 p-8 text-center text-gray-500">
-          No hay reclamos pendientes en tu bandeja.
-        </div>
+        <EmptyState
+          title="Bandeja vacía"
+          description="No hay reclamos pendientes en tus cursos por ahora."
+        />
       ) : (
-        <div className="bg-white rounded-lg border overflow-hidden">
-          <table className="min-w-full divide-y divide-gray-200 text-sm">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Estudiante</th>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Curso / Evaluación</th>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Estado</th>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Motivo</th>
-                <th className="px-4 py-3" />
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-100">
-              {reclamos.map((r) => (
-                <tr key={r.id} className="hover:bg-gray-50">
-                  <td className="px-4 py-3 font-medium">{r.estudiante.nombre}</td>
-                  <td className="px-4 py-3">
-                    {r.evaluacion.curso.nombre}
-                    <br />
-                    <span className="text-gray-500">{r.evaluacion.nombre}</span>
-                  </td>
-                  <td className="px-4 py-3">
-                    <EstadoBadge estado={r.estado} />
-                  </td>
-                  <td className="px-4 py-3">{r.motivo.replace('_', ' ')}</td>
-                  <td className="px-4 py-3 text-right space-x-2">
-                    {r.estado === 'ENVIADO' && (
-                      <form action={tomarReclamoFormAction.bind(null, r.id)} className="inline">
-                        <button
-                          type="submit"
-                          className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded hover:bg-yellow-200"
-                        >
-                          Tomar caso
-                        </button>
-                      </form>
-                    )}
-                    <Link
-                      href={`/docente/${r.id}`}
-                      className="text-indigo-600 hover:underline text-sm"
-                    >
-                      Revisar
-                    </Link>
-                  </td>
+        <Card className="overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-up-border text-sm">
+              <thead className="bg-up-surface-muted">
+                <tr>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-up-text-secondary">
+                    Estudiante
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-up-text-secondary">
+                    Curso / Evaluación
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-up-text-secondary">
+                    Estado
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-up-text-secondary">
+                    Motivo
+                  </th>
+                  <th className="px-4 py-3" />
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody className="divide-y divide-up-border bg-up-surface">
+                {reclamos.map((r) => (
+                  <tr key={r.id} className="hover:bg-up-surface-muted/60">
+                    <td className="px-4 py-3 font-medium text-up-text">{r.estudiante.nombre}</td>
+                    <td className="px-4 py-3">
+                      <span className="text-up-text">{r.evaluacion.curso.nombre}</span>
+                      <br />
+                      <span className="text-up-text-muted">{r.evaluacion.nombre}</span>
+                    </td>
+                    <td className="px-4 py-3">
+                      <EstadoBadge estado={r.estado} />
+                    </td>
+                    <td className="px-4 py-3 capitalize text-up-text-secondary">
+                      {r.motivo.replace(/_/g, ' ')}
+                    </td>
+                    <td className="space-x-2 px-4 py-3 text-right">
+                      {r.estado === 'ENVIADO' && (
+                        <form action={tomarReclamoFormAction.bind(null, r.id)} className="inline">
+                          <Button type="submit" size="sm" variant="outline">
+                            Tomar caso
+                          </Button>
+                        </form>
+                      )}
+                      <Link
+                        href={`/docente/${r.id}`}
+                        className="text-sm font-medium text-up-blue hover:underline"
+                      >
+                        Revisar
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Card>
       )}
     </div>
   );

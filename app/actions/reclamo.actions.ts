@@ -4,9 +4,12 @@ import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { requireRol } from '@/lib/auth';
 import {
+  cancelarReclamoPendienteArchivo,
   cerrarReclamo,
   crearReclamoEstudiante,
   devolverADocente,
+  finalizarReclamoConArchivo,
+  prepararReclamoConArchivo,
   resolverReclamo,
   tomarReclamo,
   anularReclamoDaar,
@@ -86,6 +89,109 @@ export async function crearReclamoEstudianteAction(
       ok: false,
       error: e instanceof Error ? e.message : 'Error al crear reclamo',
     };
+  }
+}
+
+function parseReclamoFormFields(formData: FormData) {
+  return crearReclamoEstudianteSchema.safeParse({
+    evaluacionId: formData.get('evaluacionId'),
+    motivo: formData.get('motivo'),
+    argumento: formData.get('argumento'),
+    preguntaMarcada: formData.get('preguntaMarcada') || undefined,
+    examenNoLapiz: formData.get('examenNoLapiz'),
+    representantePresenciado: formData.get('representantePresenciado'),
+  });
+}
+
+/** Paso 1 producción: reserva reclamo y devuelve URL firmada (PDF no pasa por Vercel). */
+export async function prepararReclamoArchivoAction(
+  _prev: ActionResult & { signedUrl?: string; path?: string; token?: string },
+  formData: FormData
+): Promise<ActionResult & { signedUrl?: string; path?: string; token?: string }> {
+  try {
+    const session = await requireRol('estudiante');
+    const parsed = parseReclamoFormFields(formData);
+
+    if (!parsed.success) {
+      return {
+        ok: false,
+        error: parsed.error.issues[0]?.message ?? 'Datos inválidos',
+      };
+    }
+
+    const fileName = String(formData.get('fileName') ?? '');
+    const fileSize = Number(formData.get('fileSize') ?? 0);
+    if (!fileName || !fileSize) {
+      return { ok: false, error: 'Debe adjuntar el examen escaneado (PDF o imagen)' };
+    }
+
+    const prep = await prepararReclamoConArchivo({
+      estudianteId: session.id,
+      evaluacionId: parsed.data.evaluacionId,
+      motivo: parsed.data.motivo as MotivoReclamo,
+      argumento: parsed.data.argumento,
+      preguntaMarcada: parsed.data.preguntaMarcada,
+      examenNoLapiz: parsed.data.examenNoLapiz,
+      fileName,
+      fileSize,
+    });
+
+    return {
+      ok: true,
+      id: prep.reclamoId,
+      signedUrl: prep.signedUrl,
+      path: prep.path,
+      token: prep.token,
+    };
+  } catch (e) {
+    if (e instanceof ValidacionError) {
+      return { ok: false, error: `[${e.codigo}] ${e.message}` };
+    }
+    return {
+      ok: false,
+      error: e instanceof Error ? e.message : 'Error al preparar subida',
+    };
+  }
+}
+
+/** Paso 3 producción: confirma archivo en Storage y notifica. */
+export async function finalizarReclamoArchivoAction(input: {
+  reclamoId: string;
+  storageKey: string;
+}): Promise<ActionResult> {
+  try {
+    const session = await requireRol('estudiante');
+    const id = await finalizarReclamoConArchivo(
+      input.reclamoId,
+      session.id,
+      input.storageKey
+    );
+    revalidateReclamo(id);
+    return { ok: true, id };
+  } catch (e) {
+    if (e instanceof ValidacionError) {
+      return { ok: false, error: `[${e.codigo}] ${e.message}` };
+    }
+    return {
+      ok: false,
+      error: e instanceof Error ? e.message : 'Error al finalizar reclamo',
+    };
+  }
+}
+
+export async function cancelarReclamoArchivoAction(input: {
+  reclamoId: string;
+  storageKey?: string;
+}): Promise<void> {
+  try {
+    const session = await requireRol('estudiante');
+    await cancelarReclamoPendienteArchivo(
+      input.reclamoId,
+      session.id,
+      input.storageKey
+    );
+  } catch {
+    /* best effort */
   }
 }
 

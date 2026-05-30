@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { getSession } from '@/lib/auth';
 import { getMisReclamos } from '@/lib/services/reclamo.service';
 import { EstadoBadge } from '@/components/reclamos/estado-badge';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { EmptyState } from '@/components/ui/empty-state';
+import { PageHeader } from '@/components/ui/page-header';
 import { redirect } from 'next/navigation';
 
 export default async function EstudiantePage() {
@@ -12,64 +16,77 @@ export default async function EstudiantePage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-gray-900 mb-2">Mis reclamos</h1>
-      <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-        <p className="text-gray-800 text-sm">
-          En CAP: con el representante de aula presente, escanee su examen y registre el reclamo
-          en <strong>Nuevo reclamo</strong>.
-        </p>
-        <a
-          href="/estudiante/cap/nuevo"
-          className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
-        >
-          + Nuevo reclamo (CAP)
-        </a>
-      </div>
+      <PageHeader
+        title="Mis reclamos"
+        description="En CAP, con el representante de aula presente, escanee su examen y registre el reclamo."
+        action={
+          <Link href="/estudiante/cap/nuevo">
+            <Button>+ Nuevo reclamo (CAP)</Button>
+          </Link>
+        }
+      />
 
       {reclamos.length === 0 ? (
-        <div className="rounded-lg border border-dashed border-gray-300 p-8 text-center text-gray-500">
-          No tienes reclamos registrados. Acércate a CAP con tu examen y el representante de aula
-          para registrar uno.
-        </div>
+        <EmptyState
+          title="Sin reclamos registrados"
+          description="Acércate a CAP con tu examen y el representante de aula para registrar uno."
+          action={
+            <Link href="/estudiante/cap/nuevo">
+              <Button>Registrar reclamo</Button>
+            </Link>
+          }
+        />
       ) : (
-        <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-          <table className="min-w-full divide-y divide-gray-200 text-sm">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Curso</th>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Evaluación</th>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Estado</th>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Nota</th>
-                <th className="px-4 py-3" />
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-100">
-              {reclamos.map((r) => (
-                <tr key={r.id} className="hover:bg-gray-50">
-                  <td className="px-4 py-3">{r.evaluacion.curso.nombre}</td>
-                  <td className="px-4 py-3">{r.evaluacion.nombre}</td>
-                  <td className="px-4 py-3">
-                    <EstadoBadge estado={r.estado} />
-                  </td>
-                  <td className="px-4 py-3">
-                    {r.notaAnterior}
-                    {r.notaNueva != null && (
-                      <span className="text-green-600 ml-1">→ {r.notaNueva}</span>
-                    )}
-                  </td>
-                  <td className="px-4 py-3 text-right">
-                    <Link
-                      href={`/estudiante/${r.id}`}
-                      className="text-indigo-600 hover:underline"
-                    >
-                      Ver detalle
-                    </Link>
-                  </td>
+        <Card className="overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-up-border text-sm">
+              <thead className="bg-up-surface-muted">
+                <tr>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-up-text-secondary">
+                    Curso
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-up-text-secondary">
+                    Evaluación
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-up-text-secondary">
+                    Estado
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-up-text-secondary">
+                    Nota
+                  </th>
+                  <th className="px-4 py-3" />
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody className="divide-y divide-up-border bg-up-surface">
+                {reclamos.map((r) => (
+                  <tr key={r.id} className="hover:bg-up-surface-muted/60">
+                    <td className="px-4 py-3 font-medium text-up-text">
+                      {r.evaluacion.curso.nombre}
+                    </td>
+                    <td className="px-4 py-3 text-up-text-secondary">{r.evaluacion.nombre}</td>
+                    <td className="px-4 py-3">
+                      <EstadoBadge estado={r.estado} />
+                    </td>
+                    <td className="px-4 py-3 text-up-text">
+                      {r.notaAnterior}
+                      {r.notaNueva != null && (
+                        <span className="ml-1 font-medium text-emerald-600">→ {r.notaNueva}</span>
+                      )}
+                    </td>
+                    <td className="px-4 py-3 text-right">
+                      <Link
+                        href={`/estudiante/${r.id}`}
+                        className="text-sm font-medium text-up-blue hover:underline"
+                      >
+                        Ver detalle
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Card>
       )}
     </div>
   );

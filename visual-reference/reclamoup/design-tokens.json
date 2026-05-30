@@ -1,0 +1,79 @@
+{
+  "slug": "reclamoup",
+  "sourceUrl": "https://www.reclamoup.uk",
+  "date": "2026-05-30",
+  "colors": {
+    "background": {
+      "primary": "#FFFFFF",
+      "secondary": "#F2F4F7",
+      "tertiary": "#00205B"
+    },
+    "accent": {
+      "primary": "#0066FF",
+      "secondary": "#F9A818"
+    },
+    "text": {
+      "primary": "#1A2332",
+      "secondary": "#4B5563",
+      "muted": "#9CA3AF"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "display": "Geist Sans",
+      "body": "Geist Sans",
+      "mono": "Geist Mono"
+    },
+    "fontSize": {
+      "hero": "28px",
+      "h1": "24px",
+      "h2": "18px",
+      "body": "15px",
+      "small": "13px",
+      "micro": "12px"
+    },
+    "fontWeight": {
+      "bold": 700,
+      "semibold": 600,
+      "regular": 400
+    },
+    "lineHeight": {
+      "tight": 1.2,
+      "normal": 1.5,
+      "relaxed": 1.65
+    }
+  },
+  "spacing": {
+    "section": "32px",
+    "element": "24px",
+    "tight": "8px"
+  },
+  "borderRadius": {
+    "card": "8px",
+    "button": "6px",
+    "pill": "9999px"
+  },
+  "shadow": {
+    "card": "0 1px 3px rgba(0, 32, 91, 0.08)",
+    "elevated": "0 4px 12px rgba(0, 32, 91, 0.12)"
+  },
+  "animation": {
+    "duration": {
+      "fast": "150ms",
+      "normal": "250ms"
+    },
+    "easing": {
+      "default": "ease-out"
+    }
+  },
+  "effects": [
+    "navy-sidebar-fixed",
+    "login-hero-overlay",
+    "orange-cta-login",
+    "action-blue-buttons",
+    "card-soft-shadow",
+    "table-institutional",
+    "active-nav-pill",
+    "uppercase-form-labels"
+  ]
+}

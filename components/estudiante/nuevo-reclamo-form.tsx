@@ -1,11 +1,14 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useEffect, useRef, useState, useActionState, useTransition } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
-  crearReclamoEstudianteAction,
+  cancelarReclamoArchivoAction,
+  finalizarReclamoArchivoAction,
+  prepararReclamoArchivoAction,
   type ActionResult,
 } from '@/app/actions/reclamo.actions';
+import { Button } from '@/components/ui/button';
 import { inputClass, labelClass } from '@/lib/types';
 
 type Curso = {
@@ -26,7 +29,7 @@ type Evaluacion = {
   notaPublicada: number | null;
 };
 
-const initial: ActionResult = { ok: false };
+const MAX_MB = 10;
 
 function labelEvaluacion(tipo: string): string {
   const t = tipo.toLowerCase();
@@ -38,10 +41,7 @@ function labelEvaluacion(tipo: string): string {
 export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
-  const [state, action, pending] = useActionState(
-    crearReclamoEstudianteAction,
-    initial
-  );
+  const fileRef = useRef<HTMLInputElement>(null);
   const [codigoCurso, setCodigoCurso] = useState('');
   const [seccion, setSeccion] = useState('');
   const [secciones, setSecciones] = useState<Seccion[]>([]);
@@ -50,15 +50,11 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
   const [evaluaciones, setEvaluaciones] = useState<Evaluacion[]>([]);
   const [loadingEv, setLoadingEv] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [, startTransition] = useTransition();
+  const [pending, setPending] = useState(false);
+  const [uploadStep, setUploadStep] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
   const seccionSeleccionada = secciones.find((s) => s.seccion === seccion);
-
-  useEffect(() => {
-    if (state.ok && state.id) {
-      router.push(`/estudiante/${state.id}`);
-    }
-  }, [state.ok, state.id, router]);
 
   useEffect(() => {
     if (!codigoCurso) {
@@ -72,9 +68,7 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
       .then((r) => r.json())
       .then((data: Seccion[]) => {
         setSecciones(data);
-        if (data.length === 1) {
-          setSeccion(data[0].seccion);
-        }
+        if (data.length === 1) setSeccion(data[0].seccion);
       })
       .finally(() => setLoadingSecciones(false));
   }, [codigoCurso]);
@@ -92,33 +86,98 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
       .then((r) => r.json())
       .then((data: Evaluacion[]) => {
         setEvaluaciones(data);
-        if (data.length === 1) {
-          setEvaluacionId(data[0].id);
-        }
+        if (data.length === 1) setEvaluacionId(data[0].id);
       })
       .finally(() => setLoadingEv(false));
   }, [codigoCurso, seccion]);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setError(null);
     setShowModal(true);
   }
 
-  function handleConfirm() {
-    if (!formRef.current) return;
-    const formData = new FormData(formRef.current);
+  async function handleConfirm() {
+    if (!formRef.current || !fileRef.current?.files?.[0]) return;
+
+    const file = fileRef.current.files[0];
+    if (file.size > MAX_MB * 1024 * 1024) {
+      setError(`El archivo no puede superar ${MAX_MB} MB`);
+      setShowModal(false);
+      return;
+    }
+
     setShowModal(false);
-    startTransition(() => {
-      action(formData);
-    });
+    setPending(true);
+    setError(null);
+
+    const formData = new FormData(formRef.current);
+    formData.delete('archivo');
+    formData.set('fileName', file.name);
+    formData.set('fileSize', String(file.size));
+
+    let reclamoId: string | undefined;
+    let storageKey: string | undefined;
+
+    try {
+      setUploadStep('Validando datos...');
+      const prep: ActionResult & { signedUrl?: string; path?: string } =
+        await prepararReclamoArchivoAction({ ok: false }, formData);
+
+      if (!prep.ok || !prep.signedUrl || !prep.path || !prep.id) {
+        throw new Error(prep.error ?? 'No se pudo preparar la subida');
+      }
+
+      reclamoId = prep.id;
+      storageKey = prep.path;
+
+      setUploadStep('Subiendo examen...');
+      const uploadRes = await fetch(prep.signedUrl, {
+        method: 'PUT',
+        body: file,
+        headers: {
+          'Content-Type': file.type || 'application/pdf',
+        },
+      });
+
+      if (!uploadRes.ok) {
+        const detail = await uploadRes.text().catch(() => '');
+        throw new Error(
+          detail
+            ? `Error al subir archivo (${uploadRes.status}): ${detail.slice(0, 120)}`
+            : `Error al subir archivo (${uploadRes.status}). Verifica Supabase Storage en Vercel.`
+        );
+      }
+
+      setUploadStep('Registrando reclamo...');
+      const done = await finalizarReclamoArchivoAction({
+        reclamoId: prep.id,
+        storageKey: prep.path,
+      });
+
+      if (!done.ok || !done.id) {
+        throw new Error(done.error ?? 'Error al finalizar reclamo');
+      }
+
+      router.push(`/estudiante/${done.id}`);
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : 'Error al enviar reclamo';
+      setError(msg);
+      if (reclamoId) {
+        await cancelarReclamoArchivoAction({ reclamoId, storageKey });
+      }
+    } finally {
+      setPending(false);
+      setUploadStep('');
+    }
   }
 
   const evaluacionUnica = evaluaciones.length === 1 ? evaluaciones[0] : null;
 
   return (
     <>
-      <form ref={formRef} onSubmit={handleSubmit} className="space-y-5 max-w-2xl">
-        <div className="rounded-md bg-blue-50 border border-blue-200 p-4 text-sm text-gray-900">
+      <form ref={formRef} onSubmit={handleSubmit} className="max-w-2xl space-y-5">
+        <div className="rounded-md border border-up-blue/20 bg-up-blue/5 p-4 text-sm text-up-text">
           <strong>Paso 1 — Representante de aula:</strong> debe estar presente y observar el
           escaneo íntegro del examen.
           <br />
@@ -167,9 +226,8 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
             ))}
           </select>
           {seccionSeleccionada && (
-            <p className="text-xs text-gray-600 mt-1">
-              Docente: {seccionSeleccionada.docente.nombre} (
-              {seccionSeleccionada.docente.email})
+            <p className="mt-1 text-xs text-up-text-secondary">
+              Docente: {seccionSeleccionada.docente.nombre} ({seccionSeleccionada.docente.email})
             </p>
           )}
         </div>
@@ -227,21 +285,22 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
         </div>
 
         <div>
-          <label className={labelClass}>Examen escaneado (PDF o imagen)</label>
+          <label className={labelClass}>Examen escaneado (PDF o imagen, máx. {MAX_MB} MB)</label>
           <input
+            ref={fileRef}
             name="archivo"
             type="file"
             required
             accept=".pdf,image/*"
-            disabled={!evaluacionId}
-            className="w-full text-sm text-gray-900 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-indigo-50 file:text-indigo-700 disabled:opacity-50"
+            disabled={!evaluacionId || pending}
+            className="w-full text-sm text-up-text file:mr-4 file:rounded-md file:border-0 file:bg-up-blue/10 file:px-4 file:py-2 file:text-up-blue disabled:opacity-50"
           />
-          <p className="text-xs text-gray-500 mt-1">
+          <p className="mt-1 text-xs text-up-text-muted">
             Escanee el examen completo con el representante de aula presente.
           </p>
         </div>
 
-        <label className="flex items-start gap-2 text-sm text-gray-900">
+        <label className="flex items-start gap-2 text-sm text-up-text">
           <input type="checkbox" name="examenNoLapiz" value="true" required className="mt-1" />
           <span>
             Declaro que mi examen <strong>no</strong> fue hecho con lápiz u otro medio borrable
@@ -249,7 +308,7 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
           </span>
         </label>
 
-        <label className="flex items-start gap-2 text-sm text-gray-900">
+        <label className="flex items-start gap-2 text-sm text-up-text">
           <input
             type="checkbox"
             name="representantePresenciado"
@@ -263,33 +322,29 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
           </span>
         </label>
 
-        {state.error && (
-          <p className="text-sm text-red-700 bg-red-50 p-3 rounded-md border border-red-200">
-            {state.error}
+        {error && (
+          <p className="rounded-md border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+            {error}
           </p>
         )}
 
         {pending && (
-          <div className="rounded-md border border-indigo-200 bg-indigo-50 p-4 text-sm text-indigo-900 flex items-center gap-3">
-            <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-indigo-600 border-t-transparent" />
-            Subiendo examen y registrando reclamo...
+          <div className="flex items-center gap-3 rounded-md border border-up-blue/20 bg-up-blue/5 p-4 text-sm text-up-navy">
+            <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-up-blue border-t-transparent" />
+            {uploadStep || 'Procesando...'}
           </div>
         )}
 
-        <button
-          type="submit"
-          disabled={pending || !evaluacionId}
-          className="rounded-md bg-indigo-600 px-6 py-2.5 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-50"
-        >
+        <Button type="submit" disabled={pending || !evaluacionId}>
           {pending ? 'Enviando...' : 'Enviar reclamo al docente'}
-        </button>
+        </Button>
       </form>
 
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-          <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6 space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900">Confirmar envío</h3>
-            <ul className="space-y-3 text-sm text-gray-800 list-disc pl-5">
+          <div className="w-full max-w-md space-y-4 rounded-lg bg-up-surface p-6 shadow-xl">
+            <h3 className="text-lg font-semibold text-up-text">Confirmar envío</h3>
+            <ul className="list-disc space-y-3 pl-5 text-sm text-up-text-secondary">
               <li>
                 Recuerda: si tu examen fue hecho con lápiz, el reclamo no procede (Art. 38).
               </li>
@@ -298,22 +353,13 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
                 semestre.
               </li>
             </ul>
-            <div className="flex gap-3 justify-end pt-2">
-              <button
-                type="button"
-                onClick={() => setShowModal(false)}
-                className="rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
-              >
+            <div className="flex justify-end gap-3 pt-2">
+              <Button type="button" variant="outline" onClick={() => setShowModal(false)}>
                 Cancelar
-              </button>
-              <button
-                type="button"
-                onClick={handleConfirm}
-                disabled={pending}
-                className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-50"
-              >
+              </Button>
+              <Button type="button" onClick={handleConfirm} disabled={pending}>
                 Confirmar y enviar
-              </button>
+              </Button>
             </div>
           </div>
         </div>
