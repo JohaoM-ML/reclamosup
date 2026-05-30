@@ -41,8 +41,8 @@ export function ReclamoProgressTimeline({ estado }: { estado: EstadoReclamo }) {
   const actual = indiceProgreso(estado);
 
   return (
-    <div className="bg-white rounded-lg border p-4 sm:p-6">
-      <h2 className="text-sm font-semibold text-gray-800 mb-4">Progreso de su reclamo</h2>
+    <div className="rounded-lg border border-up-border bg-up-surface p-4 sm:p-6">
+      <h2 className="text-sm font-semibold text-up-text mb-4">Progreso de su reclamo</h2>
       <ol className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-0">
         {PASOS.map((paso, i) => {
           const completado = i < actual;
@@ -54,7 +54,7 @@ export function ReclamoProgressTimeline({ estado }: { estado: EstadoReclamo }) {
               {i > 0 && (
                 <span
                   className={`hidden sm:block absolute top-4 -left-1/2 w-full h-0.5 ${
-                    completado ? 'bg-indigo-500' : 'bg-gray-200'
+                    completado ? 'bg-up-blue/50' : 'bg-up-border'
                   }`}
                   aria-hidden
                 />
@@ -62,10 +62,10 @@ export function ReclamoProgressTimeline({ estado }: { estado: EstadoReclamo }) {
               <span
                 className={`relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
                   completado
-                    ? 'bg-indigo-600 text-white'
+                    ? 'bg-up-blue text-white'
                     : enCurso
-                      ? 'bg-indigo-100 text-indigo-700 ring-2 ring-indigo-500'
-                      : 'bg-gray-100 text-gray-400'
+                      ? 'bg-up-blue/10 text-up-navy ring-2 ring-up-blue'
+                      : 'bg-up-surface-muted text-up-text-muted'
                 }`}
               >
                 {completado ? '✓' : i + 1}
@@ -73,21 +73,21 @@ export function ReclamoProgressTimeline({ estado }: { estado: EstadoReclamo }) {
               <div className="ml-3 sm:ml-0 sm:mt-2 min-w-0">
                 <p
                   className={`text-sm font-medium ${
-                    pendiente ? 'text-gray-400' : enCurso ? 'text-indigo-700' : 'text-gray-900'
+                    pendiente ? 'text-up-text-muted' : enCurso ? 'text-up-navy' : 'text-up-text'
                   }`}
                 >
                   {paso.label}
                   {enCurso && (
-                    <span className="ml-2 text-xs font-normal text-indigo-600">(actual)</span>
+                    <span className="ml-2 text-xs font-normal text-up-blue">(actual)</span>
                   )}
                 </p>
-                <p className="text-xs text-gray-500 hidden sm:block">{paso.descripcion}</p>
+                <p className="text-xs text-up-text-muted hidden sm:block">{paso.descripcion}</p>
               </div>
             </li>
           );
         })}
       </ol>
-      <p className="mt-4 text-xs text-gray-500 sm:hidden">
+      <p className="mt-4 text-xs text-up-text-muted sm:hidden">
         Estado actual: <strong>{ESTADO_LABELS[estado]}</strong>
       </p>
     </div>

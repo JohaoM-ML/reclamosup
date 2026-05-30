@@ -55,13 +55,13 @@ export function ChatbotFlotante() {
   return (
     <>
       {abierto && (
-        <div className="fixed bottom-20 right-4 z-50 w-[min(100vw-2rem,380px)] rounded-lg border border-gray-200 bg-white shadow-xl flex flex-col h-[480px]">
-          <div className="flex items-center justify-between border-b border-gray-200 px-4 py-3">
-            <h3 className="font-semibold text-gray-900">Asistente ReclamoUP</h3>
+        <div className="fixed bottom-20 right-4 z-50 flex h-[480px] w-[min(100vw-2rem,380px)] flex-col rounded-lg border border-up-border bg-up-surface shadow-xl">
+          <div className="flex items-center justify-between border-b border-up-border bg-up-navy px-4 py-3 text-white">
+            <h3 className="font-semibold">Asistente ReclamoUP</h3>
             <button
               type="button"
               onClick={() => setAbierto(false)}
-              className="text-gray-400 hover:text-gray-600 text-xl leading-none"
+              className="text-white/70 hover:text-white text-xl leading-none"
               aria-label="Cerrar chat"
             >
               ×
@@ -70,7 +70,7 @@ export function ChatbotFlotante() {
 
           <div ref={listaRef} className="flex-1 overflow-y-auto p-4 space-y-3">
             {mensajes.length === 0 && (
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-up-text-muted">
                 Pregúntame sobre plazos, estados de reclamo, el Artículo 38 o cómo usar la
                 plataforma.
               </p>
@@ -80,16 +80,16 @@ export function ChatbotFlotante() {
                 key={i}
                 className={`text-sm rounded-lg px-3 py-2 max-w-[90%] ${
                   m.role === 'user'
-                    ? 'ml-auto bg-indigo-600 text-white'
-                    : 'bg-gray-100 text-gray-900'
+                    ? 'ml-auto bg-up-blue text-white'
+                    : 'bg-up-surface-muted text-up-text'
                 }`}
               >
                 {m.content}
               </div>
             ))}
             {escribiendo && (
-              <div className="text-sm text-gray-500 flex items-center gap-2">
-                <span className="inline-block h-3 w-3 animate-spin rounded-full border-2 border-indigo-600 border-t-transparent" />
+              <div className="text-sm text-up-text-muted flex items-center gap-2">
+                <span className="inline-block h-3 w-3 animate-spin rounded-full border-2 border-up-blue border-t-transparent" />
                 Escribiendo...
               </div>
             )}
@@ -98,7 +98,7 @@ export function ChatbotFlotante() {
             )}
           </div>
 
-          <form onSubmit={enviar} className="border-t border-gray-200 p-3 flex gap-2">
+          <form onSubmit={enviar} className="border-t border-up-border p-3 flex gap-2">
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
@@ -109,7 +109,7 @@ export function ChatbotFlotante() {
             <button
               type="submit"
               disabled={escribiendo || !input.trim()}
-              className="rounded-md bg-indigo-600 px-3 py-2 text-sm text-white hover:bg-indigo-700 disabled:opacity-50"
+              className="rounded-md bg-up-blue px-3 py-2 text-sm text-white hover:bg-up-blue-hover disabled:opacity-50"
             >
               Enviar
             </button>
@@ -120,7 +120,7 @@ export function ChatbotFlotante() {
       <button
         type="button"
         onClick={() => setAbierto((v) => !v)}
-        className="fixed bottom-4 right-4 z-50 rounded-full bg-indigo-600 px-4 py-3 text-sm font-medium text-white shadow-lg hover:bg-indigo-700"
+        className="fixed bottom-4 right-4 z-50 rounded-full bg-up-blue px-4 py-3 text-sm font-medium text-white shadow-lg hover:bg-up-blue-hover"
       >
         {abierto ? 'Cerrar chat' : 'Asistente'}
       </button>

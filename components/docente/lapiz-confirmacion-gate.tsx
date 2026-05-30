@@ -20,7 +20,7 @@ export function LapizConfirmacionGate({ reclamoId }: { reclamoId: string }) {
 
   return (
     <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 space-y-4">
-      <p className="text-sm text-gray-900">
+      <p className="text-sm text-up-text">
         El estudiante declaró que su examen <strong>NO</strong> fue hecho con lápiz. ¿Confirmas
         que el examen <strong>NO</strong> está hecho con lápiz?
       </p>
@@ -29,7 +29,7 @@ export function LapizConfirmacionGate({ reclamoId }: { reclamoId: string }) {
           type="button"
           onClick={() => setConfirmado(true)}
           disabled={pending}
-          className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-50"
+          className="rounded-md bg-up-blue px-4 py-2 text-sm font-medium text-white hover:bg-up-blue-hover disabled:opacity-50"
         >
           Sí, confirmo — sin lápiz
         </button>

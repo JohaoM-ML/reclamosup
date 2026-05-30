@@ -2,6 +2,7 @@
 
 import { useActionState } from 'react';
 import { resolverReclamoAction, type ActionResult } from '@/app/actions/reclamo.actions';
+import { Button } from '@/components/ui/button';
 import { inputClass, labelClass, RESULTADO_FINAL_LABELS } from '@/lib/types';
 
 const initial: ActionResult = { ok: false };
@@ -10,8 +11,8 @@ export function ResolverForm({ reclamoId }: { reclamoId: string }) {
   const [state, action, pending] = useActionState(resolverReclamoAction, initial);
 
   return (
-    <form action={action} className="space-y-4 rounded-lg border border-gray-200 p-4 bg-white">
-      <h3 className="font-semibold text-gray-900">Resolver reclamo</h3>
+    <form action={action} className="space-y-4">
+      <h3 className="font-semibold text-up-navy">Resolver reclamo</h3>
       <input type="hidden" name="reclamoId" value={reclamoId} />
 
       <div>
@@ -50,23 +51,19 @@ export function ResolverForm({ reclamoId }: { reclamoId: string }) {
       </div>
 
       {state.error && (
-        <p className="text-sm text-red-700 bg-red-50 p-2 rounded border border-red-200">
+        <p className="rounded-md border border-red-200 bg-red-50 p-2 text-sm text-red-700">
           {state.error}
         </p>
       )}
       {state.ok && (
-        <p className="text-sm text-green-800 bg-green-50 p-2 rounded border border-green-200">
+        <p className="rounded-md border border-emerald-200 bg-emerald-50 p-2 text-sm text-emerald-800">
           Reclamo resuelto. Enviado a DAAR para cierre.
         </p>
       )}
 
-      <button
-        type="submit"
-        disabled={pending}
-        className="w-full rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-50"
-      >
+      <Button type="submit" disabled={pending} className="w-full">
         {pending ? 'Guardando...' : 'Registrar decisión'}
-      </button>
+      </Button>
     </form>
   );
 }

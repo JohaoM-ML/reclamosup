@@ -13,20 +13,20 @@ type Evento = {
 export function ReclamoTimeline({ eventos }: { eventos: Evento[] }) {
   return (
     <div className="space-y-4">
-      <h3 className="text-sm font-semibold text-gray-700">Historial del reclamo</h3>
-      <ol className="relative border-l border-gray-200 ml-3 space-y-6">
+      <h3 className="text-sm font-semibold text-up-text-secondary">Historial del reclamo</h3>
+      <ol className="relative border-l border-up-border ml-3 space-y-6">
         {eventos.map((ev) => (
           <li key={ev.id} className="ml-6">
-            <span className="absolute -left-1.5 flex h-3 w-3 rounded-full bg-indigo-500 ring-4 ring-white" />
-            <time className="text-xs text-gray-500">
+            <span className="absolute -left-1.5 flex h-3 w-3 rounded-full bg-up-blue/50 ring-4 ring-white" />
+            <time className="text-xs text-up-text-muted">
               {new Date(ev.createdAt).toLocaleString('es-PE')}
             </time>
-            <p className="text-sm font-medium text-gray-900">{ev.accion.replace(/_/g, ' ')}</p>
-            <p className="text-xs text-gray-600">
+            <p className="text-sm font-medium text-up-text">{ev.accion.replace(/_/g, ' ')}</p>
+            <p className="text-xs text-up-text-secondary">
               {ev.actor.nombre} ({ev.actor.rol})
             </p>
             {ev.estadoNuevo && (
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-up-text-muted">
                 Estado: {ESTADO_LABELS[ev.estadoNuevo as keyof typeof ESTADO_LABELS] ?? ev.estadoNuevo}
               </p>
             )}
@@ -62,52 +62,52 @@ export function ReclamoDetalleInfo({
   return (
     <dl className="grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
       <div>
-        <dt className="text-gray-500">Estudiante</dt>
+        <dt className="text-up-text-muted">Estudiante</dt>
         <dd className="font-medium">{reclamo.estudiante.nombre}</dd>
       </div>
       <div>
-        <dt className="text-gray-500">Código</dt>
+        <dt className="text-up-text-muted">Código</dt>
         <dd className="font-medium">{reclamo.estudiante.codigo ?? '—'}</dd>
       </div>
       <div>
-        <dt className="text-gray-500">Curso</dt>
+        <dt className="text-up-text-muted">Curso</dt>
         <dd className="font-medium">
           {reclamo.evaluacion.curso.codigo} — {reclamo.evaluacion.curso.nombre}
         </dd>
       </div>
       <div>
-        <dt className="text-gray-500">Evaluación</dt>
+        <dt className="text-up-text-muted">Evaluación</dt>
         <dd className="font-medium">
           {reclamo.evaluacion.nombre} ({reclamo.evaluacion.tipo})
         </dd>
       </div>
       <div>
-        <dt className="text-gray-500">Motivo</dt>
+        <dt className="text-up-text-muted">Motivo</dt>
         <dd className="font-medium">
           {MOTIVO_LABELS[reclamo.motivo as MotivoReclamo] ?? reclamo.motivo}
         </dd>
       </div>
       <div>
-        <dt className="text-gray-500">Pregunta marcada</dt>
+        <dt className="text-up-text-muted">Pregunta marcada</dt>
         <dd className="font-medium">{reclamo.preguntaMarcada ?? '—'}</dd>
       </div>
       <div className="sm:col-span-2">
-        <dt className="text-gray-500">Argumento</dt>
+        <dt className="text-up-text-muted">Argumento</dt>
         <dd className="font-medium">{reclamo.argumento}</dd>
       </div>
       <div>
-        <dt className="text-gray-500">Nota anterior</dt>
+        <dt className="text-up-text-muted">Nota anterior</dt>
         <dd className="font-medium">{reclamo.notaAnterior}</dd>
       </div>
       {reclamo.notaNueva != null && (
         <div>
-          <dt className="text-gray-500">Nota nueva</dt>
+          <dt className="text-up-text-muted">Nota nueva</dt>
           <dd className="font-medium text-green-700">{reclamo.notaNueva}</dd>
         </div>
       )}
       {reclamo.resultadoFinal && (
         <div>
-          <dt className="text-gray-500">Resultado final</dt>
+          <dt className="text-up-text-muted">Resultado final</dt>
           <dd className="font-medium">
             {RESULTADO_FINAL_LABELS[reclamo.resultadoFinal as ResultadoFinal] ??
               reclamo.resultadoFinal}
@@ -116,25 +116,25 @@ export function ReclamoDetalleInfo({
       )}
       {reclamo.decision && !reclamo.resultadoFinal && (
         <div>
-          <dt className="text-gray-500">Decisión docente</dt>
+          <dt className="text-up-text-muted">Decisión docente</dt>
           <dd className="font-medium capitalize">{reclamo.decision.replace('_', ' ')}</dd>
         </div>
       )}
       {reclamo.archivoPath && (
         <div className="sm:col-span-2">
-          <span className="inline-block text-xs font-medium bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded">
+          <span className="inline-block text-xs font-medium bg-up-blue/10 text-up-navy px-2 py-0.5 rounded">
             Devolución virtual — examen disponible digitalmente
           </span>
         </div>
       )}
       {reclamo.comentarioDocente && (
         <div className="sm:col-span-2">
-          <dt className="text-gray-500">Comentario docente</dt>
+          <dt className="text-up-text-muted">Comentario docente</dt>
           <dd className="font-medium">{reclamo.comentarioDocente}</dd>
         </div>
       )}
       <div>
-        <dt className="text-gray-500">Docente asignado</dt>
+        <dt className="text-up-text-muted">Docente asignado</dt>
         <dd className="font-medium">{reclamo.docente.nombre}</dd>
       </div>
     </dl>

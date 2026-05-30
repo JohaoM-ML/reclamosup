@@ -9,26 +9,26 @@ export function PendientesDocenteTable({
   semestre?: string;
 }) {
   if (rows.length === 0) {
-    return <p className="text-gray-500 text-sm">No hay pendientes por docente.</p>;
+    return <p className="text-up-text-muted text-sm">No hay pendientes por docente.</p>;
   }
 
   return (
-    <div className="bg-white rounded-lg border overflow-hidden">
-      <table className="min-w-full text-sm divide-y divide-gray-200">
-        <thead className="bg-gray-50">
+    <div className="rounded-lg border border-up-border bg-up-surface overflow-hidden">
+      <table className="min-w-full text-sm divide-y divide-up-border">
+        <thead className="bg-up-surface-muted">
           <tr>
-            <th className="px-4 py-3 text-left font-medium text-gray-600">Docente</th>
-            <th className="px-4 py-3 text-left font-medium text-gray-600">Email</th>
-            <th className="px-4 py-3 text-right font-medium text-gray-600">Pendientes</th>
-            <th className="px-4 py-3 text-left font-medium text-gray-600">Plazo próximo</th>
+            <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Docente</th>
+            <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Email</th>
+            <th className="px-4 py-3 text-right font-medium text-up-text-secondary">Pendientes</th>
+            <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Plazo próximo</th>
             <th className="px-4 py-3" />
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-100">
+        <tbody className="divide-y divide-up-border">
           {rows.map((r) => (
             <tr key={r.docenteId}>
               <td className="px-4 py-3">{r.nombre}</td>
-              <td className="px-4 py-3 text-gray-600">{r.email}</td>
+              <td className="px-4 py-3 text-up-text-secondary">{r.email}</td>
               <td className="px-4 py-3 text-right font-medium">{r.pendientes}</td>
               <td className="px-4 py-3">
                 {r.plazoProximo
@@ -38,7 +38,7 @@ export function PendientesDocenteTable({
               <td className="px-4 py-3 text-right">
                 <Link
                   href={`/daar/docente/${r.docenteId}?semestre=${encodeURIComponent(semestre)}`}
-                  className="text-indigo-600 hover:underline text-xs"
+                  className="text-up-blue hover:underline text-xs"
                 >
                   Ver bandeja
                 </Link>

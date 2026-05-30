@@ -28,7 +28,7 @@ export function DashboardPdfExport({
     <button
       type="button"
       onClick={() => exportDashboardPdf(data, semestre, TAB_LABELS[tab])}
-      className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+      className="rounded-md border border-up-border bg-white px-3 py-1.5 text-sm font-medium text-up-text-secondary hover:bg-up-surface-muted"
     >
       Descargar KPIs (PDF)
     </button>

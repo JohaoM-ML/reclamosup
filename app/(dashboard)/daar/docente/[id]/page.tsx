@@ -3,6 +3,11 @@ import { redirect } from 'next/navigation';
 import { getSession } from '@/lib/auth';
 import { getReclamosPendientesDocenteDaar } from '@/lib/services/dashboard-daar.service';
 import { EstadoBadge } from '@/components/reclamos/estado-badge';
+import { Card } from '@/components/ui/card';
+import { EmptyState } from '@/components/ui/empty-state';
+import { PageHeader } from '@/components/ui/page-header';
+import { linkClass, tableHeadClass } from '@/lib/types';
+import type { EstadoReclamo } from '@/lib/types';
 
 export default async function DaarDocenteBandejaPage({
   params,
@@ -23,59 +28,61 @@ export default async function DaarDocenteBandejaPage({
 
   return (
     <div className="space-y-6">
-      <div>
-        <Link href="/daar/dashboard" className="text-sm text-indigo-600 hover:underline">
-          ← Dashboard DAAR
-        </Link>
-        <h1 className="text-2xl font-bold text-gray-900 mt-2">Bandeja del docente</h1>
-        <p className="text-gray-600 text-sm mt-1">
-          {docente.nombre} · {docente.email} · Semestre {semestre}
-        </p>
-      </div>
+      <Link href="/daar/dashboard" className={linkClass}>
+        ← Dashboard DAAR
+      </Link>
+
+      <PageHeader
+        title="Bandeja del docente"
+        description={`${docente.nombre} · ${docente.email} · Semestre ${semestre}`}
+      />
 
       {reclamos.length === 0 ? (
-        <p className="text-gray-500 text-sm">No hay reclamos pendientes de resolución.</p>
+        <EmptyState
+          title="Sin reclamos pendientes"
+          description="Este docente no tiene casos pendientes de resolución en el semestre seleccionado."
+        />
       ) : (
-        <div className="bg-white rounded-lg border overflow-hidden">
-          <table className="min-w-full text-sm divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Estudiante</th>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Curso</th>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Sección</th>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Evaluación</th>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Estado</th>
-                <th className="px-4 py-3 text-left font-medium text-gray-600">Plazo</th>
-                <th className="px-4 py-3" />
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-100">
-              {reclamos.map((r) => (
-                <tr key={r.id} className="hover:bg-gray-50">
-                  <td className="px-4 py-3">{r.estudianteNombre}</td>
-                  <td className="px-4 py-3">
-                    <span className="font-mono text-xs text-gray-500">{r.cursoCodigo}</span>
-                    <br />
-                    {r.cursoNombre}
-                  </td>
-                  <td className="px-4 py-3 font-medium">{r.seccion}</td>
-                  <td className="px-4 py-3">{r.evaluacionNombre}</td>
-                  <td className="px-4 py-3">
-                    <EstadoBadge estado={r.estado as import('@/lib/types').EstadoReclamo} />
-                  </td>
-                  <td className="px-4 py-3">
-                    {new Date(r.plazo).toLocaleDateString('es-PE')}
-                  </td>
-                  <td className="px-4 py-3 text-right">
-                    <Link href={`/daar/${r.id}`} className="text-indigo-600 hover:underline">
-                      Ver
-                    </Link>
-                  </td>
+        <Card className="overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="up-table min-w-full">
+              <thead>
+                <tr>
+                  <th className={tableHeadClass}>Estudiante</th>
+                  <th className={tableHeadClass}>Curso</th>
+                  <th className={tableHeadClass}>Sección</th>
+                  <th className={tableHeadClass}>Evaluación</th>
+                  <th className={tableHeadClass}>Estado</th>
+                  <th className={tableHeadClass}>Plazo</th>
+                  <th className={tableHeadClass} />
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {reclamos.map((r) => (
+                  <tr key={r.id}>
+                    <td className="font-medium">{r.estudianteNombre}</td>
+                    <td>
+                      <span className="font-mono text-xs text-up-text-muted">{r.cursoCodigo}</span>
+                      <br />
+                      {r.cursoNombre}
+                    </td>
+                    <td>{r.seccion}</td>
+                    <td>{r.evaluacionNombre}</td>
+                    <td>
+                      <EstadoBadge estado={r.estado as EstadoReclamo} />
+                    </td>
+                    <td>{new Date(r.plazo).toLocaleDateString('es-PE')}</td>
+                    <td className="text-right">
+                      <Link href={`/daar/${r.id}`} className={linkClass}>
+                        Ver
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Card>
       )}
     </div>
   );

@@ -9,21 +9,21 @@ export function PivotTable({ pivot }: { pivot: PivotFila[] }) {
   ];
 
   return (
-    <div className="bg-white rounded-lg border overflow-x-auto">
-      <table className="min-w-full text-sm divide-y divide-gray-200">
-        <thead className="bg-gray-50">
+    <div className="rounded-lg border border-up-border bg-up-surface overflow-x-auto">
+      <table className="min-w-full text-sm divide-y divide-up-border">
+        <thead className="bg-up-surface-muted">
           <tr>
-            <th className="px-4 py-3 text-left font-medium text-gray-600">Tipo</th>
+            <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Tipo</th>
             {cols.map((c) => (
-              <th key={c.key} className="px-4 py-3 text-right font-medium text-gray-600">
+              <th key={c.key} className="px-4 py-3 text-right font-medium text-up-text-secondary">
                 {c.label}
               </th>
             ))}
-            <th className="px-4 py-3 text-right font-medium text-gray-600">Total</th>
-            <th className="px-4 py-3 text-right font-medium text-gray-600">% No procede</th>
+            <th className="px-4 py-3 text-right font-medium text-up-text-secondary">Total</th>
+            <th className="px-4 py-3 text-right font-medium text-up-text-secondary">% No procede</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-100">
+        <tbody className="divide-y divide-up-border">
           {pivot.map((row) => (
             <tr key={row.tipo}>
               <td className="px-4 py-3 font-medium">{row.tipo}</td>

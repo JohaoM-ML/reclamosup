@@ -23,9 +23,9 @@ export function SolicitarExamenFisicoButton({
   }
 
   return (
-    <div className="rounded-lg border border-gray-200 p-4 bg-white">
-      <h3 className="font-semibold text-gray-900 mb-2">Examen físico (opcional)</h3>
-      <p className="text-sm text-gray-600 mb-3">
+    <div className="rounded-lg border border-up-border p-4 bg-white">
+      <h3 className="font-semibold text-up-text mb-2">Examen físico (opcional)</h3>
+      <p className="text-sm text-up-text-secondary mb-3">
         Si necesita revisar el examen en papel, solicite la entrega a DAAR. La devolución
         virtual (PDF escaneado) sigue siendo la vía principal.
       </p>

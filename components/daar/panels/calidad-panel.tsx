@@ -23,15 +23,15 @@ export function CalidadPanel({ data }: { data: Data }) {
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg border p-4">
-          <h3 className="text-sm font-semibold text-gray-800 mb-3">Distribución de resultados</h3>
+        <div className="rounded-lg border border-up-border bg-up-surface p-4">
+          <h3 className="text-sm font-semibold text-up-text mb-3">Distribución de resultados</h3>
           <DonutChartSimple
             data={data.donut}
             colors={['#22c55e', '#94a3b8', '#ef4444']}
           />
         </div>
-        <div className="bg-white rounded-lg border p-4">
-          <h3 className="text-sm font-semibold text-gray-800 mb-3">Delta puntos por facultad</h3>
+        <div className="rounded-lg border border-up-border bg-up-surface p-4">
+          <h3 className="text-sm font-semibold text-up-text mb-3">Delta puntos por facultad</h3>
           <BarChartSimple
             data={data.deltaPorFacultad}
             xKey="facultad"
@@ -40,8 +40,8 @@ export function CalidadPanel({ data }: { data: Data }) {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg border p-4">
-        <h3 className="text-sm font-semibold text-gray-800 mb-3">Top 5 docentes (conteo por resultado)</h3>
+      <div className="rounded-lg border border-up-border bg-up-surface p-4">
+        <h3 className="text-sm font-semibold text-up-text mb-3">Top 5 docentes (conteo por resultado)</h3>
         <BarChartSimple
           data={stackedDocentes}
           xKey="nombre"

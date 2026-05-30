@@ -21,16 +21,16 @@ export function VolumenPanel({ data }: { data: Data }) {
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg border p-4">
-          <h3 className="text-sm font-semibold text-gray-800 mb-3">Por facultad</h3>
+        <div className="rounded-lg border border-up-border bg-up-surface p-4">
+          <h3 className="text-sm font-semibold text-up-text mb-3">Por facultad</h3>
           <BarChartSimple
             data={data.porFacultad}
             xKey="facultad"
             series={[{ dataKey: 'count', fill: '#8b5cf6', name: 'Reclamos' }]}
           />
         </div>
-        <div className="bg-white rounded-lg border p-4">
-          <h3 className="text-sm font-semibold text-gray-800 mb-3">Parcial vs final por facultad</h3>
+        <div className="rounded-lg border border-up-border bg-up-surface p-4">
+          <h3 className="text-sm font-semibold text-up-text mb-3">Parcial vs final por facultad</h3>
           <BarChartSimple
             data={parcialFinalData}
             xKey="facultad"
@@ -43,8 +43,8 @@ export function VolumenPanel({ data }: { data: Data }) {
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg border p-4">
-          <h3 className="text-sm font-semibold text-gray-800 mb-3">Top cursos</h3>
+        <div className="rounded-lg border border-up-border bg-up-surface p-4">
+          <h3 className="text-sm font-semibold text-up-text mb-3">Top cursos</h3>
           <BarChartSimple
             data={data.topCursos.map((c) => ({ nombre: c.nombre.slice(0, 28), count: c.count }))}
             xKey="nombre"
@@ -53,8 +53,8 @@ export function VolumenPanel({ data }: { data: Data }) {
             height={320}
           />
         </div>
-        <div className="bg-white rounded-lg border p-4">
-          <h3 className="text-sm font-semibold text-gray-800 mb-3">Top docentes</h3>
+        <div className="rounded-lg border border-up-border bg-up-surface p-4">
+          <h3 className="text-sm font-semibold text-up-text mb-3">Top docentes</h3>
           <BarChartSimple
             data={data.topDocentes.map((d) => ({
               nombre: d.nombre.split(' ').slice(0, 2).join(' '),

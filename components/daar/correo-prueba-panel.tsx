@@ -44,8 +44,8 @@ export function CorreoPruebaPanel() {
   return (
     <div className="rounded-lg border bg-white p-4 space-y-3">
       <div>
-        <h3 className="text-sm font-semibold text-gray-900">Correo (Resend)</h3>
-        <p className="text-xs text-gray-500 mt-1">
+        <h3 className="text-sm font-semibold text-up-text">Correo (Resend)</h3>
+        <p className="text-xs text-up-text-muted mt-1">
           Notificaciones automáticas al registrar, resolver y cerrar reclamos.
         </p>
       </div>
@@ -53,22 +53,22 @@ export function CorreoPruebaPanel() {
       {status && (
         <dl className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
           <div>
-            <dt className="text-gray-500">Estado</dt>
+            <dt className="text-up-text-muted">Estado</dt>
             <dd className={status.configured ? 'text-green-700 font-medium' : 'text-red-600 font-medium'}>
               {status.configured ? 'Configurado' : 'Sin API key'}
             </dd>
           </div>
           <div>
-            <dt className="text-gray-500">Remitente</dt>
-            <dd className="font-mono text-gray-800 truncate">{status.from}</dd>
+            <dt className="text-up-text-muted">Remitente</dt>
+            <dd className="font-mono text-up-text truncate">{status.from}</dd>
           </div>
           <div className="sm:col-span-2">
-            <dt className="text-gray-500">URL app (enlaces en correo)</dt>
-            <dd className="font-mono text-gray-800 truncate">{status.appUrl}</dd>
+            <dt className="text-up-text-muted">URL app (enlaces en correo)</dt>
+            <dd className="font-mono text-up-text truncate">{status.appUrl}</dd>
           </div>
           {status.demoRedirect && (
             <div className="sm:col-span-2">
-              <dt className="text-gray-500">Redirección demo</dt>
+              <dt className="text-up-text-muted">Redirección demo</dt>
               <dd className="text-amber-700">{status.demoRedirect}</dd>
             </div>
           )}
@@ -77,11 +77,11 @@ export function CorreoPruebaPanel() {
 
       <form onSubmit={enviar} className="flex flex-wrap items-end gap-2">
         <div className="flex-1 min-w-[200px]">
-          <label className="block text-xs text-gray-600 mb-1">Enviar prueba a</label>
+          <label className="block text-xs text-up-text-secondary mb-1">Enviar prueba a</label>
           <select
             value={destino}
             onChange={(e) => setDestino(e.target.value)}
-            className="w-full rounded-md border border-gray-300 px-3 py-1.5 text-sm"
+            className="w-full rounded-md border border-up-border px-3 py-1.5 text-sm"
           >
             {DESTINOS_DEMO.map((d) => (
               <option key={d} value={d}>
@@ -93,7 +93,7 @@ export function CorreoPruebaPanel() {
         <button
           type="submit"
           disabled={loading || !status?.configured}
-          className="rounded-md bg-indigo-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-50"
+          className="rounded-md bg-up-blue px-4 py-1.5 text-sm font-medium text-white hover:bg-up-blue-hover disabled:opacity-50"
         >
           {loading ? 'Enviando…' : 'Enviar prueba'}
         </button>

@@ -31,16 +31,16 @@ export function CumplimientoPanel({ data }: { data: Data }) {
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg border p-4">
-          <h3 className="text-sm font-semibold text-gray-800 mb-3">Docentes en plazo por facultad</h3>
+        <div className="rounded-lg border border-up-border bg-up-surface p-4">
+          <h3 className="text-sm font-semibold text-up-text mb-3">Docentes en plazo por facultad</h3>
           <BarChartSimple
             data={data.docentesPorFacultad}
             xKey="facultad"
             series={[{ dataKey: 'pct', fill: '#6366f1', name: '% en plazo' }]}
           />
         </div>
-        <div className="bg-white rounded-lg border p-4">
-          <h3 className="text-sm font-semibold text-gray-800 mb-3">Formularios correctos por semana</h3>
+        <div className="rounded-lg border border-up-border bg-up-surface p-4">
+          <h3 className="text-sm font-semibold text-up-text mb-3">Formularios correctos por semana</h3>
           <LineChartSimple
             data={data.evolucionFormularios}
             xKey="semana"

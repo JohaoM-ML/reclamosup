@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { getSession } from '@/lib/auth';
 import {
@@ -8,6 +7,7 @@ import {
 import { getDashboardDaarData } from '@/lib/services/dashboard-daar.service';
 import { DashboardClient } from '@/components/daar/dashboard-client';
 import { CorreoPruebaPanel } from '@/components/daar/correo-prueba-panel';
+import { PageHeader } from '@/components/ui/page-header';
 
 export default async function DaarDashboardPage() {
   const session = await getSession();
@@ -21,12 +21,10 @@ export default async function DaarDashboardPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">Dashboard DAAR</h1>
-        <p className="text-gray-600 text-sm">
-          Panel analítico en tiempo real — reemplaza el Excel de seguimiento de reclamos.
-        </p>
-      </div>
+      <PageHeader
+        title="Dashboard DAAR"
+        description="Panel analítico en tiempo real — seguimiento de reclamos de evaluaciones Pregrado."
+      />
 
       <CorreoPruebaPanel />
 

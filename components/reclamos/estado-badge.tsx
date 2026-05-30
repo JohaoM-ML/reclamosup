@@ -5,7 +5,7 @@ export function EstadoBadge({ estado }: { estado: string }) {
   const e = estado as EstadoReclamo;
   return (
     <span
-      className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-medium ${ESTADO_COLORS[e] ?? 'bg-gray-100 text-gray-800'}`}
+      className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-medium ${ESTADO_COLORS[e] ?? 'bg-gray-100 text-up-text'}`}
     >
       {ESTADO_LABELS[e] ?? estado}
     </span>

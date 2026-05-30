@@ -36,8 +36,8 @@ export function AnularSolicitudButton({ reclamoId }: { reclamoId: string }) {
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
           <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6 space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900">Anular solicitud</h3>
-            <p className="text-sm text-gray-800">
+            <h3 className="text-lg font-semibold text-up-text">Anular solicitud</h3>
+            <p className="text-sm text-up-text">
               ¿Seguro que deseas anular esta solicitud? El estudiante deberá registrarla
               nuevamente.
             </p>
@@ -51,7 +51,7 @@ export function AnularSolicitudButton({ reclamoId }: { reclamoId: string }) {
                 type="button"
                 onClick={() => setShowModal(false)}
                 disabled={pending}
-                className="rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 disabled:opacity-50"
+                className="rounded-md border border-up-border px-4 py-2 text-sm text-up-text-secondary hover:bg-up-surface-muted disabled:opacity-50"
               >
                 Cancelar
               </button>

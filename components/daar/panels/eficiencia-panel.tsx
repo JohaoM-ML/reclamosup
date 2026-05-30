@@ -21,16 +21,16 @@ export function EficienciaPanel({ data }: { data: Data }) {
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg border p-4">
-          <h3 className="text-sm font-semibold text-gray-800 mb-3">Reclamos creados por semana</h3>
+        <div className="rounded-lg border border-up-border bg-up-surface p-4">
+          <h3 className="text-sm font-semibold text-up-text mb-3">Reclamos creados por semana</h3>
           <BarChartSimple
             data={data.picoPorSemana}
             xKey="semana"
             series={[{ dataKey: 'count', fill: '#f59e0b', name: 'Nuevos' }]}
           />
         </div>
-        <div className="bg-white rounded-lg border p-4">
-          <h3 className="text-sm font-semibold text-gray-800 mb-3">SLA cierre por semana</h3>
+        <div className="rounded-lg border border-up-border bg-up-surface p-4">
+          <h3 className="text-sm font-semibold text-up-text mb-3">SLA cierre por semana</h3>
           <LineChartSimple
             data={data.slaSemanal}
             xKey="semana"
@@ -40,8 +40,8 @@ export function EficienciaPanel({ data }: { data: Data }) {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg border p-4">
-        <h3 className="text-sm font-semibold text-gray-800 mb-3">Acumulado creados vs cerrados</h3>
+      <div className="rounded-lg border border-up-border bg-up-surface p-4">
+        <h3 className="text-sm font-semibold text-up-text mb-3">Acumulado creados vs cerrados</h3>
         <LineChartSimple
           data={data.backlogVsResuelto}
           xKey="semana"

@@ -100,6 +100,18 @@ export async function DashboardShell({
           </div>
         </header>
 
+        <nav className="flex gap-2 overflow-x-auto border-b border-up-border bg-up-surface px-4 py-2 lg:hidden">
+          {links.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="shrink-0 rounded-md bg-up-surface-muted px-3 py-1.5 text-xs font-semibold text-up-navy hover:bg-up-blue/10"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </nav>
+
         <main className="flex-1 px-4 py-6 md:px-8 md:py-8">{children}</main>
       </div>
 

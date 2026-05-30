@@ -18,16 +18,16 @@ type Props = {
 
 export function DashboardTabs({ active, onChange }: Props) {
   return (
-    <nav className="flex flex-wrap gap-1 border-b border-gray-200 pb-px">
+    <nav className="flex flex-wrap gap-1 border-b border-up-border pb-px">
       {TABS.map((tab) => (
         <button
           key={tab.id}
           type="button"
           onClick={() => onChange(tab.id)}
-          className={`px-4 py-2 text-sm font-medium rounded-t-md transition-colors ${
+          className={`rounded-t-md px-4 py-2.5 text-sm font-semibold transition-colors ${
             active === tab.id
-              ? 'bg-white border border-b-white border-gray-200 text-indigo-700 -mb-px'
-              : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+              ? '-mb-px border border-b-0 border-up-border bg-up-blue text-white'
+              : 'text-up-text-secondary hover:bg-up-surface-muted hover:text-up-navy'
           }`}
         >
           {tab.label}

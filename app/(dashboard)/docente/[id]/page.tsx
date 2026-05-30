@@ -1,15 +1,11 @@
 import { redirect } from 'next/navigation';
 import { getSession } from '@/lib/auth';
 import { getReclamoById } from '@/lib/services/reclamo.service';
-import { EstadoBadge } from '@/components/reclamos/estado-badge';
-import { PdfViewer } from '@/components/reclamos/pdf-viewer';
 import { LapizConfirmacionGate } from '@/components/docente/lapiz-confirmacion-gate';
 import { ResolverForm } from '@/components/reclamos/resolver-form';
 import { SolicitarExamenFisicoButton } from '@/components/docente/solicitar-examen-fisico';
-import {
-  ReclamoDetalleInfo,
-  ReclamoTimeline,
-} from '@/components/reclamos/reclamo-timeline';
+import { ReclamoDetailLayout } from '@/components/reclamos/reclamo-detail-layout';
+import { Card, CardBody } from '@/components/ui/card';
 
 export default async function DocenteDetallePage({
   params,
@@ -28,48 +24,40 @@ export default async function DocenteDetallePage({
   const requiereConfirmacionLapiz = reclamo.estado === 'EN_REVISION';
   const activo = ['ENVIADO', 'EN_REVISION', 'EN_VALIDACION'].includes(reclamo.estado);
 
-  return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-900">
-          Revisar reclamo #{id.slice(-6)}
-        </h1>
-        <EstadoBadge estado={reclamo.estado} />
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="space-y-4">
-          <div className="bg-white rounded-lg border p-4">
-            <ReclamoDetalleInfo reclamo={reclamo} />
-          </div>
-          {puedeResolver &&
-            (requiereConfirmacionLapiz ? (
+  const sidebar = (
+    <>
+      {puedeResolver && (
+        <Card>
+          <CardBody>
+            {requiereConfirmacionLapiz ? (
               <LapizConfirmacionGate reclamoId={reclamo.id} />
             ) : (
               <ResolverForm reclamoId={reclamo.id} />
-            ))}
-          {activo && (
+            )}
+          </CardBody>
+        </Card>
+      )}
+      {activo && (
+        <Card>
+          <CardBody>
             <SolicitarExamenFisicoButton
               reclamoId={reclamo.id}
               yaSolicitado={!!reclamo.solicitudExamenFisico}
             />
-          )}
-          <div className="bg-white rounded-lg border p-4">
-            <ReclamoTimeline eventos={reclamo.eventos} />
-          </div>
-        </div>
-        <div>
-          <h3 className="text-sm font-semibold text-gray-700 mb-2">
-            Examen escaneado — devolución virtual
-          </h3>
-          {reclamo.archivoPath && (
-            <span className="inline-block mb-2 text-xs font-medium bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded">
-              Devolución virtual disponible
-            </span>
-          )}
-          <PdfViewer reclamoId={reclamo.id} archivoPath={reclamo.archivoPath} />
-        </div>
-      </div>
-    </div>
+          </CardBody>
+        </Card>
+      )}
+    </>
+  );
+
+  return (
+    <ReclamoDetailLayout
+      reclamo={reclamo}
+      id={id}
+      backHref="/docente"
+      backLabel="Bandeja de reclamos"
+      pdfTitle="Examen escaneado — devolución virtual"
+      sidebar={sidebar}
+    />
   );
 }

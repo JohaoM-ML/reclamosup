@@ -41,13 +41,13 @@ export const MOTIVO_LABELS: Record<MotivoReclamo, string> = {
 };
 
 export const ESTADO_COLORS: Record<EstadoReclamo, string> = {
-  PENDIENTE_ESCANEO: 'bg-orange-100 text-orange-800',
-  ENVIADO: 'bg-blue-100 text-blue-800',
-  EN_REVISION: 'bg-yellow-100 text-yellow-800',
-  EN_VALIDACION: 'bg-purple-100 text-purple-800',
-  CERRADO: 'bg-green-100 text-green-800',
+  PENDIENTE_ESCANEO: 'bg-up-orange/15 text-amber-900',
+  ENVIADO: 'bg-up-blue/10 text-up-navy',
+  EN_REVISION: 'bg-amber-100 text-amber-900',
+  EN_VALIDACION: 'bg-violet-100 text-violet-900',
+  CERRADO: 'bg-emerald-100 text-emerald-900',
   RECHAZADO: 'bg-red-100 text-red-800',
-  ANULADO: 'bg-gray-100 text-gray-700',
+  ANULADO: 'bg-up-surface-muted text-up-text-muted',
 };
 
 export interface SessionUser {
@@ -58,7 +58,11 @@ export interface SessionUser {
   codigo?: string | null;
 }
 
-/** Clases compartidas para inputs legibles (texto oscuro) */
+/** Clases compartidas — paleta UP institucional */
 export const inputClass =
-  'w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 bg-white';
-export const labelClass = 'block text-sm font-medium text-gray-900 mb-1';
+  'w-full rounded-[6px] border border-up-border px-3 py-2 text-sm text-up-text placeholder:text-up-text-muted bg-up-surface focus:border-up-blue focus:outline-none focus:ring-2 focus:ring-up-blue/20';
+export const labelClass = 'block text-sm font-semibold text-up-text-secondary mb-1';
+export const tableHeadClass =
+  'px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-up-text-secondary';
+export const tableCellClass = 'px-4 py-3 text-sm text-up-text';
+export const linkClass = 'text-sm font-medium text-up-blue hover:underline';

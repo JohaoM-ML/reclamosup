@@ -29,16 +29,16 @@ export function TiemposPanel({ data }: { data: Data }) {
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg border p-4">
-          <h3 className="text-sm font-semibold text-gray-800 mb-3">Distribución de tiempos (días)</h3>
+        <div className="rounded-lg border border-up-border bg-up-surface p-4">
+          <h3 className="text-sm font-semibold text-up-text mb-3">Distribución de tiempos (días)</h3>
           <BarChartSimple
             data={data.distribucion}
             xKey="rango"
             series={[{ dataKey: 'count', fill: '#6366f1', name: 'Reclamos' }]}
           />
         </div>
-        <div className="bg-white rounded-lg border p-4">
-          <h3 className="text-sm font-semibold text-gray-800 mb-3">Promedio por facultad</h3>
+        <div className="rounded-lg border border-up-border bg-up-surface p-4">
+          <h3 className="text-sm font-semibold text-up-text mb-3">Promedio por facultad</h3>
           <BarChartSimple
             data={data.porFacultad}
             xKey="facultad"
@@ -48,8 +48,8 @@ export function TiemposPanel({ data }: { data: Data }) {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg border p-4">
-        <h3 className="text-sm font-semibold text-gray-800 mb-3">Evolución semanal (días promedio)</h3>
+      <div className="rounded-lg border border-up-border bg-up-surface p-4">
+        <h3 className="text-sm font-semibold text-up-text mb-3">Evolución semanal (días promedio)</h3>
         <LineChartSimple
           data={data.evolucionSemanal}
           xKey="semana"
