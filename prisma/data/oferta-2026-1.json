@@ -1,0 +1,7471 @@
+[
+  {
+    "codigo": "120253",
+    "nombre": "Antropología Filosófica",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "DEL MASTRO PUCCIO, Cesare Anibal"
+  },
+  {
+    "codigo": "120280",
+    "nombre": "Arte y diseño prehispánico. Naturaleza y legado",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "PARDO GRAU, Cecilia Maria Luisa"
+  },
+  {
+    "codigo": "120270",
+    "nombre": "Comunicación Digital",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ESPINOSA WINDER, Francisco"
+  },
+  {
+    "codigo": "120289",
+    "nombre": "Dios, Existencia Humana y Sociedad",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "PIEDRA VALDEZ, Jose Leopoldo"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "VARGAS DELLA CASA, Rosa Elvira"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "QUIROZ MEZA, Danitza Dejanira"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "PONCE BOGINO, Hector Alberto"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "PIEDRA VALDEZ, Jose Leopoldo"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "EGOAVIL RIOS, Jean Christian"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "Virtual",
+    "creditos": 4,
+    "profesor": "IVANOFF SABOGAL, Christian"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "VARGAS DELLA CASA, Rosa Elvira"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "ARANA ALENCASTRE, Jean Luis"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "K",
+    "creditos": 4,
+    "profesor": "ARANA ALENCASTRE, Jean Luis"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "EGOAVIL RIOS, Jean Christian"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "EGOAVIL RIOS, Jean Christian"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "N",
+    "creditos": 4,
+    "profesor": "EGOAVIL RIOS, Jean Christian"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "O",
+    "creditos": 4,
+    "profesor": "VILLARAN CONTAVALLI, ALONSO MANUEL"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "EGOAVIL RIOS, Jean Christian"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "Q",
+    "creditos": 4,
+    "profesor": "DEXTRE UZATEGUI, Sergio Guillermo"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "MORENO GONZALEZ, Rafael"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "PONCE BOGINO, Hector Alberto"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "W",
+    "creditos": 4,
+    "profesor": "PONCE BOGINO, Hector Alberto"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "X",
+    "creditos": 4,
+    "profesor": "PONCE BOGINO, Hector Alberto"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "Y",
+    "creditos": 4,
+    "profesor": "VILLARAN CONTAVALLI, ALONSO MANUEL"
+  },
+  {
+    "codigo": "120133",
+    "nombre": "Ética",
+    "seccion": "Z",
+    "creditos": 4,
+    "profesor": "DEXTRE UZATEGUI, Sergio Guillermo"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "CARRIÓN CARAVEDO, Úrsula"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "QUIROZ MEZA, Danitza Dejanira"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "LASTRES DAMMERT, Pamela Maria"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "IBAÑEZ BLANCAS, Franklin Ernesto"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "QUIROZ MEZA, Danitza Dejanira"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "DEL MASTRO PUCCIO, Cesare Anibal"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "ASTUDILLO TORRES, Deyvi Harold"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "MORENO GONZALEZ, Rafael"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "DEXTRE UZATEGUI, Sergio Guillermo"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "ASTUDILLO TORRES, Deyvi Harold"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "K",
+    "creditos": 4,
+    "profesor": "MORENO GONZALEZ, Rafael"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "DEXTRE UZATEGUI, Sergio Guillermo"
+  },
+  {
+    "codigo": "129007",
+    "nombre": "Filosofía",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "DEXTRE UZATEGUI, Sergio Guillermo"
+  },
+  {
+    "codigo": "120273",
+    "nombre": "Filosofia Política",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "CARRIÓN CARAVEDO, Úrsula"
+  },
+  {
+    "codigo": "122005",
+    "nombre": "Historia Crítica del Perú",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "FONSECA ARIZA, Juan Adoniran"
+  },
+  {
+    "codigo": "122005",
+    "nombre": "Historia Crítica del Perú",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "INJOQUE RONCEROS, Freddy Miguel"
+  },
+  {
+    "codigo": "122005",
+    "nombre": "Historia Crítica del Perú",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "INJOQUE RONCEROS, Freddy Miguel"
+  },
+  {
+    "codigo": "122005",
+    "nombre": "Historia Crítica del Perú",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "LIZARME VILLCAS, Nashely Yuvitza"
+  },
+  {
+    "codigo": "122005",
+    "nombre": "Historia Crítica del Perú",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "LIZARME VILLCAS, Nashely Yuvitza"
+  },
+  {
+    "codigo": "120269",
+    "nombre": "Historia Económica del Perú",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ONSALVE ZANATTI, Martin Alberto"
+  },
+  {
+    "codigo": "120269",
+    "nombre": "Historia Económica del Perú",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "AVIDIA, Abel Fernando"
+  },
+  {
+    "codigo": "120070",
+    "nombre": "Historia Económica y Empresarial",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RODRIGUEZ SATIZABAL, Beatriz Helena"
+  },
+  {
+    "codigo": "120070",
+    "nombre": "Historia Económica y Empresarial",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "CARRASCO WESTON, Jose Manuel"
+  },
+  {
+    "codigo": "120070",
+    "nombre": "Historia Económica y Empresarial",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "BARRETO VELAZQUEZ, Norberto"
+  },
+  {
+    "codigo": "120070",
+    "nombre": "Historia Económica y Empresarial",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "BARRETO VELAZQUEZ, Norberto"
+  },
+  {
+    "codigo": "120070",
+    "nombre": "Historia Económica y Empresarial",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "CARRASCO WESTON, Jose Manuel"
+  },
+  {
+    "codigo": "120070",
+    "nombre": "Historia Económica y Empresarial",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "CARRASCO WESTON, Jose Manuel"
+  },
+  {
+    "codigo": "120070",
+    "nombre": "Historia Económica y Empresarial",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "BARRETO VELAZQUEZ, Norberto"
+  },
+  {
+    "codigo": "120070",
+    "nombre": "Historia Económica y Empresarial",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "RODRIGUEZ SATIZABAL, Beatriz Helena"
+  },
+  {
+    "codigo": "120070",
+    "nombre": "Historia Económica y Empresarial",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "CAMACHO GAVIDIA, Abel Fernando"
+  },
+  {
+    "codigo": "120070",
+    "nombre": "Historia Económica y Empresarial",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "CABREJOS PORTOCARRERO, Jose Ignacio"
+  },
+  {
+    "codigo": "124019",
+    "nombre": "Historia y Filosofía de la Ciencia",
+    "seccion": "Virtual",
+    "creditos": 4,
+    "profesor": "PEREZ MARTINEZ, Angel Ruben"
+  },
+  {
+    "codigo": "124019",
+    "nombre": "Historia y Filosofía de la Ciencia",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "MONSALVE ZANATTI, Martin Alberto"
+  },
+  {
+    "codigo": "124019",
+    "nombre": "Historia y Filosofía de la Ciencia",
+    "seccion": "Virtual",
+    "creditos": 4,
+    "profesor": "GUADALUPE MENDIZABAL, Cesar Augusto"
+  },
+  {
+    "codigo": "124019",
+    "nombre": "Historia y Filosofía de la Ciencia",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "MONSALVE ZANATTI, Martin Alberto"
+  },
+  {
+    "codigo": "120260",
+    "nombre": "Introducción a la Política, Filosofia y Economía",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "EL MASTRO PUCCIO, Cesare Anibal"
+  },
+  {
+    "codigo": "120260",
+    "nombre": "Introducción a la Política, Filosofia y Economía",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "YLLON, Manuel Fernando"
+  },
+  {
+    "codigo": "120244",
+    "nombre": "Introducción a las Humanidades Digitales",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "PARDO GRAU, Cecilia Maria Luisa"
+  },
+  {
+    "codigo": "120252",
+    "nombre": "Lectura Crítica de la Prensa Digital y en las Redes Sociales",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ESPINOSA WINDER, Francisco"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "NASSI PERIC, Bruno Fernando"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "LANDA ROJAS, Luis Enrique"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "QUIROZ VELA, Juan Enrique"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "MORIMOTO SONE, Maria Lourdes"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "MONTAUBAN DEL SOLAR, Michele Marie"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "GAUGER QUIROZ, Juan Manuel"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "PINASCO ESPINOSA, Sandra Gabriella"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "HELGUERO MORALES, Lorenzo Pedro"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "MADALENGOITIA BARUA, Maria Gracia"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "QUIROZ VELA, Juan Enrique"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "K",
+    "creditos": 4,
+    "profesor": "PEREZ DEL SOLAR TOLA, Pedro Carlos Hilarion"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "CALDERÓN BAIOCCHI, Juan Humberto"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "PEREZ DEL SOLAR TOLA, Pedro Carlos Hilarion"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ERINO SILICANI DE ALVAREZ, Rosanna Maria"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "O",
+    "creditos": 4,
+    "profesor": "CARRILLO PASTOR, Giuliana Maria"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "HELGUERO MORALES, Lorenzo Pedro"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "Q",
+    "creditos": 4,
+    "profesor": "GUTIERREZ MEZA, José Elías"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "GUICH RODRIGUEZ, Jose Abelardo"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "ZAPATA FAJARDO, Jaime Israel"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "T",
+    "creditos": 4,
+    "profesor": "CALDERÓN BAIOCCHI, Juan Humberto"
+  },
+  {
+    "codigo": "120001",
+    "nombre": "Lenguaje I",
+    "seccion": "U",
+    "creditos": 4,
+    "profesor": "MORILLO SOTOMAYOR, Alex"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "PEREZ DEL SOLAR TOLA, Pedro Carlos Hilarion"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "GUICH RODRIGUEZ, Jose Abelardo"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "LANDA ROJAS, Luis Enrique"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "CARRILLO PASTOR, Giuliana Maria"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "NASSI PERIC, Bruno Fernando"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "MORILLO SOTOMAYOR, Alex"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "HUATUCO POMALAZA, Rocio Milagros"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "CALDERÓN BAIOCCHI, Juan Humberto"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "GUICH RODRIGUEZ, Jose Abelardo"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "K",
+    "creditos": 4,
+    "profesor": "SALCEDO REYES, Ana Lucia"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "ZAPATA FAJARDO, Jaime Israel"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "CARRIÓN CARAVEDO, Úrsula"
+  },
+  {
+    "codigo": "120006",
+    "nombre": "Lenguaje II",
+    "seccion": "N",
+    "creditos": 4,
+    "profesor": "FERRUCCI MONTOYA, Gabriela Ida"
+  },
+  {
+    "codigo": "124020",
+    "nombre": "Literatura",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "WIESSE REBAGLIATI, Jorge Raul"
+  },
+  {
+    "codigo": "127039",
+    "nombre": "Literatura Universal",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "GATTI MURRIEL, Carlos Antonio"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "A",
+    "creditos": 0,
+    "profesor": "CARRILLO PASTOR, Giuliana Maria"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "B",
+    "creditos": 0,
+    "profesor": "MORILLO SOTOMAYOR, Alex"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "C",
+    "creditos": 0,
+    "profesor": "GAUGER QUIROZ, Juan Manuel"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "D",
+    "creditos": 0,
+    "profesor": "HUATUCO POMALAZA, Rocio Milagros"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "E",
+    "creditos": 0,
+    "profesor": "MADALENGOITIA BARUA, Maria Gracia"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "M",
+    "creditos": 0,
+    "profesor": "ERINO SILICANI DE ALVAREZ, Rosanna Maria"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "G",
+    "creditos": 0,
+    "profesor": "CALDERÓN BAIOCCHI, Juan Humberto"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "H",
+    "creditos": 0,
+    "profesor": "HUATUCO POMALAZA, Rocio Milagros"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "I",
+    "creditos": 0,
+    "profesor": "GUICH RODRIGUEZ, Jose Abelardo"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "J",
+    "creditos": 0,
+    "profesor": "GAUGER QUIROZ, Juan Manuel"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "K",
+    "creditos": 0,
+    "profesor": "QUIROZ VELA, Juan Enrique"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "L",
+    "creditos": 0,
+    "profesor": "LANDA ROJAS, Luis Enrique"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "M",
+    "creditos": 0,
+    "profesor": "MADALENGOITIA BARUA, Maria Gracia"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "O",
+    "creditos": 0,
+    "profesor": "CARRILLO PASTOR, Giuliana Maria"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "P",
+    "creditos": 0,
+    "profesor": "QUIROZ VELA, Juan Enrique"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "Q",
+    "creditos": 0,
+    "profesor": "MORILLO SOTOMAYOR, Alex"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "R",
+    "creditos": 0,
+    "profesor": "HUATUCO POMALAZA, Rocio Milagros"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "S",
+    "creditos": 0,
+    "profesor": "VARGAS VILCA, Mariano Daniel"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "U",
+    "creditos": 0,
+    "profesor": "VARGAS VILCA, Mariano Daniel"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "V",
+    "creditos": 0,
+    "profesor": "VALERO VEGA, Gildo Martín"
+  },
+  {
+    "codigo": "120000",
+    "nombre": "Nivelación en Lenguaje",
+    "seccion": "W",
+    "creditos": 0,
+    "profesor": "VALERO VEGA, Gildo Martín"
+  },
+  {
+    "codigo": "120290",
+    "nombre": "Religiones, Culturas y Economía",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RMAS ASIN, Fernando Alberto"
+  },
+  {
+    "codigo": "120290",
+    "nombre": "Religiones, Culturas y Economía",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "OMERO PINTO, Ezequiel Eduardo"
+  },
+  {
+    "codigo": "120290",
+    "nombre": "Religiones, Culturas y Economía",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "LORES PAZ, Rafael Antonio"
+  },
+  {
+    "codigo": "120290",
+    "nombre": "Religiones, Culturas y Economía",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "TO DEL AVELLANAL CARRERA, Manuel Antonio"
+  },
+  {
+    "codigo": "120290",
+    "nombre": "Religiones, Culturas y Economía",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "ONSECA ARIZA, Juan Adoniran"
+  },
+  {
+    "codigo": "120290",
+    "nombre": "Religiones, Culturas y Economía",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RIAS CUBA, Ybeth Merly"
+  },
+  {
+    "codigo": "130454",
+    "nombre": "Análisis Económico de la Competencia",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "CARO JAHNCKE, Andres Javier"
+  },
+  {
+    "codigo": "130289",
+    "nombre": "Análisis Político Relevante para la Perspectiva Económica",
+    "seccion": "A",
+    "creditos": 2,
+    "profesor": "ALVAREZ RODRICH, Augusto Anibal"
+  },
+  {
+    "codigo": "130537",
+    "nombre": "Análisis Real y Convexo",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "GARCIA RAMOS, Yboon Victoria"
+  },
+  {
+    "codigo": "130564",
+    "nombre": "Data Science con Python",
+    "seccion": "Q",
+    "creditos": 3,
+    "profesor": "UISPE ROJAS, Alexander Wilder"
+  },
+  {
+    "codigo": "130639",
+    "nombre": "Diseño y Evaluación Social de Proyectos",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "RIALE UGAS, Miguel Enrique"
+  },
+  {
+    "codigo": "130538",
+    "nombre": "Econometría Aplicada",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "ASURTO PRECIADO, Maria Pia"
+  },
+  {
+    "codigo": "130424",
+    "nombre": "Econometría I",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "ARRON AYLLON, Manuel Fernando"
+  },
+  {
+    "codigo": "130424",
+    "nombre": "Econometría I",
+    "seccion": "R",
+    "creditos": 5,
+    "profesor": "EATEGUI, Ana Patricia"
+  },
+  {
+    "codigo": "130424",
+    "nombre": "Econometría I",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ASTRO CARLIN, Juan Francisco"
+  },
+  {
+    "codigo": "130424",
+    "nombre": "Econometría I",
+    "seccion": "V",
+    "creditos": 5,
+    "profesor": "ALENCIA, Edys Mirella"
+  },
+  {
+    "codigo": "130424",
+    "nombre": "Econometría I",
+    "seccion": "F",
+    "creditos": 5,
+    "profesor": "ERREIRA, Mar"
+  },
+  {
+    "codigo": "130424",
+    "nombre": "Econometría I",
+    "seccion": "L",
+    "creditos": 5,
+    "profesor": "AVADO PADILLA, Pablo Augusto"
+  },
+  {
+    "codigo": "138425",
+    "nombre": "Econometría II",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "ASURTO PRECIADO, Maria Pia"
+  },
+  {
+    "codigo": "138425",
+    "nombre": "Econometría II",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "ARMIENTO, Liz Yossie"
+  },
+  {
+    "codigo": "138425",
+    "nombre": "Econometría II",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ASAS TRAGODARA, Carlos Augusto"
+  },
+  {
+    "codigo": "138425",
+    "nombre": "Econometría II",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ASTIGLIONI, Milagros Leticia"
+  },
+  {
+    "codigo": "138425",
+    "nombre": "Econometría II",
+    "seccion": "L",
+    "creditos": 5,
+    "profesor": "AVADO PADILLA, Pablo Augusto"
+  },
+  {
+    "codigo": "130619",
+    "nombre": "Economía Ambiental Aplicada a las Políticas Públicas en el Perú",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "GALARZA CONTRERAS, Elsa Patricia"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "L",
+    "creditos": 5,
+    "profesor": "A SERNA STUDZINSKI, Karlos"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "AAVEDRA, Pablo Cesar"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "P",
+    "creditos": 5,
+    "profesor": "ARODI TRECE, Carlos Alfredo Justo"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "Y",
+    "creditos": 5,
+    "profesor": "AÑEZ, Diego Adan"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "ÓMEZ GAMARRA DE ZEA, ZOILA DEL ROSARIO"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "RUCES REATEGUI, Ana Patricia"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "OLINA CAMPODONICO, Oswaldo"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "V",
+    "creditos": 5,
+    "profesor": "ASQUEZ, Evelyn Valeria"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "GUIRRE MONTOYA, Julio Cesar"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "H",
+    "creditos": 5,
+    "profesor": "ERNANDEZ RUBIÑOS, Mario German"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "GUIRRE, Javier"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "P",
+    "creditos": 5,
+    "profesor": "RIALE UGAS, Miguel Enrique"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "P",
+    "creditos": 5,
+    "profesor": "EREZ MALCA, Patricia Estela"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ONTESINOS CORDOVA, Jorge Luis"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "UENO, Dick Patrick"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "P",
+    "creditos": 5,
+    "profesor": "AREDES SALAZAR, Lizardo Emanuel"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ENDOZA, Carlos Adrian"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "LIAGA, Daniella Lizeth"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "HIGUAMAN, Gilmer Humberto"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "RAGON PEÑALOZA, Gisella Silvana"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "T",
+    "creditos": 5,
+    "profesor": "ORRES, Estefano Javier"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "F",
+    "creditos": 5,
+    "profesor": "ALEN ZEVALLOS, Luis Eduardo"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "T",
+    "creditos": 5,
+    "profesor": "ALLEDO SANCHEZ, Jacqueline Isabel"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "Q",
+    "creditos": 5,
+    "profesor": "UISPE, Maritere Ayin"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "D",
+    "creditos": 5,
+    "profesor": "IAZ, Estrella Del Carmen"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "R",
+    "creditos": 5,
+    "profesor": "IVERA GALLEGOS, Gonzalo Javier"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "HAVEZ, Ariana Maribel"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "ANTANDER, Alejandra Regina"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "H",
+    "creditos": 5,
+    "profesor": "ERAS RIVERA, Sissi Andrea"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "UÑIZ CAHUANA, Graciela Rocio"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "LMEIDA, Andrea Liesel"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "L",
+    "creditos": 5,
+    "profesor": "ISBOA VASQUEZ, Claudia Paola"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "EVERINO MUÑOZ, Renzo Cristhyan Enrique"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "ARCIA, Percy Kiyoshi"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "V",
+    "creditos": 5,
+    "profesor": "ARGAS SAAVEDRA, Joaquin Rodrigo"
+  },
+  {
+    "codigo": "132641",
+    "nombre": "Economía General I",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "ERRANO, Daniel Enrique"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "ALINAS DEPAZ, Cesar Saturnino"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "P",
+    "creditos": 5,
+    "profesor": "ALOMINO, Jennifer Gianira"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "LBORNOZ, Isaac Augusto"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "F",
+    "creditos": 5,
+    "profesor": "RANCO VALDIVIA, Eliana"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "LBARRACIN, Joaquin Carlo"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "D",
+    "creditos": 5,
+    "profesor": "IAZ GAZANI, Guillermo"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ONTESINOS CORDOVA, Jorge Luis"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "R",
+    "creditos": 5,
+    "profesor": "OQUE, Lila Danina"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "AMILLAN, Silvana"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "ERVAN LOZANO, Sergio"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "F",
+    "creditos": 5,
+    "profesor": "ALEN ZEVALLOS, Luis Eduardo"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "V",
+    "creditos": 5,
+    "profesor": "EGA DE LA CRUZ, Hugo Yamil"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "R",
+    "creditos": 5,
+    "profesor": "OJAS RODRIGUEZ, CARMEN ROSA"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "EZA, Josue Eduardo"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "ONZAGA MENA, Bruno Eduardo"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ALDONADO, Tamara Estela Saray"
+  },
+  {
+    "codigo": "130642",
+    "nombre": "Economía General II",
+    "seccion": "Q",
+    "creditos": 5,
+    "profesor": "FALEN ZEVALLOS, Luis Eduardo"
+  },
+  {
+    "codigo": "130462",
+    "nombre": "Economía Peruana",
+    "seccion": "Virtual",
+    "creditos": 2,
+    "profesor": "PARODI TRECE, Carlos Alfredo Justo"
+  },
+  {
+    "codigo": "130043",
+    "nombre": "Economía Pública",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "URRUNAGA PASCO-FONT, Roberto Luis"
+  },
+  {
+    "codigo": "130466",
+    "nombre": "Economía y Estadística Aplicada al Derecho",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MUÑOZ BAZAN, Italo Juan Carlos"
+  },
+  {
+    "codigo": "130223",
+    "nombre": "Estadística Aplicada",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "OMERO VEREAU, Daniel Alonso"
+  },
+  {
+    "codigo": "130223",
+    "nombre": "Estadística Aplicada",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "ALINAS MORRIS, Juan Carlos"
+  },
+  {
+    "codigo": "130223",
+    "nombre": "Estadística Aplicada",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "HIRA BALLENA, Miguel Angel"
+  },
+  {
+    "codigo": "130223",
+    "nombre": "Estadística Aplicada",
+    "seccion": "T",
+    "creditos": 4,
+    "profesor": "RUJILLO GALINDO, Renato Juan"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ATEU BULLON, Pedro Fernando"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "EREZ SOTELO, Edisson Alonso"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "UBIO DONET, Jorge Luis"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "NGELES OLIVERA, Julio Hugo"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "Q",
+    "creditos": 4,
+    "profesor": "UIÑONEZ, Fidel Mauricio"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "OTO RODRIGUEZ, Ivan Dennys"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "LAJARUNA, Denise Rosalyn"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "N",
+    "creditos": 4,
+    "profesor": "AVARRETE, Luis Miguel"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "INDO HUERTAS, Elsa Maria"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "LINDO HUERTAS, Elsa Maria"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "T",
+    "creditos": 4,
+    "profesor": "ARAZONA VARGAS, Enver Gerald"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "TARAZONA VARGAS, Enver Gerald"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "Q",
+    "creditos": 4,
+    "profesor": "OSORIO MAURICIO, Lucila"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "O",
+    "creditos": 4,
+    "profesor": "SORIO MAURICIO, Lucila"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "AYCHO HUAMANI, Jose Alberto"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ALDERRAMA, Ledvir Ayrton Walter"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "ILVESTRE VALER, Jim Roland"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "ALAZAR, Kelver Rodrigo"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ALENCIA CHACON, Raphael Felix"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "ONZÁLES, Flor De Marcela"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "EBRES HUAMAN, Grimaldo Jose"
+  },
+  {
+    "codigo": "130224",
+    "nombre": "Estadística I",
+    "seccion": "Z",
+    "creditos": 4,
+    "profesor": "VALENCIA CHACON, Raphael Felix"
+  },
+  {
+    "codigo": "130225",
+    "nombre": "Estadística II",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "UBIO DONET, Jorge Luis"
+  },
+  {
+    "codigo": "130225",
+    "nombre": "Estadística II",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ATEU BULLON, Pedro Fernando"
+  },
+  {
+    "codigo": "130225",
+    "nombre": "Estadística II",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "NGELES OLIVERA, Julio Hugo"
+  },
+  {
+    "codigo": "130225",
+    "nombre": "Estadística II",
+    "seccion": "Q",
+    "creditos": 4,
+    "profesor": "UIÑONEZ, Fidel Mauricio"
+  },
+  {
+    "codigo": "130225",
+    "nombre": "Estadística II",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "OTO RODRIGUEZ, Ivan Dennys"
+  },
+  {
+    "codigo": "130225",
+    "nombre": "Estadística II",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "LAJARUNA, Denise Rosalyn"
+  },
+  {
+    "codigo": "130225",
+    "nombre": "Estadística II",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "IRANDA, Beatriz Del Carmen Lidia"
+  },
+  {
+    "codigo": "130225",
+    "nombre": "Estadística II",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "INDO HUERTAS, Elsa Maria"
+  },
+  {
+    "codigo": "130225",
+    "nombre": "Estadística II",
+    "seccion": "T",
+    "creditos": 4,
+    "profesor": "ARAZONA VARGAS, Enver Gerald"
+  },
+  {
+    "codigo": "130225",
+    "nombre": "Estadística II",
+    "seccion": "N",
+    "creditos": 4,
+    "profesor": "AVARRETE, Luis Miguel"
+  },
+  {
+    "codigo": "133016",
+    "nombre": "Evaluación Privada de Proyectos",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "I NING CHAMAN, Jorge Francisco"
+  },
+  {
+    "codigo": "133016",
+    "nombre": "Evaluación Privada de Proyectos",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "AVILA, Gerardo"
+  },
+  {
+    "codigo": "133016",
+    "nombre": "Evaluación Privada de Proyectos",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ONTESINOS CORDOVA, Jorge Luis"
+  },
+  {
+    "codigo": "133016",
+    "nombre": "Evaluación Privada de Proyectos",
+    "seccion": "N",
+    "creditos": 4,
+    "profesor": "UÑEZ, Jaime Daniel"
+  },
+  {
+    "codigo": "133016",
+    "nombre": "Evaluación Privada de Proyectos",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "ARRETO, Adriano"
+  },
+  {
+    "codigo": "135645",
+    "nombre": "Gestión de los Recursos Naturales",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "KAMICHE ZEGARRA, Joanna Noelia"
+  },
+  {
+    "codigo": "135645",
+    "nombre": "Gestión de los Recursos Naturales",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "MANRIQUE ZEDER, Liseth Cristina"
+  },
+  {
+    "codigo": "130556",
+    "nombre": "Green Growth Strategies for Peru and Latin America",
+    "seccion": "G",
+    "creditos": 2,
+    "profesor": "UARDIA MUGURUZA, Alejandra"
+  },
+  {
+    "codigo": "135015",
+    "nombre": "Historia del Pensamiento Económico",
+    "seccion": "Virtual",
+    "creditos": 4,
+    "profesor": "TORRES GOMEZ, Javier Antonio"
+  },
+  {
+    "codigo": "135015",
+    "nombre": "Historia del Pensamiento Económico",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "DEL HIERRO CARRILLO, Patricia"
+  },
+  {
+    "codigo": "131566",
+    "nombre": "Investigación Económica I",
+    "seccion": "Virtual",
+    "creditos": 2,
+    "profesor": "GONZALEZ VIGIL, Luis Fernando"
+  },
+  {
+    "codigo": "130567",
+    "nombre": "Investigación Económica II",
+    "seccion": "Virtual",
+    "creditos": 2,
+    "profesor": "GONZALEZ VIGIL, Luis Fernando"
+  },
+  {
+    "codigo": "130559",
+    "nombre": "Macroeconomía de Corto Plazo",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ASAS TRAGODARA, Carlos Augusto"
+  },
+  {
+    "codigo": "130559",
+    "nombre": "Macroeconomía de Corto Plazo",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "UENO, Dick Patrick"
+  },
+  {
+    "codigo": "134203",
+    "nombre": "Macroeconomía I",
+    "seccion": "T",
+    "creditos": 5,
+    "profesor": "ORRES GOMEZ, Javier Antonio"
+  },
+  {
+    "codigo": "134203",
+    "nombre": "Macroeconomía I",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "AAVEDRA, Oscar Martin Alejandro"
+  },
+  {
+    "codigo": "134203",
+    "nombre": "Macroeconomía I",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "ALINDO, Renzo Sandro"
+  },
+  {
+    "codigo": "134203",
+    "nombre": "Macroeconomía I",
+    "seccion": "U",
+    "creditos": 5,
+    "profesor": "RRUNAGA PASCO-FONT, Roberto Luis"
+  },
+  {
+    "codigo": "134203",
+    "nombre": "Macroeconomía I",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "LUA, Francisco Alonso"
+  },
+  {
+    "codigo": "134203",
+    "nombre": "Macroeconomía I",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ORON PASTOR, Eduardo Andres"
+  },
+  {
+    "codigo": "134203",
+    "nombre": "Macroeconomía I",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ALANCHE, Leydi Romina"
+  },
+  {
+    "codigo": "134203",
+    "nombre": "Macroeconomía I",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "USATO NOVELLI, Antonio"
+  },
+  {
+    "codigo": "134203",
+    "nombre": "Macroeconomía I",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ONTENEGRO, Manuel Alfredo"
+  },
+  {
+    "codigo": "134203",
+    "nombre": "Macroeconomía I",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ORDOVA, Marcelo Alejandro"
+  },
+  {
+    "codigo": "132204",
+    "nombre": "Macroeconomía II",
+    "seccion": "O",
+    "creditos": 5,
+    "profesor": "RTIZ SOSA, Marco Antonio"
+  },
+  {
+    "codigo": "132204",
+    "nombre": "Macroeconomía II",
+    "seccion": "P",
+    "creditos": 5,
+    "profesor": "AWELCZAK , Jakub Mateusz"
+  },
+  {
+    "codigo": "132204",
+    "nombre": "Macroeconomía II",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ASTILLO AGUIRRE, Luis Eduardo"
+  },
+  {
+    "codigo": "132204",
+    "nombre": "Macroeconomía II",
+    "seccion": "V",
+    "creditos": 5,
+    "profesor": "ALENCIA, Edys Mirella"
+  },
+  {
+    "codigo": "130648",
+    "nombre": "Macroeconomía III",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ASAS TRAGODARA, Carlos Augusto"
+  },
+  {
+    "codigo": "130648",
+    "nombre": "Macroeconomía III",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ONTENEGRO, Manuel Alfredo"
+  },
+  {
+    "codigo": "130648",
+    "nombre": "Macroeconomía III",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ANCINO, Valeria Alejandra"
+  },
+  {
+    "codigo": "130648",
+    "nombre": "Macroeconomía III",
+    "seccion": "P",
+    "creditos": 5,
+    "profesor": "INZON GIRALDO, Alvaro Jose"
+  },
+  {
+    "codigo": "130648",
+    "nombre": "Macroeconomía III",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ORDOVA, Jesus Antonio"
+  },
+  {
+    "codigo": "130227",
+    "nombre": "Macroeconomía Internacional",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "ERNANDEZ CALDERON, Joao Alejandro"
+  },
+  {
+    "codigo": "130227",
+    "nombre": "Macroeconomía Internacional",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "UIZ, Fernanda Solaine"
+  },
+  {
+    "codigo": "130227",
+    "nombre": "Macroeconomía Internacional",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "LUA, Francisco Alonso"
+  },
+  {
+    "codigo": "130227",
+    "nombre": "Macroeconomía Internacional",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ONTORO LLAMOSAS, Carlos Humberto"
+  },
+  {
+    "codigo": "130227",
+    "nombre": "Macroeconomía Internacional",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "NCCASI, Fernando Alonso"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "HAVEZ SARMIENTO, Enrique Idael"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ORDOVA, Victor Elias"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "O",
+    "creditos": 5,
+    "profesor": "LANO CRUCES, Mario Fernando"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "F",
+    "creditos": 5,
+    "profesor": "LORES SALINAS, JOSE ALBERTO"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "N",
+    "creditos": 5,
+    "profesor": "IETO, Christian Manuel"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "E",
+    "creditos": 5,
+    "profesor": "SCUDERO ACERO, Phamela Stephany"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "D",
+    "creditos": 5,
+    "profesor": "ÍAZ, Patrick Gabriel"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "D",
+    "creditos": 5,
+    "profesor": "AVILA QUESQUEN, Erick Nomberto"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "AGUIÑA, Juan Luis"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "P",
+    "creditos": 5,
+    "profesor": "ROLEON PATRICIO, DANIEL GIOVANNI"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "UTIERREZ, Jafer Karim"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "H",
+    "creditos": 5,
+    "profesor": "UARANGA AGUIRRE, Alexander Rogelio"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "K",
+    "creditos": 5,
+    "profesor": "ESCALANTE HUAMANÍ, Sonia María"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "E",
+    "creditos": 5,
+    "profesor": "SCALANTE HUAMANÍ, Sonia María"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "UARDALES VASQUEZ, Randdy Arturo"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "INCHOLA, Galia Lizbeth"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "O",
+    "creditos": 5,
+    "profesor": "MOLINA TARAZONA, Lucy Smith"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "OLINA TARAZONA, Lucy Smith"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ENESES, Enzo Alexander"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "INCHE CHOCCA, Nildo"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "LCALDE SOSA, Jose Andres"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "V",
+    "creditos": 5,
+    "profesor": "ALCALDE SOSA, Jose Andres"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "ALINAS ZAVALA, Christoper Jesus"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ORAN, Angello"
+  },
+  {
+    "codigo": "138649",
+    "nombre": "Matemáticas I",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "RREDONDO RUIZ, Manuel Jesus"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "UENO TANGOA, Orestes Martin"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "D",
+    "creditos": 5,
+    "profesor": "OMINGUEZ, Yaxy Yudith"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "D",
+    "creditos": 5,
+    "profesor": "AVILA QUESQUEN, Erick Nomberto"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "O",
+    "creditos": 5,
+    "profesor": "LIVOS, Marc Anthony"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "DAVILA QUESQUEN, Erick Nomberto"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "V",
+    "creditos": 5,
+    "profesor": "ELASQUEZ, Juan Jose"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "F",
+    "creditos": 5,
+    "profesor": "LORES SALINAS, JOSE ALBERTO"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "UTIERREZ, Jafer Karim"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "F",
+    "creditos": 5,
+    "profesor": "MOLINA TARAZONA, Lucy Smith"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "HULLUNCUY CENTENO, Andres Vicente"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "T",
+    "creditos": 5,
+    "profesor": "ANTARICO MINCHOLA, Galia Lizbeth"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ORAN, Angello"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "ALINAS ZAVALA, Christoper Jesus"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "L",
+    "creditos": 5,
+    "profesor": "TORRES PEREZ, Elvis"
+  },
+  {
+    "codigo": "131650",
+    "nombre": "Matemáticas II",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "TORRES PEREZ, Elvis"
+  },
+  {
+    "codigo": "130233",
+    "nombre": "Matemáticas III",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "OTRINA ASTO, John Edwin"
+  },
+  {
+    "codigo": "130233",
+    "nombre": "Matemáticas III",
+    "seccion": "W",
+    "creditos": 5,
+    "profesor": "INKELRIED QUEZADA, Diego Martin"
+  },
+  {
+    "codigo": "130233",
+    "nombre": "Matemáticas III",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ALLQUI, Elmo Andree"
+  },
+  {
+    "codigo": "130233",
+    "nombre": "Matemáticas III",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "UENO TANGOA, Orestes Martin"
+  },
+  {
+    "codigo": "130233",
+    "nombre": "Matemáticas III",
+    "seccion": "H",
+    "creditos": 5,
+    "profesor": "URTADO, Alejandra Rimy"
+  },
+  {
+    "codigo": "130233",
+    "nombre": "Matemáticas III",
+    "seccion": "P",
+    "creditos": 5,
+    "profesor": "EREZ SOTELO, Edisson Alonso"
+  },
+  {
+    "codigo": "130233",
+    "nombre": "Matemáticas III",
+    "seccion": "H",
+    "creditos": 5,
+    "profesor": "EREDIA, Alonso Joaquin"
+  },
+  {
+    "codigo": "130233",
+    "nombre": "Matemáticas III",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "LCALDE SOSA, Jose Andres"
+  },
+  {
+    "codigo": "130233",
+    "nombre": "Matemáticas III",
+    "seccion": "V",
+    "creditos": 5,
+    "profesor": "ELASQUEZ CASTAÑON, Oswaldo Jose"
+  },
+  {
+    "codigo": "130233",
+    "nombre": "Matemáticas III",
+    "seccion": "H",
+    "creditos": 5,
+    "profesor": "ACHAHUANCO, Julio Cesar"
+  },
+  {
+    "codigo": "130233",
+    "nombre": "Matemáticas III",
+    "seccion": "E",
+    "creditos": 5,
+    "profesor": "SPINOZA, Jorge Braulio"
+  },
+  {
+    "codigo": "130233",
+    "nombre": "Matemáticas III",
+    "seccion": "I",
+    "creditos": 5,
+    "profesor": "ALCALDE SOSA, Jose Andres"
+  },
+  {
+    "codigo": "130229",
+    "nombre": "Matemáticas IV",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "ARCIA RAMOS, Yboon Victoria"
+  },
+  {
+    "codigo": "130229",
+    "nombre": "Matemáticas IV",
+    "seccion": "E",
+    "creditos": 5,
+    "profesor": "SPINOZA, Jorge Braulio"
+  },
+  {
+    "codigo": "130229",
+    "nombre": "Matemáticas IV",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "OTRINA ASTO, John Edwin"
+  },
+  {
+    "codigo": "130229",
+    "nombre": "Matemáticas IV",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ANTILLA GONZALES DE LA COTER, Eduardo Javier"
+  },
+  {
+    "codigo": "130229",
+    "nombre": "Matemáticas IV",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "HAVARRIA IGLESIAS, Daniela"
+  },
+  {
+    "codigo": "130229",
+    "nombre": "Matemáticas IV",
+    "seccion": "E",
+    "creditos": 5,
+    "profesor": "SPINOZA, Laura Samantha"
+  },
+  {
+    "codigo": "130229",
+    "nombre": "Matemáticas IV",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "LMONACID CORDOVA, Jesus Antonio"
+  },
+  {
+    "codigo": "130229",
+    "nombre": "Matemáticas IV",
+    "seccion": "R",
+    "creditos": 5,
+    "profesor": "OMERO, Hector Fernando"
+  },
+  {
+    "codigo": "130230",
+    "nombre": "Matemáticas para los Negocios",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "SCALANTE HUAMANÍ, Sonia María"
+  },
+  {
+    "codigo": "130230",
+    "nombre": "Matemáticas para los Negocios",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "LORES SALINAS, JOSE ALBERTO"
+  },
+  {
+    "codigo": "130230",
+    "nombre": "Matemáticas para los Negocios",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "ALOME, Miguel Angel"
+  },
+  {
+    "codigo": "130230",
+    "nombre": "Matemáticas para los Negocios",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "SCUDERO ACERO, Phamela Stephany"
+  },
+  {
+    "codigo": "130230",
+    "nombre": "Matemáticas para los Negocios",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ENESES, Luis Angel"
+  },
+  {
+    "codigo": "130230",
+    "nombre": "Matemáticas para los Negocios",
+    "seccion": "O",
+    "creditos": 4,
+    "profesor": "SORIO UBALDO, Jaime"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ORTEZ VALDIVIA, Rafael Augusto"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "R",
+    "creditos": 5,
+    "profesor": "ODRIGUEZ, Andrea Del Carmen"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "ONZALES, Roberto Julio"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "RINGAS, Andres Jesus"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "R",
+    "creditos": 5,
+    "profesor": "HO , Haedong"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ALATAYUD MALLQUI, Elmo Andree"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "T",
+    "creditos": 5,
+    "profesor": "OVAR ZAMUDIO, Natalie Nicole"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "HAVEZ COTRADO, Jorge Francisco"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "I",
+    "creditos": 5,
+    "profesor": "GLESIAS, Daniela"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "R",
+    "creditos": 5,
+    "profesor": "IVERA GALLEGOS, Gonzalo Javier"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "AAVEDRA, Joaquin Rodrigo"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "P",
+    "creditos": 5,
+    "profesor": "ORRAS MENDOZA, Linda Janet"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "P",
+    "creditos": 5,
+    "profesor": "ALOMINO, Jennifer Gianira"
+  },
+  {
+    "codigo": "138201",
+    "nombre": "Microeconomía I",
+    "seccion": "H",
+    "creditos": 5,
+    "profesor": "GALARZA ARELLANO, Francisco Bruno"
+  },
+  {
+    "codigo": "134427",
+    "nombre": "Microeconomía II",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "ALARZA CONTRERAS, Elsa Patricia"
+  },
+  {
+    "codigo": "134427",
+    "nombre": "Microeconomía II",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ALLQUI, Elmo Andree"
+  },
+  {
+    "codigo": "134427",
+    "nombre": "Microeconomía II",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "ALARZA ARELLANO, Francisco Bruno"
+  },
+  {
+    "codigo": "134427",
+    "nombre": "Microeconomía II",
+    "seccion": "T",
+    "creditos": 5,
+    "profesor": "OMAS, Franco Arturo"
+  },
+  {
+    "codigo": "134427",
+    "nombre": "Microeconomía II",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "ONIFAZ FERNANDEZ, Jose Luis"
+  },
+  {
+    "codigo": "134427",
+    "nombre": "Microeconomía II",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "ARRON AYLLON, Manuel Fernando"
+  },
+  {
+    "codigo": "134427",
+    "nombre": "Microeconomía II",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "GUIRRE, Javier"
+  },
+  {
+    "codigo": "134427",
+    "nombre": "Microeconomía II",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "HAVEZ COTRADO, Jorge Francisco"
+  },
+  {
+    "codigo": "134427",
+    "nombre": "Microeconomía II",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "HAMPI, Fernando Maximiliano"
+  },
+  {
+    "codigo": "134427",
+    "nombre": "Microeconomía II",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "AAVEDRA, Oscar Martin Alejandro"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "A",
+    "creditos": 0,
+    "profesor": "PEREZ SOTELO, Edisson Alonso"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "B",
+    "creditos": 0,
+    "profesor": "ESCUDERO ACERO, Phamela Stephany"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "C",
+    "creditos": 0,
+    "profesor": "ESCUDERO ACERO, Phamela Stephany"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "D",
+    "creditos": 0,
+    "profesor": "ESCALANTE HUAMANÍ, Sonia María"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "E",
+    "creditos": 0,
+    "profesor": "ESCALANTE HUAMANÍ, Sonia María"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "F",
+    "creditos": 0,
+    "profesor": "OSORIO UBALDO, Jaime"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "G",
+    "creditos": 0,
+    "profesor": "OSORIO UBALDO, Jaime"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "H",
+    "creditos": 0,
+    "profesor": "GUARDALES VASQUEZ, Randdy Arturo"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "I",
+    "creditos": 0,
+    "profesor": "GUARDALES VASQUEZ, Randdy Arturo"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "J",
+    "creditos": 0,
+    "profesor": "GUARDALES VASQUEZ, Randdy Arturo"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "K",
+    "creditos": 0,
+    "profesor": "CERNADES GOMEZ, Jesus"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "L",
+    "creditos": 0,
+    "profesor": "CERNADES GOMEZ, Jesus"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "M",
+    "creditos": 0,
+    "profesor": "CHULLUNCUY CENTENO, Andres Vicente"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "N",
+    "creditos": 0,
+    "profesor": "CHULLUNCUY CENTENO, Andres Vicente"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "O",
+    "creditos": 0,
+    "profesor": "SINCHE CHOCCA, Nildo"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "P",
+    "creditos": 0,
+    "profesor": "SINCHE CHOCCA, Nildo"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "Q",
+    "creditos": 0,
+    "profesor": "SALINAS ZAVALA, Christoper Jesus"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "R",
+    "creditos": 0,
+    "profesor": "SALINAS ZAVALA, Christoper Jesus"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "S",
+    "creditos": 0,
+    "profesor": "VENEGAS PALACIOS, Edgard Kenny"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "T",
+    "creditos": 0,
+    "profesor": "VENEGAS PALACIOS, Edgard Kenny"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "U",
+    "creditos": 0,
+    "profesor": "OSORIO UBALDO, Jaime"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "V",
+    "creditos": 0,
+    "profesor": "MOLINA TARAZONA, Lucy Smith"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "W",
+    "creditos": 0,
+    "profesor": "CASTILLO LAGOS, Hugo Alonso"
+  },
+  {
+    "codigo": "134654",
+    "nombre": "Nivelación en Matemáticas",
+    "seccion": "X",
+    "creditos": 0,
+    "profesor": "CASTILLO LAGOS, Hugo Alonso"
+  },
+  {
+    "codigo": "130232",
+    "nombre": "Organización Industrial",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "GUIRRE MONTOYA, Julio Cesar"
+  },
+  {
+    "codigo": "130232",
+    "nombre": "Organización Industrial",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ICENTE, Valeria Noemi"
+  },
+  {
+    "codigo": "130232",
+    "nombre": "Organización Industrial",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "ONIFAZ FERNANDEZ, Jose Luis"
+  },
+  {
+    "codigo": "130232",
+    "nombre": "Organización Industrial",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "UENO, Dick Patrick"
+  },
+  {
+    "codigo": "132655",
+    "nombre": "Política Económica",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "GONZALEZ IZQUIERDO, Jorge Domingo"
+  },
+  {
+    "codigo": "132655",
+    "nombre": "Política Económica",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "ARMAS RIVAS, Adrian Alejandro"
+  },
+  {
+    "codigo": "130540",
+    "nombre": "Procesos Estocásticos",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "CHAVEZ SARMIENTO, Enrique Idael"
+  },
+  {
+    "codigo": "130578",
+    "nombre": "Sem. de la Estrategia a la Implementación de Políticas Públicas",
+    "seccion": "Virtual",
+    "creditos": 2,
+    "profesor": "ARON SAID, Ana Sofia"
+  },
+  {
+    "codigo": "130372",
+    "nombre": "Sem. Economía y Gestión de Programas Sociales",
+    "seccion": "A",
+    "creditos": 2,
+    "profesor": "Dictado en Inglés. VirtualPORRAS MENDOZA, Linda Janet"
+  },
+  {
+    "codigo": "130618",
+    "nombre": "Sem. La IA y la Robótica: Ciclos Económicos, Impactos y Respuestas",
+    "seccion": "A",
+    "creditos": 2,
+    "profesor": "DEL HIERRO CARRILLO, Patricia"
+  },
+  {
+    "codigo": "130587",
+    "nombre": "Sem.Tópicos en Organización Industrial",
+    "seccion": "A",
+    "creditos": 2,
+    "profesor": "Dictado en Inglés. VirtualDIAZ GAMARRA, Jose Guillermo"
+  },
+  {
+    "codigo": "130656",
+    "nombre": "Teoría del Comercio Internacional",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RAOZ FERNANDEZ, Mercedes Rosalba"
+  },
+  {
+    "codigo": "130656",
+    "nombre": "Teoría del Comercio Internacional",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "LARCON, Gabriel Mathias"
+  },
+  {
+    "codigo": "130656",
+    "nombre": "Teoría del Comercio Internacional",
+    "seccion": "Z",
+    "creditos": 4,
+    "profesor": "EVALLOS URQUIETA, Hector Augusto"
+  },
+  {
+    "codigo": "130656",
+    "nombre": "Teoría del Comercio Internacional",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "ANCHEZ, Maria Jose"
+  },
+  {
+    "codigo": "130563",
+    "nombre": "Tópicos de Evaluación de Impacto",
+    "seccion": "A",
+    "creditos": 2,
+    "profesor": "Dictado en Inglés. VirtualMALDONADO ZAMBRANO, Stanislao Humberto"
+  },
+  {
+    "codigo": "141036",
+    "nombre": "Análisis Multivariado para los Negocios",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "BENITES SANCHEZ, Luis Enrique"
+  },
+  {
+    "codigo": "141036",
+    "nombre": "Análisis Multivariado para los Negocios",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "CAYCHO HUAMANI, Jose Alberto"
+  },
+  {
+    "codigo": "141036",
+    "nombre": "Análisis Multivariado para los Negocios",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "DONGO ROMAN, Andie Bryan"
+  },
+  {
+    "codigo": "141036",
+    "nombre": "Análisis Multivariado para los Negocios",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "DONGO ROMAN, Andie Bryan"
+  },
+  {
+    "codigo": "141036",
+    "nombre": "Análisis Multivariado para los Negocios",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "ARCIA CESPEDES, Carlos Jeffer"
+  },
+  {
+    "codigo": "142277",
+    "nombre": "Analítica de Datos para los Negocios",
+    "seccion": "B",
+    "creditos": 3,
+    "profesor": "ENITES SANCHEZ, Luis Enrique"
+  },
+  {
+    "codigo": "142277",
+    "nombre": "Analítica de Datos para los Negocios",
+    "seccion": "V",
+    "creditos": 3,
+    "profesor": "ASQUEZ ORE, Marco Antonio"
+  },
+  {
+    "codigo": "142277",
+    "nombre": "Analítica de Datos para los Negocios",
+    "seccion": "C",
+    "creditos": 3,
+    "profesor": "MAEHARA ALIAGA, Yoshitomi Eduardo"
+  },
+  {
+    "codigo": "142277",
+    "nombre": "Analítica de Datos para los Negocios",
+    "seccion": "D",
+    "creditos": 3,
+    "profesor": "MAEHARA ALIAGA, Yoshitomi Eduardo"
+  },
+  {
+    "codigo": "142277",
+    "nombre": "Analítica de Datos para los Negocios",
+    "seccion": "E",
+    "creditos": 3,
+    "profesor": "BUSTAMANTE BAUTISTA, Beatriz Esther"
+  },
+  {
+    "codigo": "142277",
+    "nombre": "Analítica de Datos para los Negocios",
+    "seccion": "F",
+    "creditos": 3,
+    "profesor": "BUSTAMANTE BAUTISTA, Beatriz Esther"
+  },
+  {
+    "codigo": "142277",
+    "nombre": "Analítica de Datos para los Negocios",
+    "seccion": "G",
+    "creditos": 3,
+    "profesor": "RAMOS PERALTA, Karim Mabel"
+  },
+  {
+    "codigo": "142460",
+    "nombre": "Asset-Light Business Models",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "Dictado en InglésREATEGUI SCHWARZ, Gerardo"
+  },
+  {
+    "codigo": "142280",
+    "nombre": "Business Agility",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "Dictado en Inglés. VirtualVILLACORTA HOLGUIN, Katherine Lilia"
+  },
+  {
+    "codigo": "142280",
+    "nombre": "Business Agility",
+    "seccion": "B",
+    "creditos": 3,
+    "profesor": "PERALTA MANSILLA, Norma Gisela"
+  },
+  {
+    "codigo": "142077",
+    "nombre": "Creación de Valor y Toma de Decisiones",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "FLORES CASTRO, Juan Alejandro"
+  },
+  {
+    "codigo": "142077",
+    "nombre": "Creación de Valor y Toma de Decisiones",
+    "seccion": "B",
+    "creditos": 3,
+    "profesor": "FLORES CASTRO, Juan Alejandro"
+  },
+  {
+    "codigo": "142077",
+    "nombre": "Creación de Valor y Toma de Decisiones",
+    "seccion": "C",
+    "creditos": 3,
+    "profesor": "Díaz Rojas, Carlos Andres"
+  },
+  {
+    "codigo": "142077",
+    "nombre": "Creación de Valor y Toma de Decisiones",
+    "seccion": "D",
+    "creditos": 3,
+    "profesor": "LAFOSSE QUINTANA, Wilfredo Jesus"
+  },
+  {
+    "codigo": "149078",
+    "nombre": "Dirección Estratégica",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "PAIVA ZARZAR, Roberto Alcides"
+  },
+  {
+    "codigo": "149078",
+    "nombre": "Dirección Estratégica",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "PAIVA ZARZAR, Roberto Alcides"
+  },
+  {
+    "codigo": "149078",
+    "nombre": "Dirección Estratégica",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "ALACIOS MATOS, Maria Del Pilar Amelia"
+  },
+  {
+    "codigo": "149078",
+    "nombre": "Dirección Estratégica",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "LAFOSSE QUINTANA, Wilfredo Jesus"
+  },
+  {
+    "codigo": "149078",
+    "nombre": "Dirección Estratégica",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "PALACIOS MATOS, Maria Del Pilar Amelia"
+  },
+  {
+    "codigo": "142315",
+    "nombre": "Diseño de Negocios Circulares y Desafío Climático",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "UEYONAHARA MATZUMOTO, Jorge Antonio"
+  },
+  {
+    "codigo": "142081",
+    "nombre": "Diseño Organizacional y Estrategia",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "REBAZA CARO, Nancy"
+  },
+  {
+    "codigo": "142081",
+    "nombre": "Diseño Organizacional y Estrategia",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "FLORES CASTRO, Juan Alejandro"
+  },
+  {
+    "codigo": "142081",
+    "nombre": "Diseño Organizacional y Estrategia",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "REBAZA CARO, Nancy"
+  },
+  {
+    "codigo": "142081",
+    "nombre": "Diseño Organizacional y Estrategia",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "ACUÑA SILLO, Elba Lourdes"
+  },
+  {
+    "codigo": "142081",
+    "nombre": "Diseño Organizacional y Estrategia",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "ACUÑA SILLO, Elba Lourdes"
+  },
+  {
+    "codigo": "142081",
+    "nombre": "Diseño Organizacional y Estrategia",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "GRANTHON URIARTE, Ronald Jefrie"
+  },
+  {
+    "codigo": "142082",
+    "nombre": "Emprendimiento e Innovación",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "TRUJILLO SOSA, Jorge Enrique"
+  },
+  {
+    "codigo": "142082",
+    "nombre": "Emprendimiento e Innovación",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "Dictado en Inglés. VirtualRODRIGUEZ CONSONI, Mariana"
+  },
+  {
+    "codigo": "142082",
+    "nombre": "Emprendimiento e Innovación",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "SANCHEZ JUGO, Isabel"
+  },
+  {
+    "codigo": "142082",
+    "nombre": "Emprendimiento e Innovación",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "VILLANUEVA PEREZ, Humberto Jesus"
+  },
+  {
+    "codigo": "142082",
+    "nombre": "Emprendimiento e Innovación",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "Dictado en InglésVILLEGAS VALLADARES, Shirley Rubi"
+  },
+  {
+    "codigo": "142082",
+    "nombre": "Emprendimiento e Innovación",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "BELTRÁN PUERTA, Jorge"
+  },
+  {
+    "codigo": "142082",
+    "nombre": "Emprendimiento e Innovación",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "RIVAS VELARDE, Andrea Carolina"
+  },
+  {
+    "codigo": "142083",
+    "nombre": "Estrategia",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ACUÑA SILLO, Elba Lourdes"
+  },
+  {
+    "codigo": "142083",
+    "nombre": "Estrategia",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "ACUÑA SILLO, Elba Lourdes"
+  },
+  {
+    "codigo": "141748",
+    "nombre": "Formación y Desarrollo del Talento",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RODRIGUEZ CORNEJO, Juan Carlos"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "CORNEJO ALVAREZ DE ESQUIVES, Ana Lourdes"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "WEINBERGER VILLARAN, Karen Edith"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "DEL CASTILLO MORY, Elsa Catalina"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "TRUJILLO SOSA, Jorge Enrique"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "GRANTHON URIARTE, Ronald Jefrie"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "GRANTHON URIARTE, Ronald Jefrie"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "MANOSALVA MENDOZA, Maritza Elva Juana"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "MANOSALVA MENDOZA, Maritza Elva Juana"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "ACUÑA SILLO, Elba Lourdes"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "ACUÑA SILLO, Elba Lourdes"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "K",
+    "creditos": 4,
+    "profesor": "REBAZA CARO, Nancy"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "SANCHEZ JUGO, Isabel"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "MEDINA WONG, Gwendolyne"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "N",
+    "creditos": 4,
+    "profesor": "JAYME MOSQUERA, Guadalupe Desiree"
+  },
+  {
+    "codigo": "141038",
+    "nombre": "Fundamentos de las Ciencias Empresariales",
+    "seccion": "O",
+    "creditos": 4,
+    "profesor": "CARRERAS MERINO, Andrea"
+  },
+  {
+    "codigo": "141041",
+    "nombre": "Gestión de la Cadena de Suministros",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ANTICONA SUAREZ, Erick Olson"
+  },
+  {
+    "codigo": "141041",
+    "nombre": "Gestión de la Cadena de Suministros",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "ANTICONA SUAREZ, Erick Olson"
+  },
+  {
+    "codigo": "141041",
+    "nombre": "Gestión de la Cadena de Suministros",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "OLIVEIRA CAMBIASO, Daniel Alessandro"
+  },
+  {
+    "codigo": "141041",
+    "nombre": "Gestión de la Cadena de Suministros",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "GARCIA SALINAS, Javier Enrique"
+  },
+  {
+    "codigo": "141041",
+    "nombre": "Gestión de la Cadena de Suministros",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "CHICHIZOLA FAJARDO, Cristina Elizabeth"
+  },
+  {
+    "codigo": "146771",
+    "nombre": "Gestión de la Innovación",
+    "seccion": "Virtual",
+    "creditos": 3,
+    "profesor": "FLORES CASTRO, Juan Alejandro"
+  },
+  {
+    "codigo": "142085",
+    "nombre": "Gestión de la Sostenibilidad Social y Ambiental en las Empresas",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "PECASTAING , Nicolas"
+  },
+  {
+    "codigo": "142085",
+    "nombre": "Gestión de la Sostenibilidad Social y Ambiental en las Empresas",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "PECASTAING , Nicolas"
+  },
+  {
+    "codigo": "142085",
+    "nombre": "Gestión de la Sostenibilidad Social y Ambiental en las Empresas",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "RIALE VALLE, Maria Angela"
+  },
+  {
+    "codigo": "142085",
+    "nombre": "Gestión de la Sostenibilidad Social y Ambiental en las Empresas",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "TEJADA MATOS, Susana Rocío"
+  },
+  {
+    "codigo": "142085",
+    "nombre": "Gestión de la Sostenibilidad Social y Ambiental en las Empresas",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "UEYONAHARA MATZUMOTO, Jorge Antonio"
+  },
+  {
+    "codigo": "142084",
+    "nombre": "Gestión de Operaciones en las Organizaciones",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "SARAVIA VERGARA, Enrique Andres"
+  },
+  {
+    "codigo": "142084",
+    "nombre": "Gestión de Operaciones en las Organizaciones",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "SARAVIA VERGARA, Enrique Andres"
+  },
+  {
+    "codigo": "142084",
+    "nombre": "Gestión de Operaciones en las Organizaciones",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "LARIOS FRANCIA, Rosa Patricia"
+  },
+  {
+    "codigo": "142084",
+    "nombre": "Gestión de Operaciones en las Organizaciones",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "CHICHIZOLA FAJARDO, Cristina Elizabeth"
+  },
+  {
+    "codigo": "144741",
+    "nombre": "Gestión de Personas",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ESQUIVES GUERRA, Marcial Ruben"
+  },
+  {
+    "codigo": "144741",
+    "nombre": "Gestión de Personas",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "FUCHS ANGELES, Rosa Maria"
+  },
+  {
+    "codigo": "144741",
+    "nombre": "Gestión de Personas",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "FUCHS ANGELES, Rosa Maria"
+  },
+  {
+    "codigo": "144741",
+    "nombre": "Gestión de Personas",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "OTINIANO CARBONELL, Martin Carlos"
+  },
+  {
+    "codigo": "142314",
+    "nombre": "Gestión de Riesgos según el PMI",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "CAMPOS FERNANDEZ, Luis Enrique"
+  },
+  {
+    "codigo": "142094",
+    "nombre": "Gestión del Cambio y Transformación Cultural",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "OTINIANO CARBONELL, Martin Carlos"
+  },
+  {
+    "codigo": "142094",
+    "nombre": "Gestión del Cambio y Transformación Cultural",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "REBAZA CARO, Nancy"
+  },
+  {
+    "codigo": "142094",
+    "nombre": "Gestión del Cambio y Transformación Cultural",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "MANOSALVA MENDOZA, Maritza Elva Juana"
+  },
+  {
+    "codigo": "142094",
+    "nombre": "Gestión del Cambio y Transformación Cultural",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "ESQUIVES GUERRA, Marcial Ruben"
+  },
+  {
+    "codigo": "142094",
+    "nombre": "Gestión del Cambio y Transformación Cultural",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "BRAVO MONTEVERDE, Guido Humberto"
+  },
+  {
+    "codigo": "142094",
+    "nombre": "Gestión del Cambio y Transformación Cultural",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "JAYME MOSQUERA, Guadalupe Desiree"
+  },
+  {
+    "codigo": "142097",
+    "nombre": "Gestion del Capital Humano",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "ESCRIBENS OLAECHEA, Mario Eduardo"
+  },
+  {
+    "codigo": "142097",
+    "nombre": "Gestion del Capital Humano",
+    "seccion": "B",
+    "creditos": 3,
+    "profesor": "PALACIOS MATOS, Maria Del Pilar Amelia"
+  },
+  {
+    "codigo": "142285",
+    "nombre": "Gestión Estratégica de Organizaciones Deportivas",
+    "seccion": "G",
+    "creditos": 2,
+    "profesor": "OMEZ CHANGA, Sarita Julia"
+  },
+  {
+    "codigo": "142285",
+    "nombre": "Gestión Estratégica de Organizaciones Deportivas",
+    "seccion": "Z",
+    "creditos": 2,
+    "profesor": "AMBRANO, Renzo Mauricio"
+  },
+  {
+    "codigo": "142462",
+    "nombre": "Gestión y Emprendimiento en la Industria Musical",
+    "seccion": "A",
+    "creditos": 2,
+    "profesor": "GUERRA DELGADO, Edgar Fabian"
+  },
+  {
+    "codigo": "142091",
+    "nombre": "Innovación y Gestión en Negocios Digitales",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "CHAVEZ CARRUITERO, Jimmy Rosendo"
+  },
+  {
+    "codigo": "142091",
+    "nombre": "Innovación y Gestión en Negocios Digitales",
+    "seccion": "R",
+    "creditos": 3,
+    "profesor": "ODRIGUEZ CONSONI, Mariana"
+  },
+  {
+    "codigo": "142091",
+    "nombre": "Innovación y Gestión en Negocios Digitales",
+    "seccion": "C",
+    "creditos": 3,
+    "profesor": "CHAVEZ CARRUITERO, Jimmy Rosendo"
+  },
+  {
+    "codigo": "142091",
+    "nombre": "Innovación y Gestión en Negocios Digitales",
+    "seccion": "D",
+    "creditos": 3,
+    "profesor": "LINARES TORRES, Freddy"
+  },
+  {
+    "codigo": "142091",
+    "nombre": "Innovación y Gestión en Negocios Digitales",
+    "seccion": "G",
+    "creditos": 3,
+    "profesor": "ARCIA FRY, Andrea"
+  },
+  {
+    "codigo": "142091",
+    "nombre": "Innovación y Gestión en Negocios Digitales",
+    "seccion": "Virtual",
+    "creditos": 3,
+    "profesor": "ESPINEL HUERTAS DEL PINO, Maria Pia"
+  },
+  {
+    "codigo": "141042",
+    "nombre": "Investigación Aplicada a los Negocios",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "LARIOS FRANCIA, Rosa Patricia"
+  },
+  {
+    "codigo": "141042",
+    "nombre": "Investigación Aplicada a los Negocios",
+    "seccion": "B",
+    "creditos": 3,
+    "profesor": "CANO LANZA, Ana Maria"
+  },
+  {
+    "codigo": "141042",
+    "nombre": "Investigación Aplicada a los Negocios",
+    "seccion": "C",
+    "creditos": 3,
+    "profesor": "CANO LANZA, Ana Maria"
+  },
+  {
+    "codigo": "141042",
+    "nombre": "Investigación Aplicada a los Negocios",
+    "seccion": "D",
+    "creditos": 3,
+    "profesor": "LUJAN TANTARICO, David Ernesto"
+  },
+  {
+    "codigo": "142461",
+    "nombre": "Leading The Family Business Successfully Across Generations",
+    "seccion": "A",
+    "creditos": 2,
+    "profesor": "Dictado en Inglés. VirtualHAYOZ , Patrik"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "CHAVES CUZZI, Daniela Maria"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "HERAUD GOICOCHEA, Sylvia"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "HERAUD GOICOCHEA, Sylvia"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "Vivanco Loomer, Luis Miguel"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "Vargas Soto, Veronica"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "PALACIOS MATOS, Maria Del Pilar Amelia"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "GRANTHON URIARTE, Ronald Jefrie"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "GRANTHON URIARTE, Ronald Jefrie"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "GOMEZ CHANGA, Sarita Julia"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "REBAZA CARO, Nancy"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "K",
+    "creditos": 4,
+    "profesor": "BRAVO MONTEVERDE, Guido Humberto"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "UEYONAHARA MATZUMOTO, Jorge Antonio"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "CASTRO SEGURA, Barbara"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "N",
+    "creditos": 4,
+    "profesor": "ESQUIVES GUERRA, Marcial Ruben"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "O",
+    "creditos": 4,
+    "profesor": "GOMEZ CHANGA, Sarita Julia"
+  },
+  {
+    "codigo": "142095",
+    "nombre": "Liderazgo",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "BUTRON PIPOLI, Giuliana Maria"
+  },
+  {
+    "codigo": "142313",
+    "nombre": "Macros en Excel para No Programadores",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "VASQUEZ ORE, Marco Antonio"
+  },
+  {
+    "codigo": "142458",
+    "nombre": "Managing Innovation and Creativity - Negotiation for International",
+    "seccion": "S",
+    "creditos": 1,
+    "profesor": "ALVADOR , Elisa"
+  },
+  {
+    "codigo": "142096",
+    "nombre": "Métodos Cuantitativos para la Gestión en las Organizaciones",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "SARAVIA VERGARA, Enrique Andres"
+  },
+  {
+    "codigo": "142096",
+    "nombre": "Métodos Cuantitativos para la Gestión en las Organizaciones",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "Díaz Rojas, Carlos Andres"
+  },
+  {
+    "codigo": "142096",
+    "nombre": "Métodos Cuantitativos para la Gestión en las Organizaciones",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "AVALOS CHACON, Jorge Elias"
+  },
+  {
+    "codigo": "142096",
+    "nombre": "Métodos Cuantitativos para la Gestión en las Organizaciones",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "DAVALOS CHACON, Jorge Elias"
+  },
+  {
+    "codigo": "142096",
+    "nombre": "Métodos Cuantitativos para la Gestión en las Organizaciones",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "BRESCIANI CHAVEZ, Fernando Manuel"
+  },
+  {
+    "codigo": "142096",
+    "nombre": "Métodos Cuantitativos para la Gestión en las Organizaciones",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "BRESCIANI CHAVEZ, Fernando Manuel"
+  },
+  {
+    "codigo": "142096",
+    "nombre": "Métodos Cuantitativos para la Gestión en las Organizaciones",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "CHICHIZOLA FAJARDO, Cristina Elizabeth"
+  },
+  {
+    "codigo": "142096",
+    "nombre": "Métodos Cuantitativos para la Gestión en las Organizaciones",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "CHICHIZOLA FAJARDO, Cristina Elizabeth"
+  },
+  {
+    "codigo": "142100",
+    "nombre": "Proyecto Empresarial",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "CORNEJO ALVAREZ DE ESQUIVES, Ana Lourdes"
+  },
+  {
+    "codigo": "142100",
+    "nombre": "Proyecto Empresarial",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "TRUJILLO SOSA, Jorge Enrique"
+  },
+  {
+    "codigo": "142100",
+    "nombre": "Proyecto Empresarial",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "GALVEZ PAIBA, Blanca Eliana"
+  },
+  {
+    "codigo": "142100",
+    "nombre": "Proyecto Empresarial",
+    "seccion": "D",
+    "creditos": 5,
+    "profesor": "VILLEGAS VALLADARES, Shirley Rubi"
+  },
+  {
+    "codigo": "142100",
+    "nombre": "Proyecto Empresarial",
+    "seccion": "E",
+    "creditos": 5,
+    "profesor": "ANTICONA SUAREZ, Erick Olson"
+  },
+  {
+    "codigo": "141765",
+    "nombre": "Selección y Evaluación de Personal",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ESQUIVES GUERRA, Marcial Ruben"
+  },
+  {
+    "codigo": "142273",
+    "nombre": "Sistemas de Información y Análisis de Datos",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "Díaz Rojas, Carlos Andres"
+  },
+  {
+    "codigo": "142273",
+    "nombre": "Sistemas de Información y Análisis de Datos",
+    "seccion": "B",
+    "creditos": 3,
+    "profesor": "ARANDA IPINCE, Duilio Angel"
+  },
+  {
+    "codigo": "142273",
+    "nombre": "Sistemas de Información y Análisis de Datos",
+    "seccion": "C",
+    "creditos": 3,
+    "profesor": "INFANTE CHAVEZ, Jorge Ricardo"
+  },
+  {
+    "codigo": "142273",
+    "nombre": "Sistemas de Información y Análisis de Datos",
+    "seccion": "D",
+    "creditos": 3,
+    "profesor": "CHAVEZ CARRUITERO, Jimmy Rosendo"
+  },
+  {
+    "codigo": "142273",
+    "nombre": "Sistemas de Información y Análisis de Datos",
+    "seccion": "E",
+    "creditos": 3,
+    "profesor": "ARANDA IPINCE, Duilio Angel"
+  },
+  {
+    "codigo": "142273",
+    "nombre": "Sistemas de Información y Análisis de Datos",
+    "seccion": "F",
+    "creditos": 3,
+    "profesor": "CHAVEZ CARRUITERO, Jimmy Rosendo"
+  },
+  {
+    "codigo": "142459",
+    "nombre": "Sostenibilidad Empresarial y Modelos de Negocios Circulares",
+    "seccion": "U",
+    "creditos": 4,
+    "profesor": "EYONAHARA MATZUMOTO, Jorge Antonio"
+  },
+  {
+    "codigo": "141775",
+    "nombre": "Toma de Decisiones - Simulador: Blue Ocean Strategy",
+    "seccion": "Virtual",
+    "creditos": 2,
+    "profesor": "CASAFRANCA ROSAS, Juan Carlos"
+  },
+  {
+    "codigo": "158143",
+    "nombre": "Antropología",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "VALDIVIA CORRALES, Gustavo"
+  },
+  {
+    "codigo": "158143",
+    "nombre": "Antropología",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "CASTELLANOS DEL PORTAL, Themis Aidee"
+  },
+  {
+    "codigo": "150273",
+    "nombre": "Antropología Económica",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "VALDIVIA CORRALES, Gustavo"
+  },
+  {
+    "codigo": "150255",
+    "nombre": "China Contemporánea: Sociedad, Política y Relaciones Internacionales",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "PAGAN SANCHEZ, Antonio Jose"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "PASTOR TORRES, Gustavo Ricardo"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "VERGARA PANIAGUA, Alberto"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "BLYDAL , Carl Johan"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "LANEGRA QUISPE, Ivan Kriss"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "MARIUS VASQUEZ, Paola"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "ENCINAS ZEVALLOS, Daniel"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "AVALOS BARRIO DE MENDOZA, Vicente Daniel"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "GODOY MEJIA, Jose Alejandro"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "VERGARA PANIAGUA, Alberto"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "AVALOS BARRIO DE MENDOZA, Vicente Daniel"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "K",
+    "creditos": 4,
+    "profesor": "GODOY MEJIA, Jose Alejandro"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "PASTOR TORRES, Gustavo Ricardo"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "NOLES COTITO, Mariela Ines"
+  },
+  {
+    "codigo": "150004",
+    "nombre": "Ciencia Política",
+    "seccion": "N",
+    "creditos": 4,
+    "profesor": "PASTOR TORRES, Gustavo Ricardo"
+  },
+  {
+    "codigo": "150295",
+    "nombre": "Ciudadanía y Democratización",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "BARRENECHEA CARPIO, Rodrigo"
+  },
+  {
+    "codigo": "150287",
+    "nombre": "Contemporary Public Administration Seminar",
+    "seccion": "C",
+    "creditos": 1,
+    "profesor": "HENG MATSUNO, Vanessa Cecilia"
+  },
+  {
+    "codigo": "150056",
+    "nombre": "Discriminación y Políticas Públicas",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "TACUCHE MORENO, Luis Enrique"
+  },
+  {
+    "codigo": "150350",
+    "nombre": "Economía Politica Internacional",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "SANBORN , Cynthia Ann"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "FLORES NORIEGA DE BENITES, Eva Paulina"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "B",
+    "creditos": 3,
+    "profesor": "DEBENEDETTI LUJAN, Bruno Edoardo"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "C",
+    "creditos": 3,
+    "profesor": "GIESECKE CHERO, Micaela"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "D",
+    "creditos": 3,
+    "profesor": "CASTILLO THORNE, Krishna David"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "E",
+    "creditos": 3,
+    "profesor": "DEL MASTRO VECCHIONE, Marco Hugo"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "F",
+    "creditos": 3,
+    "profesor": "GODOY MEJIA, Jose Alejandro"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "G",
+    "creditos": 3,
+    "profesor": "SETLAK , Magdalena Anna"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "H",
+    "creditos": 3,
+    "profesor": "PASTOR TORRES, Gustavo Ricardo"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "I",
+    "creditos": 3,
+    "profesor": "Hidalgo Bonicelli, Alejandra Lucia"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "J",
+    "creditos": 3,
+    "profesor": "GUTIERREZ COTTLE, Maria Cristina"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "K",
+    "creditos": 3,
+    "profesor": "VALLEJO RIVERA, Elizabeth Rocio"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "L",
+    "creditos": 3,
+    "profesor": "GORENSTEIN RIVERA, SHARON"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "M",
+    "creditos": 3,
+    "profesor": "PIZARRO BAUMANN, Maria Jimena"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "N",
+    "creditos": 3,
+    "profesor": "STIGLICH VARGAS, Maria Elizabeth"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "O",
+    "creditos": 3,
+    "profesor": "FLORES NORIEGA DE BENITES, Eva Paulina"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "P",
+    "creditos": 3,
+    "profesor": "SETLAK , Magdalena Anna"
+  },
+  {
+    "codigo": "150140",
+    "nombre": "Investigación Académica",
+    "seccion": "Q",
+    "creditos": 3,
+    "profesor": "Hidalgo Bonicelli, Alejandra Lucia"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "CRUZADO SILVERII, Miguel Gabriel"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "KOGAN COGAN, Liuba"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "KOGAN COGAN, Liuba"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "DEL MASTRO VECCHIONE, Marco Hugo"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "PASTOR TORRES, Gustavo Ricardo"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "PASTOR TORRES, Gustavo Ricardo"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "AVALOS BARRIO DE MENDOZA, Vicente Daniel"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "PROTZEL DE AMAT, Jaime Javier"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "PROTZEL DE AMAT, Jaime Javier"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "PEREZ RECALDE , Guadalupe"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "K",
+    "creditos": 4,
+    "profesor": "PEREZ RECALDE , Guadalupe"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "INJOQUE RONCEROS, Freddy Miguel"
+  },
+  {
+    "codigo": "157006",
+    "nombre": "Pensamiento Social Contemporáneo",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "MARIANI , Santiago"
+  },
+  {
+    "codigo": "150277",
+    "nombre": "Poder e Instituciones",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "BARRENECHEA CARPIO, Rodrigo"
+  },
+  {
+    "codigo": "150289",
+    "nombre": "Política Comparada",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ENCINAS ZEVALLOS, Daniel"
+  },
+  {
+    "codigo": "150275",
+    "nombre": "Procesos sociopolíticos de América Latina a través del Cine",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "MARIANI , Santiago"
+  },
+  {
+    "codigo": "150013",
+    "nombre": "Proyección Social",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "EÑA ANAYA, Maria Luisa"
+  },
+  {
+    "codigo": "150013",
+    "nombre": "Proyección Social",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ARELA GARCIA, Cinthia Patricia Alexandra"
+  },
+  {
+    "codigo": "150013",
+    "nombre": "Proyección Social",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "ERALTA MANSILLA, Norma Gisela"
+  },
+  {
+    "codigo": "150013",
+    "nombre": "Proyección Social",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "IDAL IZAGUIRRE, Patricia Estela"
+  },
+  {
+    "codigo": "150013",
+    "nombre": "Proyección Social",
+    "seccion": "Z",
+    "creditos": 4,
+    "profesor": "UÑIGA BRAVO, Martha Eliana"
+  },
+  {
+    "codigo": "150013",
+    "nombre": "Proyección Social",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "LORES GUZMAN, ROSIO MILAGRO"
+  },
+  {
+    "codigo": "150013",
+    "nombre": "Proyección Social",
+    "seccion": "Virtual",
+    "creditos": 4,
+    "profesor": ""
+  },
+  {
+    "codigo": "150013",
+    "nombre": "Proyección Social",
+    "seccion": "Virtual",
+    "creditos": 4,
+    "profesor": "VARELA GARCIA, Cinthia Patricia Alexandra"
+  },
+  {
+    "codigo": "150027",
+    "nombre": "Relaciones Internacionales",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésBAMBAREN LUKIS, Fernando Armando"
+  },
+  {
+    "codigo": "150027",
+    "nombre": "Relaciones Internacionales",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "PAGAN SANCHEZ, Antonio Jose"
+  },
+  {
+    "codigo": "158000",
+    "nombre": "Sicología",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "STIGLICH VARGAS, Maria Elizabeth"
+  },
+  {
+    "codigo": "158000",
+    "nombre": "Sicología",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "MENESES GONZALES, Gonzalo Alfredo"
+  },
+  {
+    "codigo": "158000",
+    "nombre": "Sicología",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "RODRIGUEZ CUADROS DE MURO, Lorena"
+  },
+  {
+    "codigo": "158000",
+    "nombre": "Sicología",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "YOSHIDA GOTO, Erika"
+  },
+  {
+    "codigo": "158000",
+    "nombre": "Sicología",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "OTINIANO CAMPOS, Fiorella"
+  },
+  {
+    "codigo": "158000",
+    "nombre": "Sicología",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "SOLANO SILVA, Dante Junior"
+  },
+  {
+    "codigo": "158109",
+    "nombre": "Sociología",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "BIELICH SALAZAR, Claudia Teresa"
+  },
+  {
+    "codigo": "158109",
+    "nombre": "Sociología",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "PEREZ RECALDE , Guadalupe"
+  },
+  {
+    "codigo": "158109",
+    "nombre": "Sociología",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "COBIAN OVALLE DE PLAZA, Maria Beatriz"
+  },
+  {
+    "codigo": "158109",
+    "nombre": "Sociología",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "CASTILLO THORNE, Krishna David"
+  },
+  {
+    "codigo": "158109",
+    "nombre": "Sociología",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "BIELICH SALAZAR, Claudia Teresa"
+  },
+  {
+    "codigo": "160132",
+    "nombre": "Aspectos Jurídicos para los Negocios",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MEDRANO GARCIA, Fabricio Manuel"
+  },
+  {
+    "codigo": "160139",
+    "nombre": "Aspectos Tributarios para la Empresa",
+    "seccion": "P",
+    "creditos": 3,
+    "profesor": "ANTIGOSO VELLOSO DA SILVEIRA, Francisco"
+  },
+  {
+    "codigo": "163059",
+    "nombre": "Auditoría",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "E LA TORRE ONOFRE, Christian Raul"
+  },
+  {
+    "codigo": "163059",
+    "nombre": "Auditoría",
+    "seccion": "Z",
+    "creditos": 4,
+    "profesor": "AVALA, Miguel Daygort"
+  },
+  {
+    "codigo": "160140",
+    "nombre": "Constitución y Formalización de MYPES",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "SOTO MUJICA, José Carlos Humberto"
+  },
+  {
+    "codigo": "167060",
+    "nombre": "Contabilidad de Costos",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ALVA GONZALES, Edgar Paul"
+  },
+  {
+    "codigo": "160088",
+    "nombre": "Contabilidad de Gestión",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ALVA GONZALES, Edgar Paul"
+  },
+  {
+    "codigo": "160088",
+    "nombre": "Contabilidad de Gestión",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "ALVA GONZALES, Edgar Paul"
+  },
+  {
+    "codigo": "160169",
+    "nombre": "Contabilidad Financiera Aplicada",
+    "seccion": "Y",
+    "creditos": 4,
+    "profesor": "AÑEZ QUIROZ, Mario Alberto"
+  },
+  {
+    "codigo": "160171",
+    "nombre": "Contabilidad Financiera Intermedia",
+    "seccion": "J",
+    "creditos": 5,
+    "profesor": "ARA MIRANDA, Renan Geoffrey"
+  },
+  {
+    "codigo": "160171",
+    "nombre": "Contabilidad Financiera Intermedia",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "UZMAN, Ruben"
+  },
+  {
+    "codigo": "160171",
+    "nombre": "Contabilidad Financiera Intermedia",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "HONG LEON, Esteban"
+  },
+  {
+    "codigo": "160171",
+    "nombre": "Contabilidad Financiera Intermedia",
+    "seccion": "Q",
+    "creditos": 5,
+    "profesor": "UEVEDO ALEJOS, Maria Isabel Alejandra"
+  },
+  {
+    "codigo": "160171",
+    "nombre": "Contabilidad Financiera Intermedia",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ARQUINA ARTEAGA, Stefhani Genoveva"
+  },
+  {
+    "codigo": "160171",
+    "nombre": "Contabilidad Financiera Intermedia",
+    "seccion": "D",
+    "creditos": 5,
+    "profesor": "E MENDOZA ARCE, Diego Alonso"
+  },
+  {
+    "codigo": "160171",
+    "nombre": "Contabilidad Financiera Intermedia",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "STORGA DE LA CRUZ, Brandelt Jesús"
+  },
+  {
+    "codigo": "160171",
+    "nombre": "Contabilidad Financiera Intermedia",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ARADIEGUE , SANTIAGO ALBERTO"
+  },
+  {
+    "codigo": "160171",
+    "nombre": "Contabilidad Financiera Intermedia",
+    "seccion": "L",
+    "creditos": 5,
+    "profesor": "OZANO, Sara Elena Francesca"
+  },
+  {
+    "codigo": "160171",
+    "nombre": "Contabilidad Financiera Intermedia",
+    "seccion": "V",
+    "creditos": 5,
+    "profesor": "ILLAVICENCIO EYZAGUIRRE, Maximo Moises"
+  },
+  {
+    "codigo": "160171",
+    "nombre": "Contabilidad Financiera Intermedia",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "RIAS PICON, Norma Beatriz"
+  },
+  {
+    "codigo": "160171",
+    "nombre": "Contabilidad Financiera Intermedia",
+    "seccion": "R",
+    "creditos": 5,
+    "profesor": "UIZ HURTADO, Pedro Cesar"
+  },
+  {
+    "codigo": "160025",
+    "nombre": "Contabilidad para la Toma de Decisiones",
+    "seccion": "E",
+    "creditos": 5,
+    "profesor": "SCOBAR ESPINO, Roberto Diego"
+  },
+  {
+    "codigo": "160025",
+    "nombre": "Contabilidad para la Toma de Decisiones",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "ILVA TORRALVA, Hans Jhordan"
+  },
+  {
+    "codigo": "160025",
+    "nombre": "Contabilidad para la Toma de Decisiones",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ORDOVA, Ricardo Sebastian"
+  },
+  {
+    "codigo": "160025",
+    "nombre": "Contabilidad para la Toma de Decisiones",
+    "seccion": "E",
+    "creditos": 5,
+    "profesor": "SPICHAN, Eduardo Felipe"
+  },
+  {
+    "codigo": "160025",
+    "nombre": "Contabilidad para la Toma de Decisiones",
+    "seccion": "L",
+    "creditos": 5,
+    "profesor": "OMBARDI VALLE, GINA ANGELA"
+  },
+  {
+    "codigo": "160025",
+    "nombre": "Contabilidad para la Toma de Decisiones",
+    "seccion": "M",
+    "creditos": 5,
+    "profesor": "ARCILLA, Ivana Milene"
+  },
+  {
+    "codigo": "160090",
+    "nombre": "Contabilidad y Finanzas Avanzadas",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ONTON LOPEZ, Renzo Jesus"
+  },
+  {
+    "codigo": "160091",
+    "nombre": "Control Interno y Gestión de Riesgo",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "UIZ LLACSAHUANGA, Ketty Margarita"
+  },
+  {
+    "codigo": "160091",
+    "nombre": "Control Interno y Gestión de Riesgo",
+    "seccion": "Z",
+    "creditos": 4,
+    "profesor": "AVALA, Miguel Daygort"
+  },
+  {
+    "codigo": "160172",
+    "nombre": "Evaluación Financiera de las Organizaciones",
+    "seccion": "R",
+    "creditos": 5,
+    "profesor": "UIZ HURTADO, Pedro Cesar"
+  },
+  {
+    "codigo": "160172",
+    "nombre": "Evaluación Financiera de las Organizaciones",
+    "seccion": "V",
+    "creditos": 5,
+    "profesor": "ILLAFUERTE, Alessandra Vanessa"
+  },
+  {
+    "codigo": "160172",
+    "nombre": "Evaluación Financiera de las Organizaciones",
+    "seccion": "R",
+    "creditos": 5,
+    "profesor": "UIZ PALOMINO, Cesar"
+  },
+  {
+    "codigo": "160172",
+    "nombre": "Evaluación Financiera de las Organizaciones",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ASTELLANOS NAVARRETE, Laura Mariela"
+  },
+  {
+    "codigo": "160172",
+    "nombre": "Evaluación Financiera de las Organizaciones",
+    "seccion": "V",
+    "creditos": 5,
+    "profesor": "ILLAFUERTE, Ariana Gianella"
+  },
+  {
+    "codigo": "160172",
+    "nombre": "Evaluación Financiera de las Organizaciones",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "BREGU NAVEROS, Johana"
+  },
+  {
+    "codigo": "160154",
+    "nombre": "Evaluación Financiera para No Contadores",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "RUIZ HURTADO, Pedro Cesar"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "ILVA TORRALVA, Hans Jhordan"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ORDOVA, Ricardo Sebastian"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ABALLERO, Walter Gerardo"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "OSAS, Liliana Nathaly"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "IVERO PONCE DE LEON, Eduardo Ruben"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ARQUINA ARTEAGA, Stefhani Genoveva"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ILLAFUERTE, Alessandra Vanessa"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "OZANO, Sara Elena Francesca"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "SCOBAR ESPINO, Roberto Diego"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ASQUEZ, Leonardo Agustin"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RIAS PICON, Norma Beatriz"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "N",
+    "creditos": 4,
+    "profesor": "SOTO MUJICA, José Carlos Humberto"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "OTO MUJICA, José Carlos Humberto"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "Q",
+    "creditos": 4,
+    "profesor": "UISPE, Diego Santiago"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ORDOVA, Mayte Vanessa"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "Y",
+    "creditos": 4,
+    "profesor": "AÑEZ QUIROZ, Mario Alberto"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "ONES, Alexandra Marie"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "HAVEZ CARDEÑA, Cesar Augusto"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "LANOS, Fatima Cristina"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "Z",
+    "creditos": 4,
+    "profesor": "ELADA ROLLER, Vilma Francisca"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ONTALVO, Moises Alberto"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ACERES LOAYZA, Rosa Graciela"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "Q",
+    "creditos": 4,
+    "profesor": "UIÑONES BOZA, Horacio"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ATSUNO FUCHIGAMI, Ana Cecilia"
+  },
+  {
+    "codigo": "160092",
+    "nombre": "Fundamentos de Contabilidad",
+    "seccion": "N",
+    "creditos": 4,
+    "profesor": "EYRA, Emily Maria"
+  },
+  {
+    "codigo": "160173",
+    "nombre": "Gestión de la Información y Métricas de Sostenibilidad Empresarial",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "VELASQUEZ RELAYZE, Jose Luis"
+  },
+  {
+    "codigo": "160174",
+    "nombre": "Gestión y Costos Estratégicos",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "SILVA TORRALVA, Hans Jhordan"
+  },
+  {
+    "codigo": "160314",
+    "nombre": "Inteligencia Artificial Generativa Aplicada a la Información Financiera",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "BENAVIDES GONZALES, Javier Arturo"
+  },
+  {
+    "codigo": "160205",
+    "nombre": "International Financial Reporting",
+    "seccion": "B",
+    "creditos": 1,
+    "profesor": "AAKLINI , Pascale"
+  },
+  {
+    "codigo": "160175",
+    "nombre": "Investigación para Contadores",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "ASTORGA DE LA CRUZ, Brandelt Jesús"
+  },
+  {
+    "codigo": "160099",
+    "nombre": "Normas Contables Internacionales",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ZEGARRA BENAVIDES, Carmen Cecilia"
+  },
+  {
+    "codigo": "160197",
+    "nombre": "SAP Hana para la Gestión de la Información",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "GARCIA REYES, Karin Maria"
+  },
+  {
+    "codigo": "160094",
+    "nombre": "Tributación Aplicada I",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ASTRO ARANA, Javier"
+  },
+  {
+    "codigo": "160096",
+    "nombre": "Tributación Aplicada II",
+    "seccion": "Q",
+    "creditos": 4,
+    "profesor": "UISPE CHUMPE, Emerzon"
+  },
+  {
+    "codigo": "160096",
+    "nombre": "Tributación Aplicada II",
+    "seccion": "N",
+    "creditos": 4,
+    "profesor": "ORABUENA, Nelson Francisco"
+  },
+  {
+    "codigo": "170508",
+    "nombre": "Agentes Inteligentes",
+    "seccion": "L",
+    "creditos": 3,
+    "profesor": "LONTOP MEJIA, Miguel Angel"
+  },
+  {
+    "codigo": "170324",
+    "nombre": "Álgebra Líneal Aplicada",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "VELASQUEZ CASTAÑON, Oswaldo Jose"
+  },
+  {
+    "codigo": "170065",
+    "nombre": "Algoritmos y Estructura de Datos",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ROJAS VILLANUEVA, Uwe"
+  },
+  {
+    "codigo": "170439",
+    "nombre": "Análisis de Datos Geográficos",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "INJOQUE RONCEROS, Freddy Miguel"
+  },
+  {
+    "codigo": "170043",
+    "nombre": "Analítica de la Web",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "FABIAN ARTEAGA, Junior John"
+  },
+  {
+    "codigo": "170119",
+    "nombre": "Arquitectura del Sistema de Información",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "NFANTE CHAVEZ, Jorge Ricardo"
+  },
+  {
+    "codigo": "170119",
+    "nombre": "Arquitectura del Sistema de Información",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RANDA IPINCE, Duilio Angel"
+  },
+  {
+    "codigo": "170119",
+    "nombre": "Arquitectura del Sistema de Información",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ARRILLO, Patricio Diego"
+  },
+  {
+    "codigo": "170216",
+    "nombre": "Big Data Analytics",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "TOVAR GALARRETA, Juan Carlos"
+  },
+  {
+    "codigo": "170507",
+    "nombre": "Business Analytics",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "AMADO GARFIAS, Alonso"
+  },
+  {
+    "codigo": "170342",
+    "nombre": "Business Intelligence",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "WAM BALTODANO, Javier Guillermo"
+  },
+  {
+    "codigo": "170353",
+    "nombre": "Computación de Alto Desempeño y Cloud Computing",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "TOVAR GALARRETA, Juan Carlos"
+  },
+  {
+    "codigo": "170327",
+    "nombre": "Data Mining",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ESPEZUA LLERENA, Soledad"
+  },
+  {
+    "codigo": "170212",
+    "nombre": "Desarrollo de Soluciones Empresariales",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ALERA GARCIA, Paulo Enrique"
+  },
+  {
+    "codigo": "170212",
+    "nombre": "Desarrollo de Soluciones Empresariales",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "IMENEZ, Lucerito Nayarith De Orly"
+  },
+  {
+    "codigo": "170212",
+    "nombre": "Desarrollo de Soluciones Empresariales",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ALAGA, Jose Carlos"
+  },
+  {
+    "codigo": "170212",
+    "nombre": "Desarrollo de Soluciones Empresariales",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "UAMAN LINARES, Jose"
+  },
+  {
+    "codigo": "170329",
+    "nombre": "Design Thinking and Technological Innovation",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "WONG POGGI, Jennifer Karina"
+  },
+  {
+    "codigo": "170329",
+    "nombre": "Design Thinking and Technological Innovation",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "HIUMETTRI BLANCO, Victor Kervin"
+  },
+  {
+    "codigo": "170329",
+    "nombre": "Design Thinking and Technological Innovation",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "WONG POGGI, Jennifer Karina"
+  },
+  {
+    "codigo": "170329",
+    "nombre": "Design Thinking and Technological Innovation",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "RAMIREZ VINATEA, Jimena"
+  },
+  {
+    "codigo": "170329",
+    "nombre": "Design Thinking and Technological Innovation",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "Dictado en Inglés. VirtualVILLACORTA HOLGUIN, Katherine Lilia"
+  },
+  {
+    "codigo": "170329",
+    "nombre": "Design Thinking and Technological Innovation",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "Dictado en InglésMARTINEZ QUIÑE, Lourdes"
+  },
+  {
+    "codigo": "170330",
+    "nombre": "Emprendimiento Tecnológico",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "HIUMETTRI BLANCO, Victor Kervin"
+  },
+  {
+    "codigo": "170330",
+    "nombre": "Emprendimiento Tecnológico",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "HIUMETTRI BLANCO, Victor Kervin"
+  },
+  {
+    "codigo": "170425",
+    "nombre": "Excel Avanzado para la Gestión Empresarial",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "INFANTE CHAVEZ, Jorge Ricardo"
+  },
+  {
+    "codigo": "170425",
+    "nombre": "Excel Avanzado para la Gestión Empresarial",
+    "seccion": "B",
+    "creditos": 3,
+    "profesor": "DIAZ DOMINGUEZ, Carlos Manuel"
+  },
+  {
+    "codigo": "170137",
+    "nombre": "Física",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "TUCCHI PORTOCARRERO, Luciano"
+  },
+  {
+    "codigo": "170137",
+    "nombre": "Física",
+    "seccion": "S",
+    "creditos": 5,
+    "profesor": "ANTILLAN, Fernando Manuel"
+  },
+  {
+    "codigo": "170137",
+    "nombre": "Física",
+    "seccion": "G",
+    "creditos": 5,
+    "profesor": "ARCIA, Ruth Isabel"
+  },
+  {
+    "codigo": "170137",
+    "nombre": "Física",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ARBAJAL VIGO, Saneli Alcides"
+  },
+  {
+    "codigo": "170137",
+    "nombre": "Física",
+    "seccion": "D",
+    "creditos": 5,
+    "profesor": "AMAZO, Rocío Del Alba"
+  },
+  {
+    "codigo": "179062",
+    "nombre": "Formulación y Evaluación de Proyectos",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "LAZO LAZO, Juan Guillermo"
+  },
+  {
+    "codigo": "179062",
+    "nombre": "Formulación y Evaluación de Proyectos",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "GONZALEZ PALOMINO, JORGE MARTIN"
+  },
+  {
+    "codigo": "170336",
+    "nombre": "Fundamentos de Analítica",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MAEHARA ALIAGA DE BENITES, Rocio Paola"
+  },
+  {
+    "codigo": "170336",
+    "nombre": "Fundamentos de Analítica",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "MAEHARA ALIAGA DE BENITES, Rocio Paola"
+  },
+  {
+    "codigo": "170336",
+    "nombre": "Fundamentos de Analítica",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "PORRAS CERRON, Jaime Carlos"
+  },
+  {
+    "codigo": "170343",
+    "nombre": "Gerencia de Ingeniería de Valor",
+    "seccion": "C",
+    "creditos": 3,
+    "profesor": "UMPA OBREGON, Nelson Enrique"
+  },
+  {
+    "codigo": "170343",
+    "nombre": "Gerencia de Ingeniería de Valor",
+    "seccion": "R",
+    "creditos": 3,
+    "profesor": "AMIREZ, Francesca Mirella"
+  },
+  {
+    "codigo": "170345",
+    "nombre": "Gestión de Proyectos",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "ALOMINO GARCIA, Jorge Ciro"
+  },
+  {
+    "codigo": "170345",
+    "nombre": "Gestión de Proyectos",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "LLONTOP MEJIA, Miguel Angel"
+  },
+  {
+    "codigo": "170335",
+    "nombre": "Herramientas de Programación",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "YMA QUIRITA, Victor Hugo"
+  },
+  {
+    "codigo": "170335",
+    "nombre": "Herramientas de Programación",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "UÑOZ CASILDO, Nehil Indalicio"
+  },
+  {
+    "codigo": "170335",
+    "nombre": "Herramientas de Programación",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "UACHUA, Amy Antalu"
+  },
+  {
+    "codigo": "170335",
+    "nombre": "Herramientas de Programación",
+    "seccion": "Q",
+    "creditos": 4,
+    "profesor": "UISPE AYALA, Martha Roxana"
+  },
+  {
+    "codigo": "170335",
+    "nombre": "Herramientas de Programación",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "AEHARA ALIAGA, Yoshitomi Eduardo"
+  },
+  {
+    "codigo": "170335",
+    "nombre": "Herramientas de Programación",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ELAZCO, Homero Eric"
+  },
+  {
+    "codigo": "170335",
+    "nombre": "Herramientas de Programación",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "IERRA FLORES, Luis Miguel"
+  },
+  {
+    "codigo": "170307",
+    "nombre": "Herramientas de Programacion con Python",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ROJAS VILLANUEVA, Uwe"
+  },
+  {
+    "codigo": "170331",
+    "nombre": "Infraestructura Tecnológica",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "ICCHA AYVAR, Hobber Aristides"
+  },
+  {
+    "codigo": "170331",
+    "nombre": "Infraestructura Tecnológica",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "ONZALES, Sheyla Magdiel"
+  },
+  {
+    "codigo": "170331",
+    "nombre": "Infraestructura Tecnológica",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MADO GARFIAS, Alonso"
+  },
+  {
+    "codigo": "170331",
+    "nombre": "Infraestructura Tecnológica",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "NFANTE, Alessandra Ellein"
+  },
+  {
+    "codigo": "170179",
+    "nombre": "Ingeniería de Datos",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ALERA GARCIA, Paulo Enrique"
+  },
+  {
+    "codigo": "170179",
+    "nombre": "Ingeniería de Datos",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ARRILLO, Patricio Diego"
+  },
+  {
+    "codigo": "170179",
+    "nombre": "Ingeniería de Datos",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "ABIAN ARTEAGA, Junior John"
+  },
+  {
+    "codigo": "170179",
+    "nombre": "Ingeniería de Datos",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "UÑOZ CASILDO, Nehil Indalicio"
+  },
+  {
+    "codigo": "170135",
+    "nombre": "Ingeniería de Procesos",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "GARMENDIA FOSSA, Francisco Antonio"
+  },
+  {
+    "codigo": "170135",
+    "nombre": "Ingeniería de Procesos",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "CHICHIZOLA PORRAS, Victor Augusto"
+  },
+  {
+    "codigo": "170135",
+    "nombre": "Ingeniería de Procesos",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "CHICHIZOLA PORRAS, Victor Augusto"
+  },
+  {
+    "codigo": "170496",
+    "nombre": "Innovación, Tecnologías y Emprendimiento: El caso de Silicon Valley",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "IUMETTRI BLANCO, Victor Kervin"
+  },
+  {
+    "codigo": "170339",
+    "nombre": "Inteligencia Computacional",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "TALAVERA LOPEZ, Alvaro Gustavo"
+  },
+  {
+    "codigo": "170354",
+    "nombre": "Introducción a la Cosmología y la Ciencia de la Vida",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "CARBAJAL VIGO, Saneli Alcides"
+  },
+  {
+    "codigo": "170354",
+    "nombre": "Introducción a la Cosmología y la Ciencia de la Vida",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "CARBAJAL VIGO, Saneli Alcides"
+  },
+  {
+    "codigo": "170354",
+    "nombre": "Introducción a la Cosmología y la Ciencia de la Vida",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "RODRIGUEZ SATIZABAL, Simon Andres"
+  },
+  {
+    "codigo": "170354",
+    "nombre": "Introducción a la Cosmología y la Ciencia de la Vida",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "RODRIGUEZ SATIZABAL, Simon Andres"
+  },
+  {
+    "codigo": "170354",
+    "nombre": "Introducción a la Cosmología y la Ciencia de la Vida",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "PELAYO BALDARRAGO, Mara Elizabeth"
+  },
+  {
+    "codigo": "170211",
+    "nombre": "Introducción a la Ingeniería",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "HONG CHONG, Mario Gustavo"
+  },
+  {
+    "codigo": "170211",
+    "nombre": "Introducción a la Ingeniería",
+    "seccion": "O",
+    "creditos": 4,
+    "profesor": "RTIZ VALENCIA, Alejandro Leopoldo"
+  },
+  {
+    "codigo": "170211",
+    "nombre": "Introducción a la Ingeniería",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "ANDURO, Javier David"
+  },
+  {
+    "codigo": "170211",
+    "nombre": "Introducción a la Ingeniería",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "SCRIBENS OLAECHEA, Mario Eduardo"
+  },
+  {
+    "codigo": "170211",
+    "nombre": "Introducción a la Ingeniería",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ENDOZA, Mariana Danitza"
+  },
+  {
+    "codigo": "170211",
+    "nombre": "Introducción a la Ingeniería",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "ANTILLAN, Fernando Manuel"
+  },
+  {
+    "codigo": "170211",
+    "nombre": "Introducción a la Ingeniería",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "USTAMANTE, Jimena Arianna"
+  },
+  {
+    "codigo": "170211",
+    "nombre": "Introducción a la Ingeniería",
+    "seccion": "J",
+    "creditos": 4,
+    "profesor": "IMENEZ, Lucerito Nayarith De Orly"
+  },
+  {
+    "codigo": "170352",
+    "nombre": "Investigación de Operaciones",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "LAZO LAZO, Juan Guillermo"
+  },
+  {
+    "codigo": "170352",
+    "nombre": "Investigación de Operaciones",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "MACHUCA DE PINA, Juan Manuel"
+  },
+  {
+    "codigo": "170352",
+    "nombre": "Investigación de Operaciones",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "SIERRA FLORES, Luis Miguel"
+  },
+  {
+    "codigo": "170338",
+    "nombre": "Machine Learning",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "AMADO GARFIAS, Alonso"
+  },
+  {
+    "codigo": "170333",
+    "nombre": "Matemáticas Discretas para la Computación",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MACHUCA DE PINA, Juan Manuel"
+  },
+  {
+    "codigo": "170344",
+    "nombre": "Metodologías Ágiles",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ORTIZ VALENCIA, Alejandro Leopoldo"
+  },
+  {
+    "codigo": "170344",
+    "nombre": "Metodologías Ágiles",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "HIUMETTRI BLANCO, Victor Kervin"
+  },
+  {
+    "codigo": "170344",
+    "nombre": "Metodologías Ágiles",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "WONG POGGI, Jennifer Karina"
+  },
+  {
+    "codigo": "170351",
+    "nombre": "Métodos de Investigación Cuantitativa",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "IBAQUE SAENZ, Christian Fernando"
+  },
+  {
+    "codigo": "170351",
+    "nombre": "Métodos de Investigación Cuantitativa",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "RAVO ORELLANA, Edgardo Ricardo"
+  },
+  {
+    "codigo": "170351",
+    "nombre": "Métodos de Investigación Cuantitativa",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ELEZ, Juan Luis"
+  },
+  {
+    "codigo": "170131",
+    "nombre": "Nivelación en Informática",
+    "seccion": "E",
+    "creditos": 0,
+    "profesor": "SPEZUA LLERENA, Soledad"
+  },
+  {
+    "codigo": "170131",
+    "nombre": "Nivelación en Informática",
+    "seccion": "B",
+    "creditos": 0,
+    "profesor": "USTAMANTE BAUTISTA, Beatriz Esther"
+  },
+  {
+    "codigo": "170131",
+    "nombre": "Nivelación en Informática",
+    "seccion": "V",
+    "creditos": 0,
+    "profesor": "ASQUEZ ORE, Marco Antonio"
+  },
+  {
+    "codigo": "170131",
+    "nombre": "Nivelación en Informática",
+    "seccion": "A",
+    "creditos": 0,
+    "profesor": "RANDA IPINCE, Duilio Angel"
+  },
+  {
+    "codigo": "170131",
+    "nombre": "Nivelación en Informática",
+    "seccion": "D",
+    "creditos": 0,
+    "profesor": "IAZ DOMINGUEZ, Carlos Manuel"
+  },
+  {
+    "codigo": "170131",
+    "nombre": "Nivelación en Informática",
+    "seccion": "F",
+    "creditos": 0,
+    "profesor": "DIAZ DOMINGUEZ, Carlos Manuel"
+  },
+  {
+    "codigo": "170131",
+    "nombre": "Nivelación en Informática",
+    "seccion": "R",
+    "creditos": 0,
+    "profesor": "AMOS PERALTA, Karim Mabel"
+  },
+  {
+    "codigo": "170131",
+    "nombre": "Nivelación en Informática",
+    "seccion": "I",
+    "creditos": 0,
+    "profesor": "NFANTE CHAVEZ, Jorge Ricardo"
+  },
+  {
+    "codigo": "170131",
+    "nombre": "Nivelación en Informática",
+    "seccion": "S",
+    "creditos": 0,
+    "profesor": "ENMACHE SARMIENTO, Jose Manuel Martin"
+  },
+  {
+    "codigo": "170131",
+    "nombre": "Nivelación en Informática",
+    "seccion": "Z",
+    "creditos": 0,
+    "profesor": "ALDIVAR PEÑA, Doris Adriana"
+  },
+  {
+    "codigo": "170131",
+    "nombre": "Nivelación en Informática",
+    "seccion": "Q",
+    "creditos": 0,
+    "profesor": "UISPE AYALA, Martha Roxana"
+  },
+  {
+    "codigo": "170131",
+    "nombre": "Nivelación en Informática",
+    "seccion": "T",
+    "creditos": 0,
+    "profesor": "ORRES SUAREZ, Rolando Martin"
+  },
+  {
+    "codigo": "170334",
+    "nombre": "Pensamiento Sistémico",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "CARBAJAL VIGO, Saneli Alcides"
+  },
+  {
+    "codigo": "170334",
+    "nombre": "Pensamiento Sistémico",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "PÉREZ - GODOY BALLÓN, Luis Alberto"
+  },
+  {
+    "codigo": "170334",
+    "nombre": "Pensamiento Sistémico",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "PÉREZ - GODOY BALLÓN, Luis Alberto"
+  },
+  {
+    "codigo": "170334",
+    "nombre": "Pensamiento Sistémico",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "PÉREZ - GODOY BALLÓN, Luis Alberto"
+  },
+  {
+    "codigo": "170334",
+    "nombre": "Pensamiento Sistémico",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "ARREDONDO RUIZ, Manuel Jesus"
+  },
+  {
+    "codigo": "170442",
+    "nombre": "Power BI: Transforma y Visualiza Datos para Decisiones Informadas",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "ARANDA IPINCE, Duilio Angel"
+  },
+  {
+    "codigo": "170423",
+    "nombre": "Principios de Machine Learning",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ROJAS VILLANUEVA, Uwe"
+  },
+  {
+    "codigo": "170341",
+    "nombre": "Procesos de Distribución",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "HONG CHONG, Mario Gustavo"
+  },
+  {
+    "codigo": "170341",
+    "nombre": "Procesos de Distribución",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "ERRERAS, Solange"
+  },
+  {
+    "codigo": "170341",
+    "nombre": "Procesos de Distribución",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "UMPA OBREGON, Nelson Enrique"
+  },
+  {
+    "codigo": "170340",
+    "nombre": "Procesos de Producción",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "UMPA OBREGON, Nelson Enrique"
+  },
+  {
+    "codigo": "170340",
+    "nombre": "Procesos de Producción",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "AMAZO, Rocío Del Alba"
+  },
+  {
+    "codigo": "170340",
+    "nombre": "Procesos de Producción",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "ALCEDO MANSILLA, Jorge Manuel"
+  },
+  {
+    "codigo": "170340",
+    "nombre": "Procesos de Producción",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ARQUEZ, Gustavo Alonso"
+  },
+  {
+    "codigo": "170337",
+    "nombre": "Procesos de Suministros",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "ARMENDIA FOSSA, Francisco Antonio"
+  },
+  {
+    "codigo": "170337",
+    "nombre": "Procesos de Suministros",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "QUIZE, Adriana"
+  },
+  {
+    "codigo": "170337",
+    "nombre": "Procesos de Suministros",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "UTIERREZ, Rodrigo Fernando"
+  },
+  {
+    "codigo": "170107",
+    "nombre": "Programación Avanzada para la Ciencia de Datos",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "VELASQUEZ CASTAÑON, Oswaldo Jose"
+  },
+  {
+    "codigo": "170427",
+    "nombre": "Prototipea tu Idea con Impresión 3D",
+    "seccion": "A",
+    "creditos": 1,
+    "profesor": "CORNEJO RIVERO, Alvaro Alexander"
+  },
+  {
+    "codigo": "170510",
+    "nombre": "Sem. de Investigación en Ingeniería",
+    "seccion": "A",
+    "creditos": 2,
+    "profesor": "LIBAQUE SAENZ, Christian Fernando"
+  },
+  {
+    "codigo": "170503",
+    "nombre": "Sem. Defining Powerful Experience Strategy",
+    "seccion": "S",
+    "creditos": 1,
+    "profesor": "ZOSTEK , Agnieszka"
+  },
+  {
+    "codigo": "170504",
+    "nombre": "Sem. Gestión de las Operaciones y Transformación Digital para la",
+    "seccion": "J",
+    "creditos": 1,
+    "profesor": "URBURG MELNIK, Daniel Andres"
+  },
+  {
+    "codigo": "170505",
+    "nombre": "Sem. Introduction to Operational Research",
+    "seccion": "F",
+    "creditos": 1,
+    "profesor": "LORCZAK , Waldemar Han"
+  },
+  {
+    "codigo": "170346",
+    "nombre": "Tecnología para el Desarrollo Sostenible",
+    "seccion": "Virtual",
+    "creditos": 3,
+    "profesor": "LUNA , Ana Eugenia"
+  },
+  {
+    "codigo": "170346",
+    "nombre": "Tecnología para el Desarrollo Sostenible",
+    "seccion": "B",
+    "creditos": 3,
+    "profesor": "SOTOMAYOR CABRERA, Aristides"
+  },
+  {
+    "codigo": "170350",
+    "nombre": "Tecnología y Negocios Digitales",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RODRIGUEZ SERRA, Michelle"
+  },
+  {
+    "codigo": "170350",
+    "nombre": "Tecnología y Negocios Digitales",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "RODRIGUEZ SERRA, Michelle"
+  },
+  {
+    "codigo": "170350",
+    "nombre": "Tecnología y Negocios Digitales",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "ROGUETT QUEZADA, Nicolas Patricio"
+  },
+  {
+    "codigo": "170350",
+    "nombre": "Tecnología y Negocios Digitales",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "DROGUETT QUEZADA, Nicolas Patricio"
+  },
+  {
+    "codigo": "170350",
+    "nombre": "Tecnología y Negocios Digitales",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "ESCRIBENS OLAECHEA, Mario Eduardo"
+  },
+  {
+    "codigo": "170348",
+    "nombre": "Trabajo Final de Ingeniería de la Información I",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "TALAVERA LOPEZ, Alvaro Gustavo"
+  },
+  {
+    "codigo": "170130",
+    "nombre": "Trabajo Final de Ingeniería Empresarial",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "ALIAGA ALIAGA, Walter"
+  },
+  {
+    "codigo": "170130",
+    "nombre": "Trabajo Final de Ingeniería Empresarial",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "GARMENDIA FOSSA, Francisco Antonio"
+  },
+  {
+    "codigo": "170130",
+    "nombre": "Trabajo Final de Ingeniería Empresarial",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "FANG CHONG, Sergio Enrique"
+  },
+  {
+    "codigo": "170130",
+    "nombre": "Trabajo Final de Ingeniería Empresarial",
+    "seccion": "D",
+    "creditos": 5,
+    "profesor": "ALIAGA ALIAGA, Walter"
+  },
+  {
+    "codigo": "170347",
+    "nombre": "Transformación Digital y Gestión del Cambio",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ORTIZ VALENCIA, Alejandro Leopoldo"
+  },
+  {
+    "codigo": "170347",
+    "nombre": "Transformación Digital y Gestión del Cambio",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "PALACIOS MATOS, Maria Del Pilar Amelia"
+  },
+  {
+    "codigo": "185099",
+    "nombre": "Acto Jurídico",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RETAMOZO ESCOBAR, Jaliya"
+  },
+  {
+    "codigo": "185099",
+    "nombre": "Acto Jurídico",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "HAVEZ VERASTEGUI, Christian"
+  },
+  {
+    "codigo": "185099",
+    "nombre": "Acto Jurídico",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "HUNGA, Kevin Jesus"
+  },
+  {
+    "codigo": "180376",
+    "nombre": "AI Regulation: A Global and Comparative Perspective",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "Dictado en Inglés. VirtualPIEROLA CASTRO, Noe Fernando Nicolas"
+  },
+  {
+    "codigo": "182047",
+    "nombre": "Análisis Económico del Derecho",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "ZUÑIGA PALOMINO, Mario Augusto"
+  },
+  {
+    "codigo": "186045",
+    "nombre": "Arbitraje",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "SPEJO DONAIRE, Andrea Patricia"
+  },
+  {
+    "codigo": "186045",
+    "nombre": "Arbitraje",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "ERRERO DIAZ, Javier Ignacio"
+  },
+  {
+    "codigo": "180265",
+    "nombre": "Contratos",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "HUANCO PISCOCHE, Henry Wilder"
+  },
+  {
+    "codigo": "180265",
+    "nombre": "Contratos",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "MADRID HORNA, Victor"
+  },
+  {
+    "codigo": "180333",
+    "nombre": "Contratos Especiales",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "SORIA AGUILAR, Alfredo Fernando"
+  },
+  {
+    "codigo": "180333",
+    "nombre": "Contratos Especiales",
+    "seccion": "G",
+    "creditos": 3,
+    "profesor": "ABRIEL RIVERA, Jose Luis"
+  },
+  {
+    "codigo": "180331",
+    "nombre": "Criminología y Derecho Penitenciario",
+    "seccion": "N",
+    "creditos": 3,
+    "profesor": "UÑOVERO CISNEROS, Lucia Betty"
+  },
+  {
+    "codigo": "180331",
+    "nombre": "Criminología y Derecho Penitenciario",
+    "seccion": "G",
+    "creditos": 3,
+    "profesor": "UADALUPE, Jose Luis"
+  },
+  {
+    "codigo": "187019",
+    "nombre": "Derecho Administrativo I",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "TIRADO BARRERA, Jose Antonio"
+  },
+  {
+    "codigo": "187019",
+    "nombre": "Derecho Administrativo I",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "GOMEZ APAC, Hugo Ramiro"
+  },
+  {
+    "codigo": "189097",
+    "nombre": "Derecho Administrativo II",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MORI TORRES, Natalia Vanessa"
+  },
+  {
+    "codigo": "189097",
+    "nombre": "Derecho Administrativo II",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "FARFAN SOUSA, Ronnie Ado"
+  },
+  {
+    "codigo": "180266",
+    "nombre": "Derecho Civil y Comercial",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "ARMESTAR BRUNO, Gloria Maria"
+  },
+  {
+    "codigo": "180266",
+    "nombre": "Derecho Civil y Comercial",
+    "seccion": "B",
+    "creditos": 3,
+    "profesor": "RAMIREZ OTERO, Lorena Cecilia"
+  },
+  {
+    "codigo": "180266",
+    "nombre": "Derecho Civil y Comercial",
+    "seccion": "C",
+    "creditos": 3,
+    "profesor": "PARODI LUNA, Maria Beatriz"
+  },
+  {
+    "codigo": "180266",
+    "nombre": "Derecho Civil y Comercial",
+    "seccion": "D",
+    "creditos": 3,
+    "profesor": "ARMESTAR BRUNO, Gloria Maria"
+  },
+  {
+    "codigo": "180404",
+    "nombre": "Sem. Derecho Comparado: Aspectos Prácticos y Metodológicos",
+    "seccion": "F",
+    "creditos": 1,
+    "profesor": "ERRANTE , Alfredo"
+  },
+  {
+    "codigo": "184062",
+    "nombre": "Derecho Concursal",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "LIZARRAGA VERA-PORTOCARRERO, Anthony"
+  },
+  {
+    "codigo": "180086",
+    "nombre": "Derecho Constitucional General",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "ALBAN GONZALEZ, Javier Ignacio"
+  },
+  {
+    "codigo": "180086",
+    "nombre": "Derecho Constitucional General",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "NEYRA ZEGARRA, Ana Cristina"
+  },
+  {
+    "codigo": "188027",
+    "nombre": "Derecho de Familia y Sucesiones",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "PLACIDO VILCACHAGUA, Alex Fernando"
+  },
+  {
+    "codigo": "188027",
+    "nombre": "Derecho de Familia y Sucesiones",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "PLACIDO VILCACHAGUA, Alex Fernando"
+  },
+  {
+    "codigo": "180122",
+    "nombre": "Derecho de la Empresa",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ARES RUIZ, Carla Elena"
+  },
+  {
+    "codigo": "182128",
+    "nombre": "Derecho Internacional Privado",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "VASSALLO BURNEO, Nicolas"
+  },
+  {
+    "codigo": "180070",
+    "nombre": "Derecho Internacional Público",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ZELADA ACUÑA, Carlos Joel"
+  },
+  {
+    "codigo": "180070",
+    "nombre": "Derecho Internacional Público",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "ZELADA ACUÑA, Carlos Joel"
+  },
+  {
+    "codigo": "180088",
+    "nombre": "Derecho Laboral I",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "RELLE MAYURI, Herbert Victor Ricardo"
+  },
+  {
+    "codigo": "180088",
+    "nombre": "Derecho Laboral I",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "IYAGUSUKU, Jorge Luis"
+  },
+  {
+    "codigo": "180088",
+    "nombre": "Derecho Laboral I",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "CASTILLO FUENTES, Diego Sebastian"
+  },
+  {
+    "codigo": "180088",
+    "nombre": "Derecho Laboral I",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "LORA ALVAREZ, German Lino"
+  },
+  {
+    "codigo": "180089",
+    "nombre": "Derecho Laboral II",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "CASTRO POSADAS, Eric Christian"
+  },
+  {
+    "codigo": "180268",
+    "nombre": "Derecho Laboral y Tributario",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "GILDEMEISTER RUIZ HUIDOBRO, Alfredo"
+  },
+  {
+    "codigo": "180268",
+    "nombre": "Derecho Laboral y Tributario",
+    "seccion": "P",
+    "creditos": 3,
+    "profesor": "ANTIGOSO VELLOSO DA SILVEIRA, Francisco"
+  },
+  {
+    "codigo": "180268",
+    "nombre": "Derecho Laboral y Tributario",
+    "seccion": "C",
+    "creditos": 3,
+    "profesor": "MEDRANO GARCIA, Fabricio Manuel"
+  },
+  {
+    "codigo": "180092",
+    "nombre": "Derecho para los Negocios Internacionales",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésGARCIA BELAUNDE SALDIAS, Diego"
+  },
+  {
+    "codigo": "180092",
+    "nombre": "Derecho para los Negocios Internacionales",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "GARCIA BELAUNDE SALDIAS, Diego"
+  },
+  {
+    "codigo": "180327",
+    "nombre": "Derecho Penal",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "ARO JOHN, Jose Antonio"
+  },
+  {
+    "codigo": "180327",
+    "nombre": "Derecho Penal",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "BENDEZU BARNUEVO, Rocci Fiorella"
+  },
+  {
+    "codigo": "181008",
+    "nombre": "Derecho Penal Económico",
+    "seccion": "A",
+    "creditos": 2,
+    "profesor": "BENDEZU BARNUEVO, Rocci Fiorella"
+  },
+  {
+    "codigo": "180321",
+    "nombre": "Derecho Procesal Civil",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "CUBA COPELLO, YVO CAMILO"
+  },
+  {
+    "codigo": "180321",
+    "nombre": "Derecho Procesal Civil",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "RIVAS CASO, Gino Elvio"
+  },
+  {
+    "codigo": "180315",
+    "nombre": "Derecho Procesal Constitucional",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ALBAN GONZALEZ, Javier Ignacio"
+  },
+  {
+    "codigo": "180315",
+    "nombre": "Derecho Procesal Constitucional",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "CAMPOS BERNAL, Heber Joel"
+  },
+  {
+    "codigo": "180358",
+    "nombre": "Derecho Procesal Penal",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "AYO RIVERA SCHREIBER, Maria Jimena Soledad"
+  },
+  {
+    "codigo": "180358",
+    "nombre": "Derecho Procesal Penal",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "ALAZAR PAIVA, María Milagros"
+  },
+  {
+    "codigo": "180339",
+    "nombre": "Derecho Tributario I",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "IAZ TENORIO, Diego Arturo"
+  },
+  {
+    "codigo": "180339",
+    "nombre": "Derecho Tributario I",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "EKULA, Danica"
+  },
+  {
+    "codigo": "180339",
+    "nombre": "Derecho Tributario I",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "UERTAS LIZARZABURU, Martha Cristina"
+  },
+  {
+    "codigo": "180339",
+    "nombre": "Derecho Tributario I",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "HUMAN, Lorena Graciela"
+  },
+  {
+    "codigo": "181000",
+    "nombre": "Derecho Tributario II",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "POLO CHIROQUE, ROBERTO EDWARD"
+  },
+  {
+    "codigo": "181000",
+    "nombre": "Derecho Tributario II",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "RUIZ COLMENARES, Melissa Sarahi"
+  },
+  {
+    "codigo": "180017",
+    "nombre": "Derechos Reales",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RAVINA SANCHEZ, Raul Fernando"
+  },
+  {
+    "codigo": "180017",
+    "nombre": "Derechos Reales",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "HUANCO PISCOCHE, Henry Wilder"
+  },
+  {
+    "codigo": "180405",
+    "nombre": "Derechos Reales y Contratos: Teoría Clásica y Transformaciones",
+    "seccion": "G",
+    "creditos": 1,
+    "profesor": "INES CASTELLET, Nuria"
+  },
+  {
+    "codigo": "188111",
+    "nombre": "Destrezas Legales I",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "DEBENEDETTI LUJAN, Bruno Edoardo"
+  },
+  {
+    "codigo": "180354",
+    "nombre": "Destrezas Legales y Económicas para Litigar en Libre Competencia",
+    "seccion": "A",
+    "creditos": 2,
+    "profesor": "LONSO HERRERA, Jorge Ivan"
+  },
+  {
+    "codigo": "186108",
+    "nombre": "Economía y Derecho",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "URBINA LOVON, Erick Edwin"
+  },
+  {
+    "codigo": "186108",
+    "nombre": "Economía y Derecho",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "GABRIEL RIVERA, Jose Luis"
+  },
+  {
+    "codigo": "186108",
+    "nombre": "Economía y Derecho",
+    "seccion": "I",
+    "creditos": 4,
+    "profesor": "PARRAGUIRRE ROMERO, Gianfranco"
+  },
+  {
+    "codigo": "180196",
+    "nombre": "Fusiones y Adquisiciones",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "COGORNO FALCONE, Sandro Agustin"
+  },
+  {
+    "codigo": "180378",
+    "nombre": "Inglés Jurídico",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "Dictado en InglésCORTINA MENDOZA, Roxana Marina"
+  },
+  {
+    "codigo": "180276",
+    "nombre": "Instituciones de Derecho Mercantil",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "BARDALES MENDOZA, Enrique Rosendo"
+  },
+  {
+    "codigo": "180277",
+    "nombre": "Introducción al Derecho",
+    "seccion": "A",
+    "creditos": 5,
+    "profesor": "ZUÑIGA SCHRODER, Humberto Angel"
+  },
+  {
+    "codigo": "180277",
+    "nombre": "Introducción al Derecho",
+    "seccion": "B",
+    "creditos": 5,
+    "profesor": "OLIVOS CELIS, Milagros Katherine"
+  },
+  {
+    "codigo": "180277",
+    "nombre": "Introducción al Derecho",
+    "seccion": "C",
+    "creditos": 5,
+    "profesor": "TALAVERA CANO, Andres Alvaro"
+  },
+  {
+    "codigo": "180278",
+    "nombre": "Obligaciones",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MADRID HORNA, Victor"
+  },
+  {
+    "codigo": "180278",
+    "nombre": "Obligaciones",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "VASQUEZ REBAZA, Walter Humberto"
+  },
+  {
+    "codigo": "180379",
+    "nombre": "Organizaciones Internacionales",
+    "seccion": "B",
+    "creditos": 3,
+    "profesor": "RAVO ARANA, Grismi Claudia"
+  },
+  {
+    "codigo": "180066",
+    "nombre": "Personas del Derecho Civil",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "OLIVOS CELIS, Milagros Katherine"
+  },
+  {
+    "codigo": "180066",
+    "nombre": "Personas del Derecho Civil",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "NEIRA LUCAR, Melissa Judith"
+  },
+  {
+    "codigo": "185037",
+    "nombre": "Regulación Bancaria y Mercado de Capitales",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "LIAGA FARFAN, Jeanette Sofia"
+  },
+  {
+    "codigo": "185037",
+    "nombre": "Regulación Bancaria y Mercado de Capitales",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "SARMIENTO AGUIRRE, Lorena Yolanda"
+  },
+  {
+    "codigo": "180099",
+    "nombre": "Responsabilidad Extracontractual",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "RETAMOZO ESCOBAR, Jaliya"
+  },
+  {
+    "codigo": "180099",
+    "nombre": "Responsabilidad Extracontractual",
+    "seccion": "B",
+    "creditos": 3,
+    "profesor": "RETAMOZO ESCOBAR, Jaliya"
+  },
+  {
+    "codigo": "180377",
+    "nombre": "Sem. de Derecho Administrativo y Regulación",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "FARFAN SOUSA, Ronnie Ado"
+  },
+  {
+    "codigo": "180062",
+    "nombre": "Sem. de Derecho Constitucional",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "ABAD YUPANQUI, Samuel Bernardo"
+  },
+  {
+    "codigo": "180114",
+    "nombre": "Sem. de Tesis",
+    "seccion": "D",
+    "creditos": 2,
+    "profesor": "EBENEDETTI LUJAN, Bruno Edoardo"
+  },
+  {
+    "codigo": "180350",
+    "nombre": "Sociedades",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "RAMIREZ OTERO, Lorena Cecilia"
+  },
+  {
+    "codigo": "180317",
+    "nombre": "Técnicas de Persuasión y Moot Court",
+    "seccion": "F",
+    "creditos": 3,
+    "profesor": "REITAS CABANILLAS, Rodrigo Andrés"
+  },
+  {
+    "codigo": "180317",
+    "nombre": "Técnicas de Persuasión y Moot Court",
+    "seccion": "P",
+    "creditos": 3,
+    "profesor": "ISCOCHE, Henry Wilder"
+  },
+  {
+    "codigo": "180355",
+    "nombre": "Tendencias Jurisprudenciales del Derecho Penal Económico",
+    "seccion": "A",
+    "creditos": 3,
+    "profesor": "REAÑO PESCHIERA, José Leandro"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "SIMONS PINO, Adrian Marcius"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "CHIRINOS VIDAURRAZAGA, Gonzalo Guillermo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "ALINAS MORRIS, Juan Carlos"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "SCALANTE, Roberto"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ALPARTIDA TABUCHI, Daniel Humberto"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "ONCAGLIOLO, Gabriel Andres"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "UNA VICTORIA CONTRERAS, Rolando Alfonso"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "AUNELLI MONTERO, Jose Carlos"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ARTINEZ, Braulio Eduardo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ONGRUT MONTALVAN, Samuel Arturo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "EZAMETA, Salvador Paul Walter"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "EYNOSO, Lucia Fabiola"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ARBAJAL ZAPATA, Jeferson Davy"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "OJAS, Jose Roberto"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ORNEJO LIMO, Luis Bruno"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "OZO SANCHEZ, Jorge Antonio"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "W",
+    "creditos": 4,
+    "profesor": "ATSON ALVARADO, Jean Paul"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "EFILIPPI ANGELDONIS, Enzo Fabrizio"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "HAVEZ, Renzo Miguel"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "Y",
+    "creditos": 4,
+    "profesor": "AMAN , Serhat"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "IZARRO ARTEAGA, Delvick Jhon"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "OBLES FLORES, Luis Miguel"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ALLA POLANCO, Christian Israel Raymundo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "ANDURO PARDO, Julio Antonio"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ORALES, Antonella Andrea"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ACERES, Kattia Geraldine"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ORDOVA LOPEZ, Juan Pablo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "T",
+    "creditos": 4,
+    "profesor": "ELLO YZAGUIRRE, Andre Luis"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ASTAÑEDA, Juaquin Francisco"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "T",
+    "creditos": 4,
+    "profesor": "ORRE, Eberth Alexis"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RUIZ PEREZ, Jose Luis"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RUNCIMAN SAETTONE, Guillermo Alfredo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "RUNCIMAN SAETTONE, Guillermo Alfredo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "RESCIANI CHAVEZ, Fernando Manuel"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ONTALVO, Moises Alberto"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "IANCAS SOTELO, Francis Junior"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "LVAREZ DROBUSH, Alexei Darwinovich"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "OREDO, Joshep Haruo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "RUZ CASTAÑEDA, Vivian"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ELASQUEZ, Zahir Sebastian"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RIAS VERNAL, Carlos Augusto"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ARGAS VILCHEZ, Enver Enrique"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "Z",
+    "creditos": 4,
+    "profesor": "APATA, Andres Eduardo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "AIZ NEYRA, Luis Oscar"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "RCE ROEL, Luis Enrique"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "OOR OSELE, Daniela"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "T",
+    "creditos": 4,
+    "profesor": "AM CUBA, Sasha Prince"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "Q",
+    "creditos": 4,
+    "profesor": "UEVEDO SANCHEZ, Gregorio Vladimir"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "QUEVEDO SANCHEZ, Gregorio Vladimir"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "GABILONDO ALVAREZ, Sergio Alejandro"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "LADO MARQUEZ, Jorge Eduardo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "IRA, Diego Santiago"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en Inglés. VirtualWINKELRIED QUEZADA, Diego Martin"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ENDIBURU DIAZ, Carlos Hugo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "OGATA SHIMOKAWA DE KANAMORI, Clara Elena"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ASTELLANOS ROBLES, Enrique Guillermo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "R",
+    "creditos": 4,
+    "profesor": "ODRIGUEZ CASANOVA, Gianina"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "ALACIOS PEREYRA, Diego Alberto"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "ORDON, Jose Salvador"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "V",
+    "creditos": 4,
+    "profesor": "ALENZUELA HUARCAYA, Adriana"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "DE LA CUBA RESTANI, Mauricio Fernando"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "ERGGRUN PRECIADO, Luis"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "SANCHO ROJAS, Alejandro Antonio"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésTANTALEAN VALDIVIESO, Elizabeth Marie"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MONTENEGRO LEE, Ruben Angel"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "Virtual",
+    "creditos": 4,
+    "profesor": "OLIVARES CANCHARI, Jose Andres"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésARIAS VERNAL, Carlos Augusto"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésTORRES GOMEZ, Victor Manuel"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en Inglés. VirtualDIAZ GALINDO, Fanny Mariana"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en Inglés. VirtualRUIZ DE LA CRUZ, Fernando Miguel"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "WINKELRIED QUEZADA, Diego Martin"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésLAU PUN, Federico"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MATUTE QUIROGA, Juan Andres"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "N",
+    "creditos": 4,
+    "profesor": "OEDING KOLTERMANN, Kurt Heinrich August"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en Inglés. VirtualLOVEDAY LAGHI, James Louis"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésPONCE HEREDIA, Juan Jose"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en Inglés. VirtualLUCEN VALDIVIA, Fernando"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "SANCHEZ CHAVEZ, Elio Javier"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "QUEVEDO SANCHEZ, Gregorio Vladimir"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésLEON , Vicente Manuel"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "Dictado en InglésLEON , Vicente Manuel"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "LIZARZABURU BARTRA, Adriana Lastenia"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "PANCORBO VALDIVIA, Sergio Omar"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MOSQUEIRA LOAYZA, Javier Edilberto"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "PEINADO BRAVO, Maria Estrella Del Pilar"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "IAZ RAMOS, Miguel Raúl"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "HERNANI MERINO, Martin Nelson"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "SANCHEZ JUGO, Isabel"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "SANCHEZ JUGO, Isabel"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésKOBAYASHI ANDO, María Elena"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "Dictado en InglésPINTO GUILLEN, Maria Jose"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésLINARES TORRES, Freddy"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MALCA GUAYLUPO, Oscar Enrique"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésESPINOZA MATOS, José Francisco"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "CARBONELL ROSSO, María De Las Mercedes"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "CARBONELL ROSSO, María De Las Mercedes"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "IZARZABURU VELASQUEZ, Carlos Enrique"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "PENNANO VILLANUEVA, Carla"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "EINADO BRAVO, Maria Estrella Del Pilar"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "P",
+    "creditos": 4,
+    "profesor": "OZO YABAR, Natalia Sofia"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en Inglés. VirtualMEUNIER , Bernard"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "Dictado en Inglés. VirtualACOSTA RUIZ, Vanessa Mirtha"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "S",
+    "creditos": 4,
+    "profesor": "AKODA MIZUSHIMA, Diego"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "LADINES AZALIA, Juan Carlos"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "GARCIA JERI, Oswaldo Carlos"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "Virtual",
+    "creditos": 4,
+    "profesor": ""
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "PEREZ DE ARMAS, Emilio"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésACOSTA RUIZ, Vanessa Mirtha"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "GARMENDIA FOSSA, Francisco Antonio"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MORI CLEMENT, Yadira Isbi"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en Inglés. VirtualDEL SOLAR ESCARDO, Diego"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésVEGA FARRO, Elizabeth"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "DEH , Jude Ndubuisi"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "IMONGI FRANCA COELHO, Ricardo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en Inglés. VirtualCALMET GUTIERREZ, Maria Angela"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésLADINES AZALIA, Juan Carlos"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "Dictado en InglésVARGAS DE LA JARA, Marisol"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "IAZ DIAZ, Dagoberto Luis"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "LVARADO RUIZ, Paola Alessandra"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésKALMURAND , Katrin"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "Dictado en InglésCARRERAS MERINO, Andrea"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésPENNANO VILLANUEVA, Carla"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "RANCO VALDIVIA, Eliana"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "L",
+    "creditos": 4,
+    "profesor": "ADINES AZALIA, Juan Carlos"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MELLADO SILVA, Maria Antonieta Rosario"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "TALAVERA SALDARRIAGA, Willy Martin Enrique"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "ZUÑIGA LAZO, Jenny Lorena"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "TUTAYA ZEVALLOS, Renan Jesus"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "GOMEZ ALVIS, ELIZABETH INGRID"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "CAYCHO HUAMANI, Jose Alberto"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "H",
+    "creditos": 4,
+    "profesor": "ERNANI MERINO, Martin Nelson"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "ANTICONA SUAREZ, Erick Olson"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ANRIQUE PONCE, Christian Gerardo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MANRIQUE PONCE, Christian Gerardo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "CLAUX FREITAS, Lorena"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "OMEZ CHANGA, Sarita Julia"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "Z",
+    "creditos": 4,
+    "profesor": "AMBRANO, Renzo Mauricio"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MAYORGA GUTIERREZ, David Jesus"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "MAYORGA GUTIERREZ, David Jesus"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "C",
+    "creditos": 4,
+    "profesor": "RIVAS VELARDE, Andrea Carolina"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "E",
+    "creditos": 4,
+    "profesor": "TUTAYA ZEVALLOS, Renan Jesus"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "F",
+    "creditos": 4,
+    "profesor": "RIVAS VELARDE, Andrea Carolina"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "G",
+    "creditos": 4,
+    "profesor": "Dictado en InglésPENNANO VILLANUEVA, Carla"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "GONZALES ARBAIZA, Maricruz Del Pilar"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "OTTGER GARFIAS, Alexandra Hedwig"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "SCHWALB HELGUERO, Maria Matilde"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en Inglés. VirtualROMAN YSEKI, Jorge Hiroshi"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "Dictado en InglésGARCIA BELAUNDE SALDIAS, Diego"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "Dictado en InglésGARCIA BELAUNDE SALDIAS, Diego"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "LINARES TORRES, Freddy"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "A",
+    "creditos": 4,
+    "profesor": "MARROU LOAYZA, Julio Estuardo"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "AYORGA GUTIERREZ, David Jesus"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "D",
+    "creditos": 4,
+    "profesor": "E VEGA DE UNCETA, Alejandro"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "M",
+    "creditos": 4,
+    "profesor": "ORI CLEMENT, Yadira Isbi"
+  },
+  {
+    "codigo": "180282",
+    "nombre": "Teoría General del Proceso",
+    "seccion": "B",
+    "creditos": 4,
+    "profesor": "RAGAGNINI OLIVER, Rizal Andres"
+  }
+]

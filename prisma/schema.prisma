@@ -1,0 +1,178 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  rol       String
+  createdAt DateTime @default(now())
+
+  alumno             Alumno?
+  docente            Docente?
+  administrativoDaar AdministrativoDaar?
+
+  reclamosEstudiante Reclamo[]              @relation("EstudianteReclamos")
+  reclamosDocente    Reclamo[]              @relation("DocenteReclamos")
+  reclamosOperador   Reclamo[]              @relation("OperadorReclamos")
+  eventos            ReclamoEvento[]
+  notificaciones     Notificacion[]
+  entregasFisicas    SolicitudExamenFisico[] @relation("OperadorEntregaFisica")
+}
+
+model Alumno {
+  userId                 String  @id
+  nombres                String
+  apellidoPaterno        String
+  apellidoMaterno        String
+  codigo                 String  @unique
+  impedidoHastaSemestre  String?
+
+  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  matriculas Matricula[]
+}
+
+model Docente {
+  userId          String @id
+  nombres         String
+  apellidoPaterno String
+  apellidoMaterno String
+
+  user              User                    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  cursos            Curso[]                 @relation("DocenteCursos")
+  solicitudesFisico SolicitudExamenFisico[]
+}
+
+model AdministrativoDaar {
+  userId          String @id
+  nombres         String
+  apellidoPaterno String
+  apellidoMaterno String
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Curso {
+  id           String   @id @default(cuid())
+  codigo       String
+  seccion      String   @default("A")
+  nombre       String
+  creditos     Float    @default(4)
+  departamento String   @default("General")
+  docenteId    String
+  semestre     String
+  createdAt    DateTime @default(now())
+
+  docente      Docente       @relation("DocenteCursos", fields: [docenteId], references: [userId])
+  evaluaciones Evaluacion[]
+  matriculas   Matricula[]
+
+  @@unique([codigo, seccion, semestre])
+}
+
+model Matricula {
+  id           String   @id @default(cuid())
+  estudianteId String
+  cursoId      String
+  createdAt    DateTime @default(now())
+
+  estudiante Alumno @relation(fields: [estudianteId], references: [userId], onDelete: Cascade)
+  curso      Curso  @relation(fields: [cursoId], references: [id], onDelete: Cascade)
+
+  @@unique([estudianteId, cursoId])
+}
+
+model Evaluacion {
+  id                 String   @id @default(cuid())
+  cursoId            String
+  tipo               String
+  nombre             String
+  notaPublicada      Float?
+  fechaLimiteReclamo DateTime
+  createdAt          DateTime @default(now())
+
+  curso    Curso     @relation(fields: [cursoId], references: [id])
+  reclamos Reclamo[]
+}
+
+model Reclamo {
+  id                String    @id @default(cuid())
+  evaluacionId      String
+  estudianteId      String
+  docenteId         String
+  operadorDaarId    String?
+  motivo            String
+  argumento         String
+  preguntaMarcada   Int?
+  examenNoLapiz     Boolean   @default(false)
+  estado            String    @default("ENVIADO")
+  decision          String?
+  resultadoFinal    String?
+  semestreAcademico String    @default("2026-I")
+  notaAnterior      Float
+  notaNueva         Float?
+  comentarioDocente String?
+  archivoPath       String?
+  archivoHash       String?
+  escaneadoAt       DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  evaluacion          Evaluacion              @relation(fields: [evaluacionId], references: [id])
+  estudiante          User                    @relation("EstudianteReclamos", fields: [estudianteId], references: [id])
+  docente             User                    @relation("DocenteReclamos", fields: [docenteId], references: [id])
+  operador            User?                   @relation("OperadorReclamos", fields: [operadorDaarId], references: [id])
+  eventos             ReclamoEvento[]
+  notificaciones      Notificacion[]
+  solicitudExamenFisico SolicitudExamenFisico?
+
+  @@unique([estudianteId, evaluacionId])
+}
+
+model SolicitudExamenFisico {
+  id              String    @id @default(cuid())
+  reclamoId       String    @unique
+  docenteId       String
+  solicitadoAt    DateTime  @default(now())
+  entregadoAt     DateTime?
+  procede         Boolean?
+  operadorDaarId  String?
+  createdAt       DateTime  @default(now())
+
+  reclamo  Reclamo @relation(fields: [reclamoId], references: [id], onDelete: Cascade)
+  docente  Docente @relation(fields: [docenteId], references: [userId])
+  operador User?   @relation("OperadorEntregaFisica", fields: [operadorDaarId], references: [id])
+}
+
+model ReclamoEvento {
+  id             String   @id @default(cuid())
+  reclamoId      String
+  actorId        String
+  accion         String
+  estadoAnterior String?
+  estadoNuevo    String?
+  metadata       String?
+  createdAt      DateTime @default(now())
+
+  reclamo Reclamo @relation(fields: [reclamoId], references: [id], onDelete: Cascade)
+  actor   User    @relation(fields: [actorId], references: [id])
+}
+
+model Notificacion {
+  id        String   @id @default(cuid())
+  usuarioId String
+  reclamoId String?
+  titulo    String
+  mensaje   String
+  leida     Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  usuario User     @relation(fields: [usuarioId], references: [id])
+  reclamo Reclamo? @relation(fields: [reclamoId], references: [id], onDelete: SetNull)
+}
