@@ -7,6 +7,7 @@ import {
 } from '@/lib/services/reclamo.service';
 import { getDashboardDaarData } from '@/lib/services/dashboard-daar.service';
 import { DashboardClient } from '@/components/daar/dashboard-client';
+import { CorreoPruebaPanel } from '@/components/daar/correo-prueba-panel';
 
 export default async function DaarDashboardPage() {
   const session = await getSession();
@@ -26,6 +27,8 @@ export default async function DaarDashboardPage() {
           Panel analítico en tiempo real — reemplaza el Excel de seguimiento de reclamos.
         </p>
       </div>
+
+      <CorreoPruebaPanel />
 
       <DashboardClient initial={initial} pendientesCierre={pendientes} todos={todos} />
     </div>

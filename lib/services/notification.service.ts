@@ -1,3 +1,4 @@
+import { reclamoUrl } from '@/lib/app-url';
 import { sendEmailToUser } from '@/lib/services/email.service';
 import { prisma } from '@/lib/db';
 import type { Rol } from '@/lib/types';
@@ -19,10 +20,18 @@ export async function sendNotification(input: {
 
   const user = await prisma.user.findUnique({
     where: { id: input.userId },
-    select: { email: true },
+    select: { email: true, rol: true },
   });
+
   if (user?.email) {
-    await sendEmailToUser(user.email, input.titulo, input.mensaje);
+    const linkUrl = input.reclamoId
+      ? reclamoUrl(input.reclamoId, user.rol as 'estudiante' | 'docente' | 'daar')
+      : undefined;
+
+    await sendEmailToUser(user.email, input.titulo, input.mensaje, {
+      linkUrl,
+      linkLabel: 'Ver reclamo en ReclamoUP',
+    });
   }
 }
 
@@ -41,6 +50,9 @@ export async function sendToRole(
   });
 
   for (const u of users) {
-    await sendEmailToUser(u.email, input.titulo, input.mensaje);
+    await sendEmailToUser(u.email, input.titulo, input.mensaje, {
+      linkUrl: input.reclamoId ? reclamoUrl(input.reclamoId, rol) : undefined,
+      linkLabel: 'Ver en panel DAAR',
+    });
   }
 }
