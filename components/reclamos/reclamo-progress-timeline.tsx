@@ -39,14 +39,15 @@ export function ReclamoProgressTimeline({ estado }: { estado: EstadoReclamo }) {
   }
 
   const actual = indiceProgreso(estado);
+  const finalizado = estado === 'CERRADO';
 
   return (
     <div className="rounded-lg border border-up-border bg-up-surface p-4 sm:p-6">
       <h2 className="text-sm font-semibold text-up-text mb-4">Progreso de su reclamo</h2>
       <ol className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-0">
         {PASOS.map((paso, i) => {
-          const completado = i < actual;
-          const enCurso = i === actual;
+          const completado = finalizado ? i <= actual : i < actual;
+          const enCurso = !finalizado && i === actual;
           const pendiente = i > actual;
 
           return (
