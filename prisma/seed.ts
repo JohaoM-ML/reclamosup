@@ -6,6 +6,7 @@ import { createPrismaClient } from '../lib/create-prisma-client';
 import { CONTRASENA_INICIAL } from '../lib/contrasena-inicial';
 import { generarCodigoUpAleatorio } from '../lib/codigo-up';
 import { departamentoDesdeCodigo } from '../lib/departamento';
+import { seleccionarOfertaPorFacultad } from '../lib/oferta-por-facultad';
 import { calcularResultadoFinal } from '../lib/domain/resultado-final';
 import {
   emailAlumnoUp,
@@ -29,7 +30,6 @@ const EMAIL_DEMO_DOCENTE = 'pa.tueroc@alum.up.edu.pe';
 const CODIGO_DEMO_DOCENTE = '000100001';
 const CURSOS_POR_ESTUDIANTE = 5;
 const TOTAL_ESTUDIANTES = 50;
-const MAX_CURSOS = 20;
 const MIN_SECCIONES_POR_CURSO = 2;
 const MAX_SECCIONES_POR_CURSO = 4;
 const TARGET_RECLAMOS = 98;
@@ -72,36 +72,11 @@ function cargarOferta(): OfertaSeccion[] {
 }
 
 function seleccionarOferta(oferta: OfertaSeccion[]): OfertaSeccion[] {
-  const elegible = oferta.filter((s) => !esCursoExcluidoReclamoDigital(s.nombre));
-
-  const porCodigo = new Map<string, OfertaSeccion[]>();
-  for (const s of elegible) {
-    const list = porCodigo.get(s.codigo) ?? [];
-    list.push(s);
-    porCodigo.set(s.codigo, list);
-  }
-
-  const codigos = [...porCodigo.keys()].sort((a, b) => a.localeCompare(b));
-  const codigosElegidos = codigos.slice(0, MAX_CURSOS);
-  const out: OfertaSeccion[] = [];
-
-  for (const codigo of codigosElegidos) {
-    const vistosSeccion = new Set<string>();
-    const secciones = [...(porCodigo.get(codigo) ?? [])]
-      .sort((a, b) => a.seccion.localeCompare(b.seccion))
-      .filter((s) => {
-        if (vistosSeccion.has(s.seccion)) return false;
-        vistosSeccion.add(s.seccion);
-        return true;
-      });
-    const cantidad = Math.min(
-      MAX_SECCIONES_POR_CURSO,
-      Math.max(MIN_SECCIONES_POR_CURSO, secciones.length)
-    );
-    out.push(...secciones.slice(0, cantidad));
-  }
-
-  return out;
+  return seleccionarOfertaPorFacultad(oferta, {
+    cursosPorPrefijo: 4,
+    minSeccionesPorCurso: MIN_SECCIONES_POR_CURSO,
+    maxSeccionesPorCurso: MAX_SECCIONES_POR_CURSO,
+  });
 }
 
 function notaAleatoria() {

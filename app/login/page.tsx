@@ -98,11 +98,7 @@ export default function LoginPage() {
                       const emailInput = form?.querySelector<HTMLInputElement>(
                         'input[name="email"]'
                       );
-                      const passInput = form?.querySelector<HTMLInputElement>(
-                        'input[name="password"]'
-                      );
                       if (emailInput) emailInput.value = acc.email;
-                      if (passInput) passInput.value = 'demo123';
                     }}
                     className="flex w-full items-center justify-between rounded-md border border-white/10 px-3 py-2 text-left text-xs text-white/90 transition-colors hover:border-white/25 hover:bg-white/10"
                   >
@@ -111,7 +107,6 @@ export default function LoginPage() {
                   </button>
                 ))}
               </div>
-              <p className="mt-3 text-xs text-white/50">Contraseña: demo123</p>
             </div>
           </div>
         </main>
