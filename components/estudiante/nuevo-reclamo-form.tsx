@@ -230,11 +230,8 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
     <>
       <form ref={formRef} onSubmit={handleSubmit} className="max-w-2xl space-y-5">
         <div className="rounded-md border border-up-blue/20 bg-up-blue/5 p-4 text-sm text-up-text">
-          <strong>Paso 1 — Representante de aula:</strong> debe estar presente y observar el
-          escaneo íntegro del examen.
-          <br />
-          <strong>Paso 2 — Usted (estudiante):</strong> complete el formulario y adjunte el PDF
-          del examen escaneado. El reclamo se envía directamente al docente.
+          Escanee su examen completo, complete el formulario y adjunte el PDF. El reclamo se envía
+          directamente al docente.
         </div>
 
         <div>
@@ -347,7 +344,7 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
             className="w-full text-sm text-up-text file:mr-4 file:rounded-md file:border-0 file:bg-up-blue/10 file:px-4 file:py-2 file:text-up-blue disabled:opacity-50"
           />
           <p className="mt-1 text-xs text-up-text-muted">
-            Escanee el examen completo con el representante de aula presente.
+            Escanee el examen completo antes de adjuntarlo.
           </p>
         </div>
 
@@ -356,20 +353,6 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
           <span>
             Declaro que mi examen <strong>no</strong> fue hecho con lápiz u otro medio borrable
             (Art. 38)
-          </span>
-        </label>
-
-        <label className="flex items-start gap-2 text-sm text-up-text">
-          <input
-            type="checkbox"
-            name="representantePresenciado"
-            value="true"
-            required
-            className="mt-1"
-          />
-          <span>
-            Confirmo que el <strong>representante de aula</strong> presenció el escaneo íntegro de
-            mi examen.
           </span>
         </label>
 

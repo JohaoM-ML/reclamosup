@@ -15,14 +15,6 @@ export const crearReclamoEstudianteSchema = z.object({
     .string()
     .transform((v) => v === 'true' || v === 'on')
     .pipe(z.literal(true, { message: 'Debe confirmar que el examen no fue hecho con lápiz' })),
-  representantePresenciado: z
-    .string()
-    .transform((v) => v === 'true' || v === 'on')
-    .pipe(
-      z.literal(true, {
-        message: 'Debe confirmar que el representante de aula presenció el escaneo',
-      })
-    ),
 });
 
 export const resolverReclamoSchema = z

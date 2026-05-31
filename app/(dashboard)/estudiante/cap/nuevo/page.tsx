@@ -19,7 +19,7 @@ export default async function NuevoReclamoPage() {
     <div>
       <PageHeader
         title="Nuevo reclamo — CAP"
-        description="Con el representante de aula presente, escanee su examen y complete el formulario. El reclamo se envía directamente al docente."
+        description="Escanee su examen y complete el formulario. El reclamo se envía directamente al docente."
       />
 
       {impedidoHasta && (

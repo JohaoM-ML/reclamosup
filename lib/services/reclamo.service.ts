@@ -147,7 +147,7 @@ async function notificarReclamoRegistrado(
     actorId: estudianteId,
     accion: 'ESTUDIANTE_REGISTRO_CON_PDF',
     estadoNuevo: 'ENVIADO',
-    metadata: { representantePresenciado: true },
+    metadata: {},
   });
 
   await sendNotification({
@@ -248,7 +248,7 @@ export async function crearReclamoEstudiante(input: ReclamoEstudianteInput & {
     actorId: input.estudianteId,
     accion: 'ESTUDIANTE_REGISTRO_CON_PDF',
     estadoNuevo: 'ENVIADO',
-    metadata: { hash, representantePresenciado: true },
+    metadata: { hash },
   });
 
   await notificarReclamoRegistrado(reclamo.id, input.estudianteId, reclamo.evaluacion);

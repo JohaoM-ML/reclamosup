@@ -56,7 +56,6 @@ export async function crearReclamoEstudianteAction(
       motivo: formData.get('motivo'),
       argumento: formData.get('argumento'),
       examenNoLapiz: formData.get('examenNoLapiz'),
-      representantePresenciado: formData.get('representantePresenciado'),
     });
 
     if (!parsed.success) {
@@ -101,7 +100,6 @@ function parseReclamoFormFields(formData: FormData) {
       motivo: formData.get('motivo'),
       argumento: formData.get('argumento'),
       examenNoLapiz: formData.get('examenNoLapiz'),
-      representantePresenciado: formData.get('representantePresenciado'),
     }),
     preguntasMarcadas: parsePreguntasMarcadas(formData.getAll('preguntasMarcadas')),
   };

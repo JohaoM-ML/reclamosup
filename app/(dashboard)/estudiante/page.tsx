@@ -18,7 +18,7 @@ export default async function EstudiantePage() {
     <div>
       <PageHeader
         title="Mis reclamos"
-        description="En CAP, con el representante de aula presente, escanee su examen y registre el reclamo."
+        description="En CAP, escanee su examen y registre el reclamo."
         action={
           <Link href="/estudiante/cap/nuevo">
             <Button>+ Nuevo reclamo (CAP)</Button>
@@ -29,7 +29,7 @@ export default async function EstudiantePage() {
       {reclamos.length === 0 ? (
         <EmptyState
           title="Sin reclamos registrados"
-          description="Acércate a CAP con tu examen y el representante de aula para registrar uno."
+          description="Acércate a CAP con tu examen para registrar un reclamo."
           action={
             <Link href="/estudiante/cap/nuevo">
               <Button>Registrar reclamo</Button>
