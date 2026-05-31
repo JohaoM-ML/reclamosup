@@ -1,13 +1,8 @@
+import * as XLSX from 'xlsx';
 import { ESTADO_LABELS, RESULTADO_FINAL_LABELS, type EstadoReclamo, type ResultadoFinal } from '@/lib/types';
 import type { getTodosReclamos } from '@/lib/services/reclamo.service';
 
 export type ReclamoExportRow = Awaited<ReturnType<typeof getTodosReclamos>>[number];
-
-function escapeCsv(value: string | number | null | undefined): string {
-  const s = value == null ? '' : String(value);
-  if (/[",\n\r]/.test(s)) return `"${s.replace(/"/g, '""')}"`;
-  return s;
-}
 
 function estadoLabel(estado: string): string {
   return ESTADO_LABELS[estado as EstadoReclamo] ?? estado;
@@ -35,7 +30,7 @@ const HEADERS = [
   'Fecha registro',
 ];
 
-function rowToCsv(r: ReclamoExportRow): string[] {
+function rowToCells(r: ReclamoExportRow): (string | number)[] {
   return [
     r.id.slice(-6),
     r.estudiante.codigo ?? '',
@@ -47,29 +42,37 @@ function rowToCsv(r: ReclamoExportRow): string[] {
     r.docente.nombre,
     estadoLabel(r.estado),
     resultadoLabel(r.resultadoFinal),
-    r.notaAnterior != null ? String(r.notaAnterior) : '',
-    r.notaNueva != null ? String(r.notaNueva) : '',
+    r.notaAnterior ?? '',
+    r.notaNueva ?? '',
     r.semestreAcademico,
     new Date(r.createdAt).toLocaleString('es-PE'),
   ];
 }
 
 export function exportReclamosToExcel(rows: ReclamoExportRow[], filenamePrefix = 'reclamos-daar') {
-  const lines = [
-    HEADERS.map(escapeCsv).join(','),
-    ...rows.map((r) => rowToCsv(r).map(escapeCsv).join(',')),
+  const sheet = XLSX.utils.aoa_to_sheet([HEADERS, ...rows.map(rowToCells)]);
+  sheet['!cols'] = [
+    { wch: 8 },
+    { wch: 12 },
+    { wch: 28 },
+    { wch: 10 },
+    { wch: 32 },
+    { wch: 8 },
+    { wch: 12 },
+    { wch: 28 },
+    { wch: 18 },
+    { wch: 22 },
+    { wch: 12 },
+    { wch: 10 },
+    { wch: 10 },
+    { wch: 20 },
   ];
-  const bom = '\uFEFF';
-  const blob = new Blob([bom + lines.join('\r\n')], {
-    type: 'text/csv;charset=utf-8',
-  });
+
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, sheet, 'Reclamos');
+
   const fecha = new Date().toISOString().slice(0, 10);
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `${filenamePrefix}-${fecha}.csv`;
-  a.click();
-  URL.revokeObjectURL(url);
+  XLSX.writeFile(workbook, `${filenamePrefix}-${fecha}.xlsx`);
 }
 
-export { HEADERS as RECLAMOS_EXPORT_HEADERS, rowToCsv as reclamoToExportRow };
+export { HEADERS as RECLAMOS_EXPORT_HEADERS, rowToCells as reclamoToExportRow };
