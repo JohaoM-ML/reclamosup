@@ -21,7 +21,7 @@ export function ResolverForm({ reclamoId }: { reclamoId: string }) {
       <input type="hidden" name="reclamoId" value={reclamoId} />
 
       <div>
-        <label className={labelClass}>Resultado (Excel DAAR)</label>
+        <label className={labelClass}>Resultado</label>
         <select
           name="resultadoFinal"
           required

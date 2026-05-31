@@ -7,7 +7,6 @@ import { PendientesDocenteTable } from '@/components/daar/pendientes-docente-tab
 import { TodosReclamosTable } from '@/components/daar/todos-reclamos-table';
 import { EstadoBadge } from '@/components/reclamos/estado-badge';
 import {
-  registrarEntregaFisicaFormAction,
   cerrarReclamoFormAction,
 } from '@/app/actions/reclamo.actions';
 import type { getDashboardDaarData } from '@/lib/services/dashboard-daar.service';
@@ -101,64 +100,6 @@ export function OperativoPanel({ data, semestre, pendientesCierre, todos }: Prop
             </details>
           ))}
         </div>
-      </section>
-
-      <section>
-        <h2 className="text-lg font-semibold text-up-text mb-3">
-          Entregas físicas pendientes ({data.entregasFisicas.length})
-        </h2>
-        {data.entregasFisicas.length === 0 ? (
-          <p className="text-up-text-muted text-sm">No hay solicitudes de examen físico.</p>
-        ) : (
-          <div className="space-y-3">
-            {data.entregasFisicas.map((s) => (
-              <div
-                key={s.id}
-                className="rounded-lg border border-up-border bg-up-surface p-4 flex flex-wrap gap-4 items-center justify-between"
-              >
-                <div className="text-sm">
-                  <p className="font-medium">
-                    Reclamo #{s.reclamoId.slice(-6)} — {s.reclamo.evaluacion.curso.nombre}
-                  </p>
-                  <p className="text-up-text-secondary">
-                    Docente: {s.docente.nombres} {s.docente.apellidoPaterno}
-                  </p>
-                  <p className="text-up-text-muted text-xs">
-                    Solicitado: {new Date(s.solicitadoAt).toLocaleString('es-PE')}
-                  </p>
-                </div>
-                <div className="flex gap-2">
-                  <form action={registrarEntregaFisicaFormAction}>
-                    <input type="hidden" name="solicitudId" value={s.id} />
-                    <input type="hidden" name="procede" value="true" />
-                    <button
-                      type="submit"
-                      className="bg-green-600 text-white text-xs px-3 py-1.5 rounded hover:bg-green-700"
-                    >
-                      Entregar — Procede
-                    </button>
-                  </form>
-                  <form action={registrarEntregaFisicaFormAction}>
-                    <input type="hidden" name="solicitudId" value={s.id} />
-                    <input type="hidden" name="procede" value="false" />
-                    <button
-                      type="submit"
-                      className="bg-red-600 text-white text-xs px-3 py-1.5 rounded hover:bg-red-700"
-                    >
-                      Entregar — No procede
-                    </button>
-                  </form>
-                  <Link
-                    href={`/daar/${s.reclamoId}`}
-                    className="text-up-blue text-xs self-center hover:underline"
-                  >
-                    Ver
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
       </section>
 
       <section>

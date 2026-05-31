@@ -322,7 +322,7 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
         </div>
 
         <div>
-          <label className={labelClass}>Argumento / fundamento</label>
+          <label className={labelClass}>Argumento(s) / fundamento</label>
           <textarea
             name="argumento"
             required

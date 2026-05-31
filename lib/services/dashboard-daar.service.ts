@@ -347,15 +347,13 @@ export function labelResultado(r: ResultadoFinal | null | undefined): string {
 
 export async function getDashboardDaarData(semestre?: string) {
   const s = semestre ?? '2026-I';
-  const [kpis, pivot, porDocente, porCurso, porDepartamento, entregasFisicas, analytics] =
-    await Promise.all([
+  const [kpis, pivot, porDocente, porCurso, porDepartamento, analytics] = await Promise.all([
       getKpisDaar(s),
       getPivotPorTipo(s),
       getPendientesPorDocente(s),
       getPendientesPorCurso(s),
       getAgrupadoPorDepartamento(s),
-      getEntregasFisicasPendientes(),
       getAnalyticsDaar(s),
     ]);
-  return { kpis, pivot, porDocente, porCurso, porDepartamento, entregasFisicas, analytics };
+  return { kpis, pivot, porDocente, porCurso, porDepartamento, analytics };
 }

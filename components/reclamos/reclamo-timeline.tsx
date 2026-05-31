@@ -10,12 +10,18 @@ type Evento = {
   metadata: string | null;
 };
 
+const EVENTOS_EXAMEN_FISICO = new Set([
+  'SOLICITUD_EXAMEN_FISICO',
+  'ENTREGA_FISICA_REGISTRADA',
+]);
+
 export function ReclamoTimeline({ eventos }: { eventos: Evento[] }) {
+  const visibles = eventos.filter((ev) => !EVENTOS_EXAMEN_FISICO.has(ev.accion));
   return (
     <div className="space-y-4">
       <h3 className="text-sm font-semibold text-up-text-secondary">Historial del reclamo</h3>
       <ol className="relative border-l border-up-border ml-3 space-y-6">
-        {eventos.map((ev) => (
+        {visibles.map((ev) => (
           <li key={ev.id} className="ml-6">
             <span className="absolute -left-1.5 flex h-3 w-3 rounded-full bg-up-blue/50 ring-4 ring-white" />
             <time className="text-xs text-up-text-muted">

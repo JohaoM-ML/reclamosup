@@ -220,7 +220,7 @@ export async function resolverReclamoAction(
     const parsed = resolverReclamoSchema.safeParse({
       reclamoId: formData.get('reclamoId'),
       resultadoFinal: formData.get('resultadoFinal'),
-      notaNueva: formData.get('notaNueva') || undefined,
+      notaNueva: formData.get('notaNueva'),
       comentario: formData.get('comentario'),
     });
 

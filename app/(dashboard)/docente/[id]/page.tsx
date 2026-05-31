@@ -3,7 +3,6 @@ import { getSession } from '@/lib/auth';
 import { getReclamoById } from '@/lib/services/reclamo.service';
 import { LapizConfirmacionGate } from '@/components/docente/lapiz-confirmacion-gate';
 import { ResolverForm } from '@/components/reclamos/resolver-form';
-import { SolicitarExamenFisicoButton } from '@/components/docente/solicitar-examen-fisico';
 import { ReclamoDetailLayout } from '@/components/reclamos/reclamo-detail-layout';
 import { Card, CardBody } from '@/components/ui/card';
 
@@ -22,33 +21,18 @@ export default async function DocenteDetallePage({
 
   const puedeResolver = ['ENVIADO', 'EN_REVISION'].includes(reclamo.estado);
   const requiereConfirmacionLapiz = reclamo.estado === 'EN_REVISION';
-  const activo = ['ENVIADO', 'EN_REVISION', 'EN_VALIDACION'].includes(reclamo.estado);
 
-  const sidebar = (
-    <>
-      {puedeResolver && (
-        <Card>
-          <CardBody>
-            {requiereConfirmacionLapiz ? (
-              <LapizConfirmacionGate reclamoId={reclamo.id} />
-            ) : (
-              <ResolverForm reclamoId={reclamo.id} />
-            )}
-          </CardBody>
-        </Card>
-      )}
-      {activo && (
-        <Card>
-          <CardBody>
-            <SolicitarExamenFisicoButton
-              reclamoId={reclamo.id}
-              yaSolicitado={!!reclamo.solicitudExamenFisico}
-            />
-          </CardBody>
-        </Card>
-      )}
-    </>
-  );
+  const sidebar = puedeResolver ? (
+    <Card>
+      <CardBody>
+        {requiereConfirmacionLapiz ? (
+          <LapizConfirmacionGate reclamoId={reclamo.id} />
+        ) : (
+          <ResolverForm reclamoId={reclamo.id} />
+        )}
+      </CardBody>
+    </Card>
+  ) : undefined;
 
   return (
     <ReclamoDetailLayout

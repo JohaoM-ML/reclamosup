@@ -21,11 +21,26 @@ export const resolverReclamoSchema = z
   .object({
     reclamoId: z.string().min(1),
     resultadoFinal: z.enum(['no_procede', 'procede_modifica', 'procede_sin_modifica']),
-    notaNueva: z.coerce.number().min(0).max(20).optional(),
-    comentario: z.string().optional(),
+    notaNueva: z.preprocess(
+      (val) => (val === null || val === '' ? undefined : val),
+      z.coerce.number().min(0).max(20).optional()
+    ),
+    comentario: z.preprocess(
+      (val) => (val === null || val === '' ? undefined : val),
+      z.string().optional()
+    ),
   })
   .superRefine((data, ctx) => {
-    if (data.resultadoFinal === 'procede_modifica') return;
+    if (data.resultadoFinal === 'procede_modifica') {
+      if (data.notaNueva == null || Number.isNaN(data.notaNueva)) {
+        ctx.addIssue({
+          code: 'custom',
+          message: 'Indique la nota nueva si procede y modifica',
+          path: ['notaNueva'],
+        });
+      }
+      return;
+    }
     const texto = data.comentario?.trim() ?? '';
     if (texto.length < 5) {
       ctx.addIssue({
