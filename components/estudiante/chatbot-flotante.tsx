@@ -1,13 +1,57 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { CHIPS_INICIALES, MENSAJE_BIENVENIDA } from '@/lib/chat/conocimiento-reclamos';
+import type { ChatChip, ChatMessage } from '@/lib/chat/types';
 import { inputClass } from '@/lib/types';
 
-type Message = { role: 'user' | 'assistant'; content: string };
+function MensajeTexto({ content }: { content: string }) {
+  const parts = content.split(/(\*\*[^*]+\*\*)/g);
+  return (
+    <span className="whitespace-pre-wrap break-words">
+      {parts.map((part, i) =>
+        part.startsWith('**') && part.endsWith('**') ? (
+          <strong key={i}>{part.slice(2, -2)}</strong>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </span>
+  );
+}
+
+function ChipsSugerencias({
+  chips,
+  onSelect,
+  disabled,
+}: {
+  chips: ChatChip[];
+  onSelect: (chip: ChatChip) => void;
+  disabled: boolean;
+}) {
+  if (chips.length === 0) return null;
+
+  return (
+    <div className="flex flex-wrap gap-2 pt-1">
+      {chips.map((chip) => (
+        <button
+          key={chip.id}
+          type="button"
+          disabled={disabled}
+          onClick={() => onSelect(chip)}
+          className="rounded-full border border-up-border bg-up-surface px-3 py-1.5 text-xs text-up-text-secondary hover:border-up-blue hover:text-up-blue disabled:opacity-50"
+        >
+          {chip.label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export function ChatbotFlotante() {
   const [abierto, setAbierto] = useState(false);
-  const [mensajes, setMensajes] = useState<Message[]>([]);
+  const [mensajes, setMensajes] = useState<ChatMessage[]>([]);
+  const [sugerencias, setSugerencias] = useState<ChatChip[]>(CHIPS_INICIALES);
   const [input, setInput] = useState('');
   const [escribiendo, setEscribiendo] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -17,16 +61,16 @@ export function ChatbotFlotante() {
     if (listaRef.current) {
       listaRef.current.scrollTop = listaRef.current.scrollHeight;
     }
-  }, [mensajes, escribiendo]);
+  }, [mensajes, escribiendo, sugerencias]);
 
-  async function enviar(e: React.FormEvent) {
-    e.preventDefault();
-    const texto = input.trim();
-    if (!texto || escribiendo) return;
+  async function enviarTexto(texto: string) {
+    const trimmed = texto.trim();
+    if (!trimmed || escribiendo) return;
 
-    const nuevosMensajes: Message[] = [...mensajes, { role: 'user', content: texto }];
+    const nuevosMensajes: ChatMessage[] = [...mensajes, { role: 'user', content: trimmed }];
     setMensajes(nuevosMensajes);
     setInput('');
+    setSugerencias([]);
     setEscribiendo(true);
     setError(null);
 
@@ -41,15 +85,31 @@ export function ChatbotFlotante() {
 
       if (!res.ok) {
         setError(data.error ?? 'Error al obtener respuesta');
+        setSugerencias(CHIPS_INICIALES);
         return;
       }
 
       setMensajes((prev) => [...prev, { role: 'assistant', content: data.reply }]);
+      setSugerencias(
+        Array.isArray(data.suggestions) && data.suggestions.length > 0
+          ? data.suggestions
+          : CHIPS_INICIALES.slice(0, 3)
+      );
     } catch {
       setError('No se pudo conectar con el asistente');
+      setSugerencias(CHIPS_INICIALES);
     } finally {
       setEscribiendo(false);
     }
+  }
+
+  function enviar(e: React.FormEvent) {
+    e.preventDefault();
+    void enviarTexto(input);
+  }
+
+  function seleccionarChip(chip: ChatChip) {
+    void enviarTexto(chip.message);
   }
 
   return (
@@ -69,12 +129,17 @@ export function ChatbotFlotante() {
           </div>
 
           <div ref={listaRef} className="flex-1 overflow-y-auto p-4 space-y-3">
-            {mensajes.length === 0 && (
-              <p className="text-sm text-up-text-muted">
-                Pregúntame sobre plazos, estados de reclamo, el Artículo 38 o cómo usar la
-                plataforma.
-              </p>
-            )}
+            <div className="text-sm rounded-lg px-3 py-2 max-w-[90%] bg-up-surface-muted text-up-text">
+              <MensajeTexto content={MENSAJE_BIENVENIDA} />
+              {mensajes.length === 0 && (
+                <ChipsSugerencias
+                  chips={sugerencias}
+                  onSelect={seleccionarChip}
+                  disabled={escribiendo}
+                />
+              )}
+            </div>
+
             {mensajes.map((m, i) => (
               <div
                 key={i}
@@ -84,9 +149,22 @@ export function ChatbotFlotante() {
                     : 'bg-up-surface-muted text-up-text'
                 }`}
               >
-                {m.content}
+                {m.role === 'assistant' ? (
+                  <MensajeTexto content={m.content} />
+                ) : (
+                  <span className="whitespace-pre-wrap break-words">{m.content}</span>
+                )}
               </div>
             ))}
+
+            {!escribiendo && mensajes.length > 0 && (
+              <ChipsSugerencias
+                chips={sugerencias}
+                onSelect={seleccionarChip}
+                disabled={escribiendo}
+              />
+            )}
+
             {escribiendo && (
               <div className="text-sm text-up-text-muted flex items-center gap-2">
                 <span className="inline-block h-3 w-3 animate-spin rounded-full border-2 border-up-blue border-t-transparent" />
@@ -105,6 +183,7 @@ export function ChatbotFlotante() {
               placeholder="Escribe tu pregunta..."
               className={`${inputClass} flex-1`}
               disabled={escribiendo}
+              maxLength={500}
             />
             <button
               type="submit"
