@@ -20,6 +20,7 @@ export type ContextoEstudianteChat = {
     notaNueva: number | null;
   }>;
   reclamosCerrados: number;
+  reclamosNoProcedentes: Array<{ curso: string; evaluacion: string }>;
   textoPrompt: string;
 };
 
@@ -55,6 +56,13 @@ export async function getContextoEstudianteChat(
     (r) => !ACTIVOS.has(r.estado as EstadoReclamo)
   ).length;
 
+  const noProcedentes = reclamos
+    .filter((r) => r.resultadoFinal === 'no_procede')
+    .map((r) => ({
+      curso: r.evaluacion.curso.nombre,
+      evaluacion: r.evaluacion.nombre,
+    }));
+
   const lineas: string[] = [
     `Alumno: ${nombre}`,
     `Impedido hasta semestre: ${impedidoHasta ?? 'ninguno (puede reclamar)'}`,
@@ -74,6 +82,13 @@ export async function getContextoEstudianteChat(
 
   lineas.push(`Reclamos cerrados/rechazados: ${cerrados}`);
 
+  if (noProcedentes.length > 0) {
+    lineas.push('Reclamos no procedentes (causan impedimento si son 3 en el semestre):');
+    for (const r of noProcedentes) {
+      lineas.push(`  - ${r.curso}, ${r.evaluacion}`);
+    }
+  }
+
   const ultimoCerrado = reclamos.find((r) => r.estado === 'CERRADO');
   if (ultimoCerrado?.resultadoFinal) {
     lineas.push(
@@ -88,6 +103,7 @@ export async function getContextoEstudianteChat(
     nombresCursos: cursos.map((c) => c.nombre),
     reclamosActivos: activos,
     reclamosCerrados: cerrados,
+    reclamosNoProcedentes: noProcedentes,
     textoPrompt: lineas.join('\n'),
   };
 }

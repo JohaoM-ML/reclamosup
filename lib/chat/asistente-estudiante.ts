@@ -65,6 +65,7 @@ ESTILO (OBLIGATORIO):
 - Tono cercano, natural y claro, como un compañero que orienta. Sin emojis.
 - Escribe en texto plano: PROHIBIDO usar markdown, asteriscos, negritas o viñetas con guiones.
 - Si preguntan algo fuera de reclamos de exámenes, responde en 1 frase que solo puedes ayudar con eso.
+- Si el alumno está impedido y pregunta por qué no puede reclamar, menciona el semestre de impedimento y los cursos donde tuvo resultado No procede (están en el contexto).
 
 CONTEXTO DEL ALUMNO (usa estos datos cuando pregunte por "mi reclamo", "mi nota", "puedo reclamar"):
 ${contexto.textoPrompt}
@@ -74,11 +75,33 @@ ${hechosParaPrompt()}
 `.trim();
 }
 
+function listarCursosNoProcedentes(
+  reclamos: Array<{ curso: string; evaluacion: string }>
+): string {
+  if (reclamos.length === 0) return '';
+  return reclamos.map((r) => `${r.curso} (${r.evaluacion})`).join(', ');
+}
+
+function respuestaImpedidoConDetalle(ctx: ContextoEstudianteChat): string {
+  const nombre = primerNombre(ctx.nombre);
+  const cursos = listarCursosNoProcedentes(ctx.reclamosNoProcedentes);
+
+  if (!ctx.impedidoHasta) {
+    return `Por ahora no estás impedido, ${nombre}. Solo ten en cuenta que tres reclamos no procedentes en un semestre implican sanción el siguiente. ¿Quieres revisar cómo van tus reclamos?`;
+  }
+
+  const base = `${nombre}, estás impedido de reclamar hasta el semestre ${ctx.impedidoHasta} por acumular tres reclamos no procedentes`;
+  if (cursos) {
+    return `${base}: ${cursos}. Cuando pase ese semestre podrás volver a registrar reclamos.`;
+  }
+  return `${base}. Cuando pase ese semestre podrás volver a registrar reclamos.`;
+}
+
 function respuestaMisReclamos(ctx: ContextoEstudianteChat): string {
   const nombre = primerNombre(ctx.nombre);
 
   if (ctx.impedidoHasta) {
-    return `${nombre}, por ahora estás impedido de reclamar hasta el semestre ${ctx.impedidoHasta} por tres reclamos no procedentes. Cuando pase ese semestre podrás volver a registrar reclamos.`;
+    return respuestaImpedidoConDetalle(ctx);
   }
 
   if (ctx.reclamosActivos.length === 0) {
@@ -104,12 +127,7 @@ function respuestaMisReclamos(ctx: ContextoEstudianteChat): string {
 }
 
 function respuestaImpedimento(ctx: ContextoEstudianteChat): string {
-  const nombre = primerNombre(ctx.nombre);
-
-  if (ctx.impedidoHasta) {
-    return `Sí, ${nombre}: estás impedido de reclamar hasta el semestre ${ctx.impedidoHasta} por acumular tres reclamos no procedentes. ¿Tienes otra duda sobre el reglamento?`;
-  }
-  return `Por ahora no estás impedido, ${nombre}. Solo ten en cuenta que tres reclamos no procedentes en un semestre implican sanción el siguiente. ¿Quieres revisar cómo van tus reclamos?`;
+  return respuestaImpedidoConDetalle(ctx);
 }
 
 function respuestaOtro(): ChatResponse {

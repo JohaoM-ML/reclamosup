@@ -119,7 +119,11 @@ export function detectarTema(mensaje: string): TemaChat | null {
   if (/articulo 38|art\.?\s*38|lapiz|lápiz|borrable/.test(t)) {
     return 'art38';
   }
-  if (/impedido|impedimento|3 reclamo|puedo reclamar|sancion/.test(t)) {
+  if (
+    /impedido|impedimento|3 reclamo|puedo reclamar|sancion|no puedo reclamar|no me deja reclamar|por ?que no puedo|porque no puedo/.test(
+      t
+    )
+  ) {
     return 'impedimento';
   }
   if (/hola|buenas|ayuda|otra duda|otra pregunta/.test(t) && t.length < 40) {
