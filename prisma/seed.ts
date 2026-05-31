@@ -25,6 +25,11 @@ const prisma = createPrismaClient(process.env.DIRECT_URL ?? process.env.DATABASE
 const SEMESTRE = '2026-I';
 /** Cuentas demo del equipo (hackathon). */
 const EMAIL_DEMO_ESTUDIANTE = 'jr.mendozaf@alum.up.edu.pe';
+const DEMO_ESTUDIANTE_NOMBRE = {
+  nombres: 'Johao Rafael',
+  apellidoPaterno: 'Mendoza',
+  apellidoMaterno: 'Fabian',
+} as const;
 const EMAIL_DEMO_DAAR = 'Ap.Carhuavilcac@alum.up.edu.pe';
 const EMAIL_DEMO_DOCENTE = 'pa.tueroc@alum.up.edu.pe';
 const CODIGO_DEMO_DOCENTE = '000100001';
@@ -187,139 +192,12 @@ type EventoSeedRow = {
   createdAt: Date;
 };
 
-/** Reclamos fijos para Juan Renato (demo): cursos de Giuliana + al menos uno libre para reclamar. */
-async function crearReclamosDemoEstudiante(opts: {
-  estudianteId: string;
-  docenteDemoId: string;
-  daarId: string;
-  eventoRows: EventoSeedRow[];
-}): Promise<number> {
+/** Demo estudiante: sin reclamos fijos; queda matriculado en 5 cursos para reclamar. */
+async function prepararDemoEstudiante(estudianteId: string): Promise<void> {
   await prisma.alumno.update({
-    where: { userId: opts.estudianteId },
+    where: { userId: estudianteId },
     data: { impedidoHastaSemestre: null },
   });
-
-  const matriculas = await prisma.matricula.findMany({
-    where: { estudianteId: opts.estudianteId },
-    include: { curso: { select: { id: true, codigo: true, docenteId: true, nombre: true } } },
-  });
-
-  const porCodigo = new Map<string, (typeof matriculas)[0]>();
-  for (const m of matriculas) {
-    if (esCursoExcluidoReclamoDigital(m.curso.nombre)) continue;
-    if (!porCodigo.has(m.curso.codigo)) porCodigo.set(m.curso.codigo, m);
-  }
-
-  const cursosGiuliana = [...porCodigo.values()].filter(
-    (m) => m.curso.docenteId === opts.docenteDemoId
-  );
-  const configs: Array<{ estado: EstadoReclamo; cursoIdx: number }> =
-    cursosGiuliana.length >= 2
-      ? [
-          { estado: 'ENVIADO', cursoIdx: 0 },
-          { estado: 'EN_REVISION', cursoIdx: 1 },
-        ]
-      : [{ estado: 'ENVIADO', cursoIdx: 0 }];
-
-  let count = 0;
-
-  for (let i = 0; i < configs.length; i++) {
-    const cfg = configs[i];
-    const mat = cursosGiuliana[cfg.cursoIdx];
-    if (!mat) continue;
-
-    const ev = await prisma.evaluacion.findFirst({
-      where: { cursoId: mat.curso.id, tipo: 'parcial' },
-    });
-    if (!ev) continue;
-
-    const createdAt = fechaEnSemanaCiclo(2 + i, i);
-    const notaAnterior = ev.notaPublicada ?? notaAleatoria();
-    const notaNueva =
-      cfg.estado === 'CERRADO' ? Math.min(20, Math.round((notaAnterior + 1.5) * 10) / 10) : undefined;
-    const decision = cfg.estado === 'CERRADO' ? 'procedente' : undefined;
-    const resultadoFinal =
-      cfg.estado === 'CERRADO' && notaNueva != null
-        ? calcularResultadoFinal('procedente', notaAnterior, notaNueva)
-        : undefined;
-
-    const reclamo = await prisma.reclamo.create({
-      data: {
-        evaluacionId: ev.id,
-        estudianteId: opts.estudianteId,
-        docenteId: mat.curso.docenteId,
-        semestreAcademico: SEMESTRE,
-        motivo: 'error_suma',
-        argumento:
-          'Solicito revisión de mi examen conforme al reglamento vigente y adjunto sustento.',
-        examenNoLapiz: true,
-        notaAnterior,
-        estado: cfg.estado,
-        createdAt,
-        updatedAt: createdAt,
-        escaneadoAt: createdAt,
-        archivoPath: `/uploads/seed/demo-estudiante-${i}.pdf`,
-        archivoHash: `demo${i.toString().padStart(4, '0')}`,
-        ...(cfg.estado === 'CERRADO'
-          ? {
-              decision,
-              resultadoFinal,
-              notaNueva,
-              comentarioDocente: 'Revisión favorable con modificación de nota.',
-            }
-          : {}),
-      },
-    });
-    count++;
-
-    opts.eventoRows.push({
-      reclamoId: reclamo.id,
-      actorId: opts.estudianteId,
-      accion: 'ESTUDIANTE_REGISTRO',
-      estadoAnterior: null,
-      estadoNuevo: 'ENVIADO',
-      createdAt,
-    });
-
-    if (cfg.estado === 'EN_REVISION' || cfg.estado === 'CERRADO') {
-      const docenteToma = addDias(createdAt, 1);
-      opts.eventoRows.push({
-        reclamoId: reclamo.id,
-        actorId: mat.curso.docenteId,
-        accion: 'DOCENTE_TOMO_CASO',
-        estadoAnterior: 'ENVIADO',
-        estadoNuevo: 'EN_REVISION',
-        createdAt: docenteToma,
-      });
-    }
-
-    if (cfg.estado === 'CERRADO') {
-      const docenteResolvio = addDias(createdAt, 3);
-      opts.eventoRows.push({
-        reclamoId: reclamo.id,
-        actorId: mat.curso.docenteId,
-        accion: 'DOCENTE_RESOLVIO',
-        estadoAnterior: 'EN_REVISION',
-        estadoNuevo: 'EN_VALIDACION',
-        createdAt: docenteResolvio,
-      });
-      const cierre = addDias(createdAt, 5);
-      opts.eventoRows.push({
-        reclamoId: reclamo.id,
-        actorId: opts.daarId,
-        accion: 'DAAR_CERRO',
-        estadoAnterior: 'EN_VALIDACION',
-        estadoNuevo: 'CERRADO',
-        createdAt: cierre,
-      });
-      await prisma.reclamo.update({
-        where: { id: reclamo.id },
-        data: { updatedAt: cierre },
-      });
-    }
-  }
-
-  return count;
 }
 
 type CalidadSeed = 'sube' | 'sin_cambio' | 'baja';
@@ -462,11 +340,12 @@ async function main() {
     } while (codigosUsados.has(codigo));
     codigosUsados.add(codigo);
 
-    const nombreCompleto =
+    const partes =
       i === 0
-        ? 'Juan Renato Mendoza Flores'
-        : `${NOMBRES[i % NOMBRES.length]} ${APELLIDOS[(i * 7) % APELLIDOS.length]} ${APELLIDOS[(i * 13) % APELLIDOS.length]}`;
-    const partes = parseNombreEstudiante(nombreCompleto);
+        ? { ...DEMO_ESTUDIANTE_NOMBRE }
+        : parseNombreEstudiante(
+            `${NOMBRES[i % NOMBRES.length]} ${APELLIDOS[(i * 7) % APELLIDOS.length]} ${APELLIDOS[(i * 13) % APELLIDOS.length]}`
+          );
     const email =
       i === 0 ? EMAIL_DEMO_ESTUDIANTE : emailUnico(emailAlumnoUp(partes), emailsUsados);
 
@@ -497,12 +376,21 @@ async function main() {
     const esDemo = estudiante.email === EMAIL_DEMO_ESTUDIANTE && giulianaDocenteId;
     const elegidos = esDemo
       ? [
-          ...cursos.filter((c) => c.docenteId === giulianaDocenteId),
+          ...pickCursosDistintosPorCodigo(
+            cursos.filter((c) => c.docenteId === giulianaDocenteId),
+            CURSOS_POR_ESTUDIANTE
+          ),
           ...pickCursosDistintosPorCodigo(
             cursos.filter((c) => c.docenteId !== giulianaDocenteId),
-            Math.max(0, CURSOS_POR_ESTUDIANTE - cursos.filter((c) => c.docenteId === giulianaDocenteId).length)
+            CURSOS_POR_ESTUDIANTE
           ),
-        ].slice(0, CURSOS_POR_ESTUDIANTE)
+        ]
+          .filter(
+            (c, i, arr) =>
+              arr.findIndex((x) => x.codigo === c.codigo) === i &&
+              !esCursoExcluidoReclamoDigital(c.nombre)
+          )
+          .slice(0, CURSOS_POR_ESTUDIANTE)
       : pickCursosDistintosPorCodigo(cursos, CURSOS_POR_ESTUDIANTE);
 
     for (const c of elegidos) {
@@ -726,12 +614,7 @@ async function main() {
     }
   }
 
-  reclamoCount += await crearReclamosDemoEstudiante({
-    estudianteId: demoEstudianteId,
-    docenteDemoId: docentePorNombre.get('CARRILLO PASTOR, Giuliana Maria') ?? docentePorNombre.values().next().value!,
-    daarId,
-    eventoRows,
-  });
+  await prepararDemoEstudiante(demoEstudianteId);
 
   await createManyBatched('Eventos reclamo', eventoRows, async (batch) => {
     const r = await prisma.reclamoEvento.createMany({ data: batch });
@@ -747,7 +630,7 @@ async function main() {
   console.log(`  Cursos:       ${new Set(cursos.map((c) => c.codigo)).size} (${cursos.length} secciones)`);
   console.log(`  Matrículas:   ${matCount}`);
   console.log(`  Evaluaciones: ${evalRows.length}`);
-  console.log(`  Reclamos:     ${reclamoCount} (incl. 2 demo ${EMAIL_DEMO_ESTUDIANTE})`);
+  console.log(`  Reclamos:     ${reclamoCount}`);
   console.log('');
   console.log('Acceso demo (hackathon):');
   console.log(`  Estudiante: ${EMAIL_DEMO_ESTUDIANTE}`);
