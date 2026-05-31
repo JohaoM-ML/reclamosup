@@ -16,10 +16,7 @@ const NAV: Record<string, { href: string; label: string }[]> = {
     { href: '/docente', label: 'Bandeja de reclamos' },
     { href: '/docente/historial', label: 'Historial de reclamos' },
   ],
-  daar: [
-    { href: '/daar/dashboard', label: 'Dashboard analítico' },
-    { href: '/daar/escaneo', label: 'Escaneo de exámenes' },
-  ],
+  daar: [{ href: '/daar/dashboard', label: 'Dashboard analítico' }],
 };
 
 const ROL_LABEL: Record<string, string> = {
