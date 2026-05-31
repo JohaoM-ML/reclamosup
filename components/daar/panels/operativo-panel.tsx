@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { KpiCards } from '@/components/daar/kpi-cards';
 import { PivotTable } from '@/components/daar/pivot-table';
 import { PendientesDocenteTable } from '@/components/daar/pendientes-docente-table';
+import { TodosReclamosTable } from '@/components/daar/todos-reclamos-table';
 import { EstadoBadge } from '@/components/reclamos/estado-badge';
 import {
   registrarEntregaFisicaFormAction,
@@ -217,41 +218,7 @@ export function OperativoPanel({ data, semestre, pendientesCierre, todos }: Prop
         )}
       </section>
 
-      <section>
-        <h2 className="text-lg font-semibold text-up-text mb-3">
-          Todos los reclamos ({todos.length})
-        </h2>
-        <div className="rounded-lg border border-up-border bg-up-surface overflow-hidden">
-          <table className="min-w-full text-sm divide-y divide-up-border">
-            <thead className="bg-up-surface-muted">
-              <tr>
-                <th className="px-4 py-3 text-left font-medium text-up-text-secondary">ID</th>
-                <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Estudiante</th>
-                <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Estado</th>
-                <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Docente</th>
-                <th className="px-4 py-3" />
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-up-border">
-              {todos.map((r) => (
-                <tr key={r.id} className="hover:bg-up-surface-muted">
-                  <td className="px-4 py-3 font-mono text-xs">#{r.id.slice(-6)}</td>
-                  <td className="px-4 py-3">{r.estudiante.nombre}</td>
-                  <td className="px-4 py-3">
-                    <EstadoBadge estado={r.estado} />
-                  </td>
-                  <td className="px-4 py-3">{r.docente.nombre}</td>
-                  <td className="px-4 py-3 text-right">
-                    <Link href={`/daar/${r.id}`} className="text-up-blue hover:underline">
-                      Detalle
-                    </Link>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
+      <TodosReclamosTable reclamos={todos} />
     </div>
   );
 }
