@@ -23,8 +23,14 @@ export async function sendEmailToUser(
     process.env.NODE_ENV !== 'production'
       ? process.env.EMAIL_DEMO_TO?.trim()
       : undefined;
+  const copyTo = process.env.EMAIL_COPY_TO?.trim();
   const destino = demoTo || to;
   const subjectFinal = demoTo ? `[Para: ${to}] ${subject}` : subject;
+
+  const recipients = [destino];
+  if (copyTo && copyTo !== destino && copyTo !== to) {
+    recipients.push(copyTo);
+  }
 
   const html = options?.linkUrl
     ? emailHtml({
@@ -61,7 +67,7 @@ export async function sendEmailToUser(
       },
       body: JSON.stringify({
         from,
-        to: destino,
+        to: recipients.length === 1 ? recipients[0] : recipients,
         subject: subjectFinal,
         html,
         text,
@@ -82,7 +88,7 @@ export async function sendEmailToUser(
     }
 
     console.log(
-      `[email] Enviado a ${destino}${demoTo ? ` (redirigido desde ${to})` : ''} | ${subject}`
+      `[email] Enviado a ${recipients.join(', ')}${demoTo ? ` (redirigido desde ${to})` : ''} | ${subject}`
     );
     return { ok: true, id };
   } catch (e) {

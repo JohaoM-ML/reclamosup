@@ -3,6 +3,17 @@ import { sendEmailToUser } from '@/lib/services/email.service';
 import { prisma } from '@/lib/db';
 import type { Rol } from '@/lib/types';
 
+async function enviarCorreo(to: string, titulo: string, mensaje: string, link?: { url: string; label: string }) {
+  const result = await sendEmailToUser(to, titulo, mensaje, {
+    linkUrl: link?.url,
+    linkLabel: link?.label,
+  });
+  if (!result.ok) {
+    console.error(`[notificacion] Fallo correo a ${to}:`, result.error);
+  }
+  return result;
+}
+
 export async function sendNotification(input: {
   userId: string;
   reclamoId?: string;
@@ -27,11 +38,9 @@ export async function sendNotification(input: {
     const linkUrl = input.reclamoId
       ? reclamoUrl(input.reclamoId, user.rol as 'estudiante' | 'docente' | 'daar')
       : undefined;
-
-    await sendEmailToUser(user.email, input.titulo, input.mensaje, {
-      linkUrl,
-      linkLabel: 'Ver reclamo en ReclamoUP',
-    });
+    await enviarCorreo(user.email, input.titulo, input.mensaje, linkUrl
+      ? { url: linkUrl, label: 'Ver reclamo en ReclamoUP' }
+      : undefined);
   }
 }
 
@@ -50,9 +59,9 @@ export async function sendToRole(
   });
 
   for (const u of users) {
-    await sendEmailToUser(u.email, input.titulo, input.mensaje, {
-      linkUrl: input.reclamoId ? reclamoUrl(input.reclamoId, rol) : undefined,
-      linkLabel: 'Ver en panel DAAR',
-    });
+    const linkUrl = input.reclamoId ? reclamoUrl(input.reclamoId, rol) : undefined;
+    await enviarCorreo(u.email, input.titulo, input.mensaje, linkUrl
+      ? { url: linkUrl, label: 'Ver en panel DAAR' }
+      : undefined);
   }
 }

@@ -39,6 +39,10 @@ export async function getEmailStatusAction() {
     configured: isEmailConfigured(),
     from: process.env.EMAIL_FROM ?? '(no definido)',
     appUrl: getAppUrl(),
-    demoRedirect: process.env.EMAIL_DEMO_TO?.trim() || null,
+    demoRedirect:
+      process.env.NODE_ENV !== 'production'
+        ? process.env.EMAIL_DEMO_TO?.trim() || null
+        : null,
+    copyTo: process.env.EMAIL_COPY_TO?.trim() || null,
   };
 }

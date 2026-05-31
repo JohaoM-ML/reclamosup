@@ -46,7 +46,9 @@ export function CorreoPruebaPanel() {
       <div>
         <h3 className="text-sm font-semibold text-up-text">Correo (Resend)</h3>
         <p className="text-xs text-up-text-muted mt-1">
-          Notificaciones automáticas al registrar, resolver y cerrar reclamos.
+          Notificaciones automáticas al registrar, resolver y cerrar reclamos. Los correos
+          institucionales demo (@alum.up.edu.pe) son ficticios: use una copia real abajo o
+          cambie los emails demo en la base de datos.
         </p>
       </div>
 
@@ -66,6 +68,12 @@ export function CorreoPruebaPanel() {
             <dt className="text-up-text-muted">URL app (enlaces en correo)</dt>
             <dd className="font-mono text-up-text truncate">{status.appUrl}</dd>
           </div>
+          {status.copyTo && (
+            <div className="sm:col-span-2">
+              <dt className="text-up-text-muted">Copia a (EMAIL_COPY_TO)</dt>
+              <dd className="text-green-700 font-mono">{status.copyTo}</dd>
+            </div>
+          )}
           {status.demoRedirect && (
             <div className="sm:col-span-2">
               <dt className="text-up-text-muted">Redirección demo</dt>
