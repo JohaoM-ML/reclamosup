@@ -1,6 +1,6 @@
 /**
  * Crea 3 reclamos cerrados "no procede" para un estudiante demo de sanción.
- * Cursos fijos: Lenguaje I, Matemáticas I, Economía General I.
+ * Cursos fijos: Lenguaje I, Fundamentos de Contabilidad, Economía General I.
  * Crea curso + evaluaciones + matrícula si no existen en BD.
  * Uso: npx tsx scripts/seed-tres-reclamos-fallidos.ts [email]
  */
@@ -18,9 +18,9 @@ const SEMESTRE = '2026-I';
 const EMAIL_DOCENTE_FALLBACK = 'pa.tueroc@alum.up.edu.pe';
 
 const CURSOS_RECLAMO = [
-  { codigo: '120001', nombre: 'Lenguaje I', creditos: 4 },
-  { codigo: '138649', nombre: 'Matemáticas I', creditos: 5 },
-  { codigo: '132641', nombre: 'Economía General I', creditos: 5 },
+  { codigo: '120001', nombre: 'Lenguaje I', seccion: 'A', creditos: 4 },
+  { codigo: '160092', nombre: 'Fundamentos de Contabilidad', seccion: 'A', creditos: 4 },
+  { codigo: '132641', nombre: 'Economía General I', seccion: 'A', creditos: 5 },
 ] as const;
 
 function plazoReclamo() {
@@ -47,18 +47,17 @@ async function ensureCursoConEvaluaciones(
   docenteId: string
 ) {
   let curso = await prisma.curso.findFirst({
-    where: { codigo: spec.codigo, semestre: SEMESTRE },
+    where: { codigo: spec.codigo, seccion: spec.seccion, semestre: SEMESTRE },
     include: { evaluaciones: { orderBy: { createdAt: 'asc' } } },
-    orderBy: { seccion: 'asc' },
   });
 
   if (!curso) {
-    console.log(`  Creando curso ${spec.codigo} ${spec.nombre}...`);
+    console.log(`  Creando curso ${spec.codigo} ${spec.nombre} (${spec.seccion})...`);
     const plazo = plazoReclamo();
     curso = await prisma.curso.create({
       data: {
         codigo: spec.codigo,
-        seccion: 'A',
+        seccion: spec.seccion,
         nombre: spec.nombre,
         creditos: spec.creditos,
         departamento: departamentoDesdeCodigo(spec.codigo),
@@ -262,7 +261,7 @@ async function main() {
   console.log('Listo');
   console.log(`  Correo:     ${estudiante.email}`);
   console.log(`  Contraseña: reclamoup1234`);
-  console.log(`  Reclamos:   Lenguaje I, Matemáticas I, Economía General I — No procede`);
+  console.log(`  Reclamos:   Lenguaje I, Fundamentos de Contabilidad, Economía General I — No procede`);
   console.log(`  Impedido:   hasta semestre ${impedidoHasta}`);
 }
 

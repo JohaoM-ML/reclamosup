@@ -3,6 +3,7 @@
  * Fuente: entrevista DAAR + pautas UP.
  */
 export const CURSOS_EXCLUIDOS_RECLAMO_DIGITAL = [
+  'Matemáticas I',
   'Matemáticas II',
   'Estadística I',
 ] as const;

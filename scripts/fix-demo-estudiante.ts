@@ -1,5 +1,6 @@
 /**
- * Prepara al estudiante demo Johao: 5 cursos fijos, sin reclamos, Matemáticas I con Giuliana.
+ * Prepara al estudiante demo Johao: 5 cursos fijos, sin reclamos.
+ * Fundamentos de Contabilidad asignado a Giuliana para demo docente.
  * Uso: npm run demo:reset
  */
 import 'dotenv/config';
@@ -22,7 +23,7 @@ const DEMO_ESTUDIANTE: PartesNombre = {
 
 /** Cursos fijos para la demo de Johao (código + sección UP). */
 const CURSOS_JOHAO_DEMO = [
-  { codigo: '138649', nombre: 'Matemáticas I', seccion: 'A', creditos: 5, docenteGiuliana: true },
+  { codigo: '160092', nombre: 'Fundamentos de Contabilidad', seccion: 'A', creditos: 4, docenteGiuliana: true },
   { codigo: '132641', nombre: 'Economía General I', seccion: 'A', creditos: 5, docenteGiuliana: false },
   { codigo: '120001', nombre: 'Lenguaje I', seccion: 'A', creditos: 4, docenteGiuliana: false },
   { codigo: '170211', nombre: 'Introducción a la Ingeniería', seccion: 'C', creditos: 4, docenteGiuliana: false },
@@ -191,7 +192,7 @@ async function main() {
   console.log('');
   console.log(`OK: ${nombreCompleto}`);
   console.log(`  0 reclamos — puede registrar hasta ${matriculaCursos.length} en cursos distintos`);
-  console.log(`  Docente demo recibe reclamos de: Matemáticas I (${SEMESTRE}-A)`);
+  console.log(`  Docente demo recibe reclamos de: Fundamentos de Contabilidad (${SEMESTRE}-A)`);
 }
 
 main()
