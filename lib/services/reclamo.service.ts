@@ -589,6 +589,20 @@ export async function getBandejaDocente(docenteId: string) {
   return rows.map(mapReclamo);
 }
 
+/** Reclamos ya resueltos por el docente o cerrados (fuera de bandeja activa). */
+export async function getHistorialDocente(docenteId: string, limit?: number) {
+  const rows = await prisma.reclamo.findMany({
+    where: {
+      docenteId,
+      estado: { in: ['EN_VALIDACION', 'CERRADO', 'RECHAZADO', 'ANULADO'] },
+    },
+    include: reclamoInclude,
+    orderBy: { updatedAt: 'desc' },
+    ...(limit != null ? { take: limit } : {}),
+  });
+  return rows.map(mapReclamo);
+}
+
 export async function getMisReclamos(estudianteId: string) {
   const rows = await prisma.reclamo.findMany({
     where: { estudianteId },

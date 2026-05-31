@@ -4,14 +4,18 @@ import { getSession } from '@/lib/auth';
 import { NotificationBell } from '@/components/layout/notification-bell';
 import { SidebarNav } from '@/components/layout/sidebar-nav';
 import { ChatbotFlotante } from '@/components/estudiante/chatbot-flotante';
-import { contarNotificacionesNoLeidas } from '@/lib/services/reclamo.service';
+import { contarNotificacionesNoLeidas, getHistorialDocente } from '@/lib/services/reclamo.service';
+import { DocenteSidebarHistorial } from '@/components/docente/docente-historial';
 
 const NAV: Record<string, { href: string; label: string }[]> = {
   estudiante: [
     { href: '/estudiante', label: 'Mis reclamos' },
     { href: '/estudiante/cap/nuevo', label: 'Nuevo reclamo (CAP)' },
   ],
-  docente: [{ href: '/docente', label: 'Bandeja de reclamos' }],
+  docente: [
+    { href: '/docente', label: 'Bandeja de reclamos' },
+    { href: '/docente/historial', label: 'Historial de reclamos' },
+  ],
   daar: [
     { href: '/daar/dashboard', label: 'Dashboard analítico' },
     { href: '/daar/escaneo', label: 'Escaneo de exámenes' },
@@ -34,6 +38,8 @@ export async function DashboardShell({
 
   const noLeidas = await contarNotificacionesNoLeidas(session.id);
   const links = NAV[session.rol] ?? [];
+  const historialDocente =
+    session.rol === 'docente' ? await getHistorialDocente(session.id, 6) : [];
 
   return (
     <div className="flex min-h-screen bg-up-surface-muted">
@@ -50,6 +56,9 @@ export async function DashboardShell({
             Navegación
           </p>
           <SidebarNav links={links} />
+          {session.rol === 'docente' && (
+            <DocenteSidebarHistorial reclamos={historialDocente} />
+          )}
         </div>
 
         <div className="border-t border-white/10 px-5 py-5 text-xs text-white/60">

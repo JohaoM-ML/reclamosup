@@ -37,6 +37,7 @@ function revalidateReclamo(reclamoId: string) {
   revalidatePath(`/estudiante/${reclamoId}`);
   revalidatePath('/estudiante/cap/nuevo');
   revalidatePath('/docente');
+  revalidatePath('/docente/historial');
   revalidatePath(`/docente/${reclamoId}`);
   revalidatePath('/daar/dashboard');
   revalidatePath(`/daar/${reclamoId}`);

@@ -10,12 +10,23 @@ export function SidebarNav({
   links: { href: string; label: string }[];
 }) {
   const pathname = usePathname();
+  const hrefs = links.map((l) => l.href);
+
+  function isActive(href: string) {
+    if (pathname === href) return true;
+    if (!pathname.startsWith(`${href}/`)) return false;
+    return !hrefs.some(
+      (h) =>
+        h !== href &&
+        h.startsWith(`${href}/`) &&
+        (pathname === h || pathname.startsWith(`${h}/`))
+    );
+  }
 
   return (
     <nav className="space-y-1">
       {links.map((l) => {
-        const active =
-          pathname === l.href || (l.href !== '/' && pathname.startsWith(l.href));
+        const active = isActive(l.href);
         return (
           <Link
             key={l.href}
