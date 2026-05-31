@@ -11,6 +11,22 @@ export const MAX_MENSAJE_CHARS = 500;
 export const MAX_HISTORIAL = 10;
 export const MAX_TOKENS = 400;
 
+/** Quita markdown y deja el texto listo para mostrar en el chat */
+export function humanizarRespuesta(texto: string): string {
+  return texto
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/__([^_]+)__/g, '$1')
+    .replace(/_([^_]+)_/g, '$1')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
+function primerNombre(nombre: string): string {
+  return nombre.split(/\s+/)[0] ?? nombre;
+}
+
 export function validarMensajes(messages: unknown): ChatMessage[] | null {
   if (!Array.isArray(messages) || messages.length === 0) return null;
 
@@ -46,7 +62,8 @@ ESTILO (OBLIGATORIO):
 - Máximo 2-4 oraciones por respuesta, salvo que pidan "más detalle" o "explícame".
 - Una sola idea o una pregunta de seguimiento por turno.
 - NO listes más de 3 opciones ni enumeres todos los temas posibles.
-- Tono cercano y claro. Sin emojis.
+- Tono cercano, natural y claro, como un compañero que orienta. Sin emojis.
+- Escribe en texto plano: PROHIBIDO usar markdown, asteriscos, negritas o viñetas con guiones.
 - Si preguntan algo fuera de reclamos de exámenes, responde en 1 frase que solo puedes ayudar con eso.
 
 CONTEXTO DEL ALUMNO (usa estos datos cuando pregunte por "mi reclamo", "mi nota", "puedo reclamar"):
@@ -58,43 +75,47 @@ ${hechosParaPrompt()}
 }
 
 function respuestaMisReclamos(ctx: ContextoEstudianteChat): string {
+  const nombre = primerNombre(ctx.nombre);
+
   if (ctx.impedidoHasta) {
-    return `Estás impedido de reclamar hasta el semestre **${ctx.impedidoHasta}** (3 no procedentes). No podrás registrar nuevos reclamos hasta entonces.`;
+    return `${nombre}, por ahora estás impedido de reclamar hasta el semestre ${ctx.impedidoHasta} por tres reclamos no procedentes. Cuando pase ese semestre podrás volver a registrar reclamos.`;
   }
 
   if (ctx.reclamosActivos.length === 0) {
     if (ctx.reclamosCerrados > 0) {
-      return `No tienes reclamos activos ahora. Tienes ${ctx.reclamosCerrados} reclamo(s) ya cerrado(s). Revisa el detalle en **Mis reclamos**.\n\n¿Quieres presentar uno nuevo?`;
+      return `No tienes reclamos activos en este momento, ${nombre}. Ya tienes ${ctx.reclamosCerrados} cerrado(s); puedes ver el detalle en Mis reclamos. ¿Quieres presentar uno nuevo?`;
     }
-    return `Aún no tienes reclamos registrados. Puedes crear uno en **Nuevo reclamo (CAP)** si estás dentro del plazo.\n\n¿Te explico cómo hacerlo?`;
+    return `Por ahora no tienes reclamos registrados, ${nombre}. Si aún estás dentro del plazo, puedes crear uno desde Nuevo reclamo en el menú. ¿Te explico cómo?`;
   }
 
   if (ctx.reclamosActivos.length === 1) {
     const r = ctx.reclamosActivos[0];
     const nota =
       r.notaNueva != null
-        ? ` Nota: ${r.notaAnterior} → ${r.notaNueva}.`
-        : ` Nota actual: ${r.notaAnterior}.`;
-    return `Tu reclamo de **${r.curso}** (${r.evaluacion}) está en: **${r.estado}**.${nota}\n\n¿Quieres saber qué sigue en ese estado?`;
+        ? ` Tu nota pasó de ${r.notaAnterior} a ${r.notaNueva}.`
+        : ` Tu nota actual es ${r.notaAnterior}.`;
+    return `Tu reclamo de ${r.curso} (${r.evaluacion}) está en ${r.estado}.${nota} ¿Quieres que te cuente qué sigue?`;
   }
 
-  const lista = ctx.reclamosActivos
-    .map((r) => `• ${r.curso} (${r.evaluacion}): ${r.estado}`)
-    .join('\n');
-  return `Tienes ${ctx.reclamosActivos.length} reclamos activos:\n${lista}\n\n¿Sobre cuál quieres más detalle?`;
+  const detalle = ctx.reclamosActivos
+    .map((r) => `${r.curso} (${r.evaluacion}) en ${r.estado}`)
+    .join(', ');
+  return `Tienes ${ctx.reclamosActivos.length} reclamos activos: ${detalle}. ¿Sobre cuál quieres saber más?`;
 }
 
 function respuestaImpedimento(ctx: ContextoEstudianteChat): string {
+  const nombre = primerNombre(ctx.nombre);
+
   if (ctx.impedidoHasta) {
-    return `Sí: estás **impedido** de reclamar hasta el semestre **${ctx.impedidoHasta}** por acumular 3 reclamos no procedentes.\n\n¿Tienes otra duda sobre el reglamento?`;
+    return `Sí, ${nombre}: estás impedido de reclamar hasta el semestre ${ctx.impedidoHasta} por acumular tres reclamos no procedentes. ¿Tienes otra duda sobre el reglamento?`;
   }
-  return `Por ahora **no** estás impedido. Recuerda: 3 reclamos no procedentes en un semestre implican sanción el semestre siguiente.\n\n¿Quieres revisar tus reclamos actuales?`;
+  return `Por ahora no estás impedido, ${nombre}. Solo ten en cuenta que tres reclamos no procedentes en un semestre implican sanción el siguiente. ¿Quieres revisar cómo van tus reclamos?`;
 }
 
 function respuestaOtro(): ChatResponse {
   return {
     reply:
-      'Cuéntame tu duda en pocas palabras. Puedo orientarte sobre plazos, estados, cómo reclamar o el Art. 38.',
+      'Claro, cuéntame tu duda con calma. Puedo orientarte sobre plazos, estados, cómo reclamar o el Artículo 38.',
     suggestions: [
       { id: 'como_reclamar', label: 'Cómo reclamar', message: '¿Cómo presento un reclamo?' },
       { id: 'mis_reclamos', label: 'Mi reclamo', message: '¿En qué estado está mi reclamo?' },
@@ -119,14 +140,16 @@ export function tryResolveIntent(
     case 'impedimento':
       reply = respuestaImpedimento(ctx);
       break;
-    case 'otro':
-      return respuestaOtro();
+    case 'otro': {
+      const res = respuestaOtro();
+      return { ...res, reply: humanizarRespuesta(res.reply) };
+    }
     default:
       reply = respuestaTemplate(tema);
   }
 
   return {
-    reply,
+    reply: humanizarRespuesta(reply),
     suggestions: sugerenciasPorTema(tema),
   };
 }

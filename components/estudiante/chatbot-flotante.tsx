@@ -5,21 +5,6 @@ import { CHIPS_INICIALES, MENSAJE_BIENVENIDA } from '@/lib/chat/conocimiento-rec
 import type { ChatChip, ChatMessage } from '@/lib/chat/types';
 import { inputClass } from '@/lib/types';
 
-function MensajeTexto({ content }: { content: string }) {
-  const parts = content.split(/(\*\*[^*]+\*\*)/g);
-  return (
-    <span className="whitespace-pre-wrap break-words">
-      {parts.map((part, i) =>
-        part.startsWith('**') && part.endsWith('**') ? (
-          <strong key={i}>{part.slice(2, -2)}</strong>
-        ) : (
-          <span key={i}>{part}</span>
-        )
-      )}
-    </span>
-  );
-}
-
 function ChipsSugerencias({
   chips,
   onSelect,
@@ -130,7 +115,7 @@ export function ChatbotFlotante() {
 
           <div ref={listaRef} className="flex-1 overflow-y-auto p-4 space-y-3">
             <div className="text-sm rounded-lg px-3 py-2 max-w-[90%] bg-up-surface-muted text-up-text">
-              <MensajeTexto content={MENSAJE_BIENVENIDA} />
+              <span className="whitespace-pre-wrap break-words">{MENSAJE_BIENVENIDA}</span>
               {mensajes.length === 0 && (
                 <ChipsSugerencias
                   chips={sugerencias}
@@ -149,11 +134,7 @@ export function ChatbotFlotante() {
                     : 'bg-up-surface-muted text-up-text'
                 }`}
               >
-                {m.role === 'assistant' ? (
-                  <MensajeTexto content={m.content} />
-                ) : (
-                  <span className="whitespace-pre-wrap break-words">{m.content}</span>
-                )}
+                <span className="whitespace-pre-wrap break-words">{m.content}</span>
               </div>
             ))}
 

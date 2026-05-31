@@ -1,7 +1,7 @@
 import type { ChatChip, TemaChat } from '@/lib/chat/types';
 
 export const MENSAJE_BIENVENIDA =
-  'Hola, soy el asistente de ReclamoUP. ¿En qué te ayudo con tu reclamo de examen?';
+  'Hola, soy el asistente de ReclamoUP. ¿En qué te puedo ayudar con tu reclamo?';
 
 export const CHIPS_INICIALES: ChatChip[] = [
   {
@@ -38,21 +38,21 @@ export const CHIPS_INICIALES: ChatChip[] = [
 
 const RESPUESTAS_TEMPLATE: Record<TemaChat, string> = {
   como_reclamar:
-    'Ve al CAP, inicia sesión y entra a **Nuevo reclamo (CAP)**. Elige curso, sección y evaluación (Parcial o Final), escribe tu argumento, adjunta el PDF del examen escaneado y confirma que no fue hecho con lápiz (Art. 38). Al enviar, el reclamo llega directo al docente.\n\n¿Quieres que te explique algún paso en particular?',
+    'Entra al CAP con tu usuario y ve a Nuevo reclamo. Elige curso, sección y evaluación, escribe tu argumento, sube el PDF del examen y confirma que no usaste lápiz. Al enviarlo, el docente recibe tu reclamo de inmediato. ¿Te ayudo con algún paso?',
   plazos:
-    'Solo puedes reclamar mientras la evaluación tenga **fecha límite vigente** en el sistema. Si el plazo ya venció, no podrás registrar el reclamo.\n\n¿Quieres revisar el estado de alguna evaluación tuya?',
+    'Solo puedes reclamar si la evaluación aún está dentro del plazo que ves en el sistema. Si ya venció, no se puede registrar. ¿Quieres saber cómo va alguna evaluación tuya?',
   estados:
-    'Tu reclamo avanza así: **Enviado al docente** → **En revisión** → **En validación DAAR** → **Concluido**. También puede quedar Rechazado o Anulado.\n\n¿Quieres saber en qué etapa está el tuyo?',
+    'Tu reclamo pasa por varias etapas: primero va al docente, luego lo revisa, después pasa a validación de DAAR y al final queda concluido. También puede rechazarse o anularse. ¿Te cuento en qué etapa está el tuyo?',
   resultados:
-    'El docente puede resolver: **No procede**, **Procede y modifica** (cambia la nota) o **Procede y NO modifica** (procede pero la nota se mantiene). Luego DAAR valida y cierra el trámite.\n\n¿Te explico alguno con más detalle?',
+    'El docente puede decir que no procede, que procede y modifica la nota, o que procede pero deja la nota igual. Después DAAR valida y cierra el trámite. ¿Te explico alguno con más detalle?',
   art38:
-    'Si tu examen fue hecho con **lápiz u otro medio borrable**, el reclamo **no procede** según el Art. 38. Debes marcar la casilla de confirmación al registrar el reclamo.\n\n¿Tienes duda sobre otro requisito?',
+    'Si tu examen fue hecho con lápiz u otro medio borrable, el reclamo no procede según el Artículo 38. Al registrarlo debes marcar la casilla de confirmación. ¿Tienes duda sobre otro requisito?',
   impedimento:
-    'Si acumulas **3 reclamos no procedentes** en un semestre, quedas **impedido** de reclamar el semestre siguiente.\n\n¿Quieres saber si esto te aplica a ti?',
+    'Si acumulas tres reclamos no procedentes en un semestre, quedas impedido de reclamar el semestre siguiente. ¿Quieres saber si esto te aplica a ti?',
   mis_reclamos:
-    'Puedes ver todos tus reclamos en **Mis reclamos** (menú izquierdo). Ahí aparece el estado, curso y evaluación de cada uno.\n\n¿Quieres que revise el estado de tus reclamos actuales?',
+    'Puedes ver todos tus reclamos en Mis reclamos, en el menú de la izquierda. Ahí aparece el estado, curso y evaluación de cada uno. ¿Quieres que revise cómo van los tuyos?',
   otro:
-    'Cuéntame tu duda en una frase y te oriento. Recuerda que solo puedo ayudarte con el proceso de reclamos de exámenes en ReclamoUP.',
+    'Cuéntame tu duda con calma y te oriento. Solo puedo ayudarte con el proceso de reclamos de exámenes en ReclamoUP.',
 };
 
 const SEGUIMIENTO_POR_TEMA: Record<TemaChat, ChatChip[]> = {

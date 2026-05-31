@@ -3,6 +3,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import { requireRol } from '@/lib/auth';
 import {
   buildSystemPrompt,
+  humanizarRespuesta,
   MAX_TOKENS,
   truncarHistorial,
   tryResolveIntent,
@@ -31,7 +32,10 @@ export async function POST(request: NextRequest) {
     if (ultimoUsuario) {
       const intent = tryResolveIntent(ultimoUsuario.content, contexto);
       if (intent) {
-        return NextResponse.json(intent);
+        return NextResponse.json({
+          ...intent,
+          reply: humanizarRespuesta(intent.reply),
+        });
       }
     }
 
@@ -56,7 +60,9 @@ export async function POST(request: NextRequest) {
     });
 
     const textBlock = response.content.find((b) => b.type === 'text');
-    const reply = textBlock?.type === 'text' ? textBlock.text : 'No pude generar una respuesta.';
+    const raw =
+      textBlock?.type === 'text' ? textBlock.text : 'No pude generar una respuesta.';
+    const reply = humanizarRespuesta(raw);
 
     const tema = ultimoUsuario ? detectarTema(ultimoUsuario.content) : null;
     const suggestions = tema ? sugerenciasPorTema(tema) : undefined;
