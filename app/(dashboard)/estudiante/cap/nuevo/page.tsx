@@ -10,10 +10,32 @@ export default async function NuevoReclamoPage() {
   const session = await getSession();
   if (!session || session.rol !== 'estudiante') redirect('/login');
 
-  const [cursos, impedidoHasta] = await Promise.all([
-    getCursosEstudiante(session.id),
-    getImpedidoEstudiante(session.id),
-  ]);
+  const impedidoHasta = await getImpedidoEstudiante(session.id);
+
+  if (impedidoHasta) {
+    return (
+      <div>
+        <PageHeader
+          title="Nuevo reclamo — CAP"
+          description="No puede registrar reclamos mientras dure el impedimento."
+        />
+        <Card>
+          <CardBody>
+            <InfoBox variant="danger">
+              Está impedido de presentar reclamos hasta el semestre{' '}
+              <strong>{impedidoHasta}</strong> por acumular tres reclamos no procedentes en el
+              semestre anterior.
+              <p className="mt-3 text-up-text-secondary">
+                Puede revisar el historial de sus reclamos desde el panel principal.
+              </p>
+            </InfoBox>
+          </CardBody>
+        </Card>
+      </div>
+    );
+  }
+
+  const cursos = await getCursosEstudiante(session.id);
 
   return (
     <div>
@@ -21,13 +43,6 @@ export default async function NuevoReclamoPage() {
         title="Nuevo reclamo — CAP"
         description="Escanee su examen y complete el formulario. El reclamo se envía directamente al docente."
       />
-
-      {impedidoHasta && (
-        <InfoBox variant="danger" className="mb-6">
-          Está impedido de presentar reclamos hasta el semestre <strong>{impedidoHasta}</strong>{' '}
-          (3 reclamos no procedentes en el semestre anterior).
-        </InfoBox>
-      )}
 
       <Card>
         <CardBody>
