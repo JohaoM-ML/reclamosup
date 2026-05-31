@@ -21,6 +21,7 @@ import {
 } from '@/lib/services/reclamo.service';
 import {
   crearReclamoEstudianteSchema,
+  parsePreguntasMarcadas,
   resolverReclamoSchema,
 } from '@/lib/validators/reclamo.schema';
 import type { MotivoReclamo } from '@/lib/types';
@@ -48,11 +49,12 @@ export async function crearReclamoEstudianteAction(
   try {
     const session = await requireRol('estudiante');
 
+    const preguntasMarcadas = parsePreguntasMarcadas(formData.getAll('preguntasMarcadas'));
+
     const parsed = crearReclamoEstudianteSchema.safeParse({
       evaluacionId: formData.get('evaluacionId'),
       motivo: formData.get('motivo'),
       argumento: formData.get('argumento'),
-      preguntaMarcada: formData.get('preguntaMarcada') || undefined,
       examenNoLapiz: formData.get('examenNoLapiz'),
       representantePresenciado: formData.get('representantePresenciado'),
     });
@@ -74,7 +76,7 @@ export async function crearReclamoEstudianteAction(
       evaluacionId: parsed.data.evaluacionId,
       motivo: parsed.data.motivo as MotivoReclamo,
       argumento: parsed.data.argumento,
-      preguntaMarcada: parsed.data.preguntaMarcada,
+      preguntasMarcadas,
       examenNoLapiz: parsed.data.examenNoLapiz,
       archivo,
     });
@@ -93,14 +95,16 @@ export async function crearReclamoEstudianteAction(
 }
 
 function parseReclamoFormFields(formData: FormData) {
-  return crearReclamoEstudianteSchema.safeParse({
-    evaluacionId: formData.get('evaluacionId'),
-    motivo: formData.get('motivo'),
-    argumento: formData.get('argumento'),
-    preguntaMarcada: formData.get('preguntaMarcada') || undefined,
-    examenNoLapiz: formData.get('examenNoLapiz'),
-    representantePresenciado: formData.get('representantePresenciado'),
-  });
+  return {
+    parsed: crearReclamoEstudianteSchema.safeParse({
+      evaluacionId: formData.get('evaluacionId'),
+      motivo: formData.get('motivo'),
+      argumento: formData.get('argumento'),
+      examenNoLapiz: formData.get('examenNoLapiz'),
+      representantePresenciado: formData.get('representantePresenciado'),
+    }),
+    preguntasMarcadas: parsePreguntasMarcadas(formData.getAll('preguntasMarcadas')),
+  };
 }
 
 /** Paso 1 producción: reserva reclamo y devuelve URL firmada (PDF no pasa por Vercel). */
@@ -110,7 +114,7 @@ export async function prepararReclamoArchivoAction(
 ): Promise<ActionResult & { signedUrl?: string; path?: string; token?: string }> {
   try {
     const session = await requireRol('estudiante');
-    const parsed = parseReclamoFormFields(formData);
+    const { parsed, preguntasMarcadas } = parseReclamoFormFields(formData);
 
     if (!parsed.success) {
       return {
@@ -130,7 +134,7 @@ export async function prepararReclamoArchivoAction(
       evaluacionId: parsed.data.evaluacionId,
       motivo: parsed.data.motivo as MotivoReclamo,
       argumento: parsed.data.argumento,
-      preguntaMarcada: parsed.data.preguntaMarcada,
+      preguntasMarcadas,
       examenNoLapiz: parsed.data.examenNoLapiz,
       fileName,
       fileSize,
@@ -242,7 +246,10 @@ export async function resolverReclamoAction(
       rol: session.rol,
       resultadoFinal: parsed.data.resultadoFinal,
       notaNueva: parsed.data.notaNueva,
-      comentario: parsed.data.comentario,
+      comentario:
+        parsed.data.resultadoFinal === 'procede_modifica'
+          ? undefined
+          : parsed.data.comentario?.trim(),
     });
 
     revalidateReclamo(parsed.data.reclamoId);

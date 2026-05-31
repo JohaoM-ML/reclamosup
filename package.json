@@ -15,6 +15,7 @@
     "db:push": "prisma db push",
     "db:seed": "tsx prisma/seed.ts",
     "db:clean-reclamos": "tsx scripts/clean-reclamos.ts",
+    "demo:reset": "tsx scripts/fix-demo-estudiante.ts",
     "db:recordatorio-docentes": "tsx scripts/recordatorio-docentes.ts",
     "db:reset": "prisma migrate reset --force",
     "db:studio": "prisma studio",

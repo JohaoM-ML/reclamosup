@@ -17,8 +17,8 @@ export function PendientesDocenteTable({
       <table className="min-w-full text-sm divide-y divide-up-border">
         <thead className="bg-up-surface-muted">
           <tr>
+            <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Cód. docente</th>
             <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Docente</th>
-            <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Email</th>
             <th className="px-4 py-3 text-right font-medium text-up-text-secondary">Pendientes</th>
             <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Plazo próximo</th>
             <th className="px-4 py-3" />
@@ -27,8 +27,8 @@ export function PendientesDocenteTable({
         <tbody className="divide-y divide-up-border">
           {rows.map((r) => (
             <tr key={r.docenteId}>
+              <td className="px-4 py-3 font-mono text-xs">{r.codigo}</td>
               <td className="px-4 py-3">{r.nombre}</td>
-              <td className="px-4 py-3 text-up-text-secondary">{r.email}</td>
               <td className="px-4 py-3 text-right font-medium">{r.pendientes}</td>
               <td className="px-4 py-3">
                 {r.plazoProximo

@@ -38,6 +38,58 @@ function labelEvaluacion(tipo: string): string {
   return tipo;
 }
 
+const MAX_PREGUNTAS = 20;
+
+function PreguntasMarcadasPicker() {
+  const [seleccionadas, setSeleccionadas] = useState<number[]>([]);
+
+  function toggle(n: number) {
+    setSeleccionadas((prev) =>
+      prev.includes(n) ? prev.filter((x) => x !== n) : [...prev, n].sort((a, b) => a - b)
+    );
+  }
+
+  const resumen =
+    seleccionadas.length === 0
+      ? 'Ninguna seleccionada'
+      : `Preguntas: ${seleccionadas.map((n) => `P${n}`).join(', ')}`;
+
+  return (
+    <details className="rounded-lg border border-up-border bg-up-surface">
+      <summary className="cursor-pointer px-4 py-3 text-sm font-medium text-up-text select-none">
+        Preguntas a reclamar (opcional) — {resumen}
+      </summary>
+      <div className="border-t border-up-border px-4 py-3">
+        <p className="mb-3 text-xs text-up-text-muted">
+          Marque las preguntas del examen que desea reclamar.
+        </p>
+        <div className="grid grid-cols-4 gap-2 sm:grid-cols-5">
+          {Array.from({ length: MAX_PREGUNTAS }, (_, i) => i + 1).map((n) => (
+            <label
+              key={n}
+              className={`flex cursor-pointer items-center gap-2 rounded-md border px-2 py-1.5 text-sm ${
+                seleccionadas.includes(n)
+                  ? 'border-up-blue bg-up-blue/10 text-up-blue'
+                  : 'border-up-border text-up-text'
+              }`}
+            >
+              <input
+                type="checkbox"
+                name="preguntasMarcadas"
+                value={n}
+                checked={seleccionadas.includes(n)}
+                onChange={() => toggle(n)}
+                className="sr-only"
+              />
+              P{n}
+            </label>
+          ))}
+        </div>
+      </div>
+    </details>
+  );
+}
+
 export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
@@ -269,8 +321,7 @@ export function NuevoReclamoForm({ cursos }: { cursos: Curso[] }) {
         </div>
 
         <div>
-          <label className={labelClass}>Pregunta marcada (opcional)</label>
-          <input name="preguntaMarcada" type="number" min="1" className={inputClass} />
+          <PreguntasMarcadasPicker />
         </div>
 
         <div>

@@ -43,7 +43,7 @@ export function ReclamoDetalleInfo({
   reclamo: {
     motivo: string;
     argumento: string;
-    preguntaMarcada: number | null;
+    preguntasMarcadas: number[];
     notaAnterior: number;
     notaNueva: number | null;
     decision: string | null;
@@ -88,8 +88,12 @@ export function ReclamoDetalleInfo({
         </dd>
       </div>
       <div>
-        <dt className="text-up-text-muted">Pregunta marcada</dt>
-        <dd className="font-medium">{reclamo.preguntaMarcada ?? '—'}</dd>
+        <dt className="text-up-text-muted">Preguntas marcadas</dt>
+        <dd className="font-medium">
+          {reclamo.preguntasMarcadas.length > 0
+            ? reclamo.preguntasMarcadas.map((n) => `P${n}`).join(', ')
+            : '—'}
+        </dd>
       </div>
       <div className="sm:col-span-2">
         <dt className="text-up-text-muted">Argumento</dt>

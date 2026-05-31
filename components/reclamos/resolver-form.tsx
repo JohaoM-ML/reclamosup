@@ -1,14 +1,19 @@
 'use client';
 
-import { useActionState } from 'react';
+import { useActionState, useState } from 'react';
 import { resolverReclamoAction, type ActionResult } from '@/app/actions/reclamo.actions';
 import { Button } from '@/components/ui/button';
 import { inputClass, labelClass, RESULTADO_FINAL_LABELS } from '@/lib/types';
+import type { ResultadoFinal } from '@/lib/types';
 
 const initial: ActionResult = { ok: false };
 
 export function ResolverForm({ reclamoId }: { reclamoId: string }) {
   const [state, action, pending] = useActionState(resolverReclamoAction, initial);
+  const [resultadoFinal, setResultadoFinal] = useState<ResultadoFinal | ''>('');
+
+  const requiereComentario =
+    resultadoFinal === 'no_procede' || resultadoFinal === 'procede_sin_modifica';
 
   return (
     <form action={action} className="space-y-4">
@@ -17,7 +22,13 @@ export function ResolverForm({ reclamoId }: { reclamoId: string }) {
 
       <div>
         <label className={labelClass}>Resultado (Excel DAAR)</label>
-        <select name="resultadoFinal" required className={inputClass}>
+        <select
+          name="resultadoFinal"
+          required
+          className={inputClass}
+          value={resultadoFinal}
+          onChange={(e) => setResultadoFinal(e.target.value as ResultadoFinal | '')}
+        >
           <option value="">Seleccionar...</option>
           <option value="no_procede">{RESULTADO_FINAL_LABELS.no_procede}</option>
           <option value="procede_modifica">{RESULTADO_FINAL_LABELS.procede_modifica}</option>
@@ -27,28 +38,33 @@ export function ResolverForm({ reclamoId }: { reclamoId: string }) {
         </select>
       </div>
 
-      <div>
-        <label className={labelClass}>Nota nueva (solo si procede y modifica)</label>
-        <input
-          name="notaNueva"
-          type="number"
-          step="0.1"
-          min="0"
-          max="20"
-          className={inputClass}
-        />
-      </div>
+      {resultadoFinal === 'procede_modifica' && (
+        <div>
+          <label className={labelClass}>Nota nueva</label>
+          <input
+            name="notaNueva"
+            type="number"
+            step="0.1"
+            min="0"
+            max="20"
+            required
+            className={inputClass}
+          />
+        </div>
+      )}
 
-      <div>
-        <label className={labelClass}>Comentario</label>
-        <textarea
-          name="comentario"
-          required
-          rows={3}
-          className={inputClass}
-          placeholder="Fundamento de la decisión..."
-        />
-      </div>
+      {requiereComentario && (
+        <div>
+          <label className={labelClass}>Comentario (obligatorio)</label>
+          <textarea
+            name="comentario"
+            required
+            rows={3}
+            className={inputClass}
+            placeholder="Fundamento de la decisión..."
+          />
+        </div>
+      )}
 
       {state.error && (
         <p className="rounded-md border border-red-200 bg-red-50 p-2 text-sm text-red-700">
@@ -61,7 +77,7 @@ export function ResolverForm({ reclamoId }: { reclamoId: string }) {
         </p>
       )}
 
-      <Button type="submit" disabled={pending} className="w-full">
+      <Button type="submit" disabled={pending || !resultadoFinal} className="w-full">
         {pending ? 'Guardando...' : 'Registrar decisión'}
       </Button>
     </form>

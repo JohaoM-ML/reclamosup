@@ -19,7 +19,10 @@ export async function sendEmailToUser(
 ): Promise<SendEmailResult> {
   const from = process.env.EMAIL_FROM ?? 'ReclamoUP <notificaciones@mail.reclamoup.uk>';
   const resendKey = process.env.RESEND_API_KEY?.trim();
-  const demoTo = process.env.EMAIL_DEMO_TO?.trim();
+  const demoTo =
+    process.env.NODE_ENV !== 'production'
+      ? process.env.EMAIL_DEMO_TO?.trim()
+      : undefined;
   const destino = demoTo || to;
   const subjectFinal = demoTo ? `[Para: ${to}] ${subject}` : subject;
 

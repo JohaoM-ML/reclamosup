@@ -1,18 +1,19 @@
 /**
  * Matricula a Juan Renato en cursos de Giuliana (docente demo) y crea reclamos demo.
- * Uso: npx tsx scripts/fix-demo-estudiante.ts
+ * Uso: npm run demo:reset
  */
 import 'dotenv/config';
 import { createPrismaClient } from '../lib/create-prisma-client';
 import { esCursoExcluidoReclamoDigital } from '../lib/cursos-reclamo-estandar';
-import { calcularResultadoFinal } from '../lib/domain/resultado-final';
 import { inicioCiclo } from '../lib/domain/ciclo-semanas';
 
 const prisma = createPrismaClient(process.env.DIRECT_URL ?? process.env.DATABASE_URL);
 const EMAIL_ESTUDIANTE = 'jr.mendozaf@alum.up.edu.pe';
 const EMAIL_DOCENTE = 'pa.tueroc@alum.up.edu.pe';
+const CODIGO_DEMO_DOCENTE = '000100001';
 const SEMESTRE = '2026-I';
 const CURSOS_POR_ESTUDIANTE = 5;
+const PLAZO_DIAS = 30;
 
 function addDias(fecha: Date, dias: number) {
   const d = new Date(fecha);
@@ -49,7 +50,10 @@ async function main() {
   });
   const docente = await prisma.user.findUnique({
     where: { email: EMAIL_DOCENTE },
-    select: { id: true, docente: { select: { nombres: true, apellidoPaterno: true, apellidoMaterno: true } } },
+    select: {
+      id: true,
+      docente: { select: { codigo: true, nombres: true, apellidoPaterno: true, apellidoMaterno: true } },
+    },
   });
   const daar = await prisma.user.findUnique({
     where: { email: 'Ap.Carhuavilcac@alum.up.edu.pe' },
@@ -63,6 +67,13 @@ async function main() {
   if (!docente) {
     console.error('No se encontró docente', EMAIL_DOCENTE);
     process.exit(1);
+  }
+
+  if (docente.docente && !docente.docente.codigo) {
+    await prisma.docente.update({
+      where: { userId: docente.id },
+      data: { codigo: CODIGO_DEMO_DOCENTE },
+    });
   }
 
   const nombreDocente = docente.docente
@@ -95,6 +106,13 @@ async function main() {
     skipDuplicates: true,
   });
 
+  const plazoReclamo = addDias(new Date(), PLAZO_DIAS);
+  await prisma.evaluacion.updateMany({
+    where: { cursoId: { in: matriculaCursos.map((c) => c.id) } },
+    data: { fechaLimiteReclamo: plazoReclamo },
+  });
+  console.log(`Plazos de reclamo extendidos hasta ${plazoReclamo.toLocaleDateString('es-PE')}`);
+
   console.log(`Matrículas (${matriculaCursos.length}) — docente ${nombreDocente}:`);
   for (const c of cursosGiuliana) {
     console.log(`  ✓ ${c.codigo} ${c.nombre} (${c.seccion})`);
@@ -111,6 +129,9 @@ async function main() {
     await prisma.reclamoEvento.deleteMany({
       where: { reclamoId: { in: existentes.map((r) => r.id) } },
     });
+    await prisma.notificacion.deleteMany({
+      where: { reclamoId: { in: existentes.map((r) => r.id) } },
+    });
     await prisma.reclamo.deleteMany({ where: { estudianteId: estudiante.id } });
     console.log(`\nEliminados ${existentes.length} reclamos previos`);
   }
@@ -122,17 +143,14 @@ async function main() {
   }
   const cursosReclamo = [...porCodigo.values()];
 
-  type Estado = 'ENVIADO' | 'EN_REVISION' | 'CERRADO';
+  type Estado = 'ENVIADO' | 'EN_REVISION';
   const configs: Array<{ estado: Estado; idx: number }> =
-    cursosReclamo.length >= 3
+    cursosReclamo.length >= 2
       ? [
           { estado: 'ENVIADO', idx: 0 },
           { estado: 'EN_REVISION', idx: 1 },
-          { estado: 'CERRADO', idx: 2 },
         ]
-      : cursosReclamo.length >= 2
-        ? [{ estado: 'ENVIADO', idx: 0 }]
-        : [{ estado: 'ENVIADO', idx: 0 }];
+      : [{ estado: 'ENVIADO', idx: 0 }];
 
   let creados = 0;
 
@@ -148,10 +166,6 @@ async function main() {
 
     const createdAt = fechaEnSemanaCiclo(2 + i, i);
     const notaAnterior = ev.notaPublicada ?? 12;
-    const notaNueva =
-      cfg.estado === 'CERRADO'
-        ? Math.min(20, Math.round((notaAnterior + 1.5) * 10) / 10)
-        : undefined;
 
     const reclamo = await prisma.reclamo.create({
       data: {
@@ -162,6 +176,7 @@ async function main() {
         motivo: 'error_suma',
         argumento:
           'Solicito revisión de mi examen conforme al reglamento vigente y adjunto sustento.',
+        preguntasMarcadas: i === 0 ? [2, 4] : [],
         examenNoLapiz: true,
         notaAnterior,
         estado: cfg.estado,
@@ -170,14 +185,6 @@ async function main() {
         escaneadoAt: createdAt,
         archivoPath: `/uploads/seed/demo-estudiante-${i}.pdf`,
         archivoHash: `demo${i.toString().padStart(4, '0')}`,
-        ...(cfg.estado === 'CERRADO' && notaNueva != null
-          ? {
-              decision: 'procedente',
-              resultadoFinal: calcularResultadoFinal('procedente', notaAnterior, notaNueva),
-              notaNueva,
-              comentarioDocente: 'Revisión favorable con modificación de nota.',
-            }
-          : {}),
       },
     });
     creados++;
@@ -192,8 +199,12 @@ async function main() {
       },
     });
 
-    if (cfg.estado === 'EN_REVISION' || cfg.estado === 'CERRADO') {
+    if (cfg.estado === 'EN_REVISION') {
       const toma = addDias(createdAt, 1);
+      await prisma.reclamo.update({
+        where: { id: reclamo.id },
+        data: { estado: 'EN_REVISION' },
+      });
       await prisma.reclamoEvento.create({
         data: {
           reclamoId: reclamo.id,
@@ -206,36 +217,7 @@ async function main() {
       });
     }
 
-    if (cfg.estado === 'CERRADO' && notaNueva != null) {
-      const resolvio = addDias(createdAt, 3);
-      const cierre = addDias(createdAt, 5);
-      await prisma.reclamoEvento.createMany({
-        data: [
-          {
-            reclamoId: reclamo.id,
-            actorId: docente.id,
-            accion: 'DOCENTE_RESOLVIO',
-            estadoAnterior: 'EN_REVISION',
-            estadoNuevo: 'EN_VALIDACION',
-            createdAt: resolvio,
-          },
-          {
-            reclamoId: reclamo.id,
-            actorId: daar?.id ?? docente.id,
-            accion: 'DAAR_CERRO',
-            estadoAnterior: 'EN_VALIDACION',
-            estadoNuevo: 'CERRADO',
-            createdAt: cierre,
-          },
-        ],
-      });
-      await prisma.reclamo.update({
-        where: { id: reclamo.id },
-        data: { updatedAt: cierre },
-      });
-    }
-
-    console.log(`  ${cfg.estado} — ${curso.nombre} → ${nombreDocente}`);
+    console.log(`  ${cfg.estado} — ${curso.codigo} ${curso.nombre} → ${nombreDocente}`);
   }
 
   const libresGiuliana = cursosReclamo.length - configs.length;

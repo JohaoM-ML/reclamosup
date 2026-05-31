@@ -24,8 +24,8 @@ export type PivotFila = {
 
 export type PendienteDocente = {
   docenteId: string;
+  codigo: string;
   nombre: string;
-  email: string;
   pendientes: number;
   plazoProximo: Date | null;
 };
@@ -34,6 +34,7 @@ export type PendienteCurso = {
   codigo: string;
   nombre: string;
   seccion: string;
+  docenteCodigo: string;
   docenteNombre: string;
   count: number;
 };
@@ -122,9 +123,13 @@ export async function getPendientesPorDocente(
       docenteId: true,
       docente: {
         select: {
-          email: true,
           docente: {
-            select: { nombres: true, apellidoPaterno: true, apellidoMaterno: true },
+            select: {
+              codigo: true,
+              nombres: true,
+              apellidoPaterno: true,
+              apellidoMaterno: true,
+            },
           },
         },
       },
@@ -137,11 +142,11 @@ export async function getPendientesPorDocente(
     const d = r.docente.docente;
     const nombre = d
       ? `${d.nombres} ${d.apellidoPaterno} ${d.apellidoMaterno}`.trim()
-      : r.docente.email;
+      : 'Docente';
     const cur = map.get(r.docenteId) ?? {
       docenteId: r.docenteId,
+      codigo: d?.codigo ?? '—',
       nombre,
-      email: r.docente.email,
       pendientes: 0,
       plazoProximo: null,
     };
@@ -170,7 +175,7 @@ export async function getPendientesPorCurso(semestre?: string): Promise<Pendient
               nombre: true,
               seccion: true,
               docente: {
-                select: { nombres: true, apellidoPaterno: true },
+                select: { codigo: true, nombres: true, apellidoPaterno: true },
               },
             },
           },
@@ -187,6 +192,7 @@ export async function getPendientesPorCurso(semestre?: string): Promise<Pendient
       codigo: c.codigo,
       nombre: c.nombre,
       seccion: c.seccion,
+      docenteCodigo: c.docente.codigo,
       docenteNombre: `${c.docente.nombres} ${c.docente.apellidoPaterno}`,
       count: 0,
     };
@@ -204,7 +210,7 @@ export async function getReclamosPendientesDocenteDaar(docenteId: string, semest
     select: {
       email: true,
       docente: {
-        select: { nombres: true, apellidoPaterno: true, apellidoMaterno: true },
+        select: { codigo: true, nombres: true, apellidoPaterno: true, apellidoMaterno: true },
       },
     },
   });
@@ -227,7 +233,7 @@ export async function getReclamosPendientesDocenteDaar(docenteId: string, semest
       estado: true,
       estudiante: {
         select: {
-          alumno: { select: { nombres: true, apellidoPaterno: true } },
+          alumno: { select: { nombres: true, apellidoPaterno: true, codigo: true } },
           email: true,
         },
       },
@@ -243,10 +249,11 @@ export async function getReclamosPendientesDocenteDaar(docenteId: string, semest
   });
 
   return {
-    docente: { nombre, email: docenteUser.email },
+    docente: { codigo: d.codigo, nombre },
     reclamos: rows.map((r) => ({
       id: r.id,
       estado: r.estado,
+      estudianteCodigo: r.estudiante.alumno?.codigo ?? '—',
       estudianteNombre: r.estudiante.alumno
         ? `${r.estudiante.alumno.nombres} ${r.estudiante.alumno.apellidoPaterno}`
         : r.estudiante.email,

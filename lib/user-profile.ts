@@ -8,6 +8,7 @@ type PerfilAlumno = {
 };
 
 type PerfilDocente = {
+  codigo: string;
   nombres: string;
   apellidoPaterno: string;
   apellidoMaterno: string;
@@ -44,7 +45,7 @@ export function getNombreUser(user: UserConPerfil): string {
 }
 
 export function getCodigoUser(user: UserConPerfil): string | null {
-  return user.alumno?.codigo ?? null;
+  return user.alumno?.codigo ?? user.docente?.codigo ?? null;
 }
 
 export const userProfileInclude = {
@@ -67,6 +68,7 @@ export const userDisplaySelect = {
   },
   docente: {
     select: {
+      codigo: true,
       nombres: true,
       apellidoPaterno: true,
       apellidoMaterno: true,

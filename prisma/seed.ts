@@ -26,6 +26,7 @@ const SEMESTRE = '2026-I';
 const EMAIL_DEMO_ESTUDIANTE = 'jr.mendozaf@alum.up.edu.pe';
 const EMAIL_DEMO_DAAR = 'Ap.Carhuavilcac@alum.up.edu.pe';
 const EMAIL_DEMO_DOCENTE = 'pa.tueroc@alum.up.edu.pe';
+const CODIGO_DEMO_DOCENTE = '000100001';
 const CURSOS_POR_ESTUDIANTE = 5;
 const TOTAL_ESTUDIANTES = 50;
 const MAX_CURSOS = 20;
@@ -158,8 +159,20 @@ async function createManyBatched<T extends Record<string, unknown>>(
 async function crearUsuarioDocente(
   partes: PartesNombre,
   email: string,
-  password: string
+  password: string,
+  codigoFijo?: string,
+  codigosUsados?: Set<string>
 ) {
+  let codigo = codigoFijo;
+  if (!codigo) {
+    do {
+      codigo = generarCodigoUpAleatorio();
+    } while (codigosUsados?.has(codigo));
+    codigosUsados?.add(codigo);
+  } else {
+    codigosUsados?.add(codigo);
+  }
+
   return prisma.user.create({
     data: {
       email,
@@ -167,6 +180,7 @@ async function crearUsuarioDocente(
       rol: 'docente',
       docente: {
         create: {
+          codigo,
           nombres: partes.nombres,
           apellidoPaterno: partes.apellidoPaterno,
           apellidoMaterno: partes.apellidoMaterno,
@@ -225,15 +239,12 @@ async function crearReclamosDemoEstudiante(opts: {
     (m) => m.curso.docenteId === opts.docenteDemoId
   );
   const configs: Array<{ estado: EstadoReclamo; cursoIdx: number }> =
-    cursosGiuliana.length >= 3
+    cursosGiuliana.length >= 2
       ? [
           { estado: 'ENVIADO', cursoIdx: 0 },
           { estado: 'EN_REVISION', cursoIdx: 1 },
-          { estado: 'CERRADO', cursoIdx: 2 },
         ]
-      : cursosGiuliana.length >= 2
-        ? [{ estado: 'ENVIADO', cursoIdx: 0 }]
-        : [{ estado: 'ENVIADO', cursoIdx: 0 }];
+      : [{ estado: 'ENVIADO', cursoIdx: 0 }];
 
   let count = 0;
 
@@ -366,7 +377,7 @@ async function main() {
   await prisma.user.deleteMany();
 
   const password = await bcrypt.hash(CONTRASENA_INICIAL, 10);
-  const plazoReclamo = diasDesdeAhora(14);
+  const plazoReclamo = diasDesdeAhora(30);
   const emailsUsados = new Set<string>([
     EMAIL_DEMO_DAAR,
     EMAIL_DEMO_ESTUDIANTE,
@@ -391,13 +402,20 @@ async function main() {
 
   const profesoresUnicos = [...new Set(oferta.map((o) => o.profesor))];
   const docentePorNombre = new Map<string, string>();
+  const codigosDocenteUsados = new Set<string>([CODIGO_DEMO_DOCENTE]);
 
   for (let idx = 0; idx < profesoresUnicos.length; idx++) {
     const nombreRaw = profesoresUnicos[idx];
     const partes = parseNombreProfesor(nombreRaw);
     const email =
       idx === 0 ? EMAIL_DEMO_DOCENTE : emailUnico(emailDocenteUp(partes), emailsUsados);
-    const docente = await crearUsuarioDocente(partes, email, password);
+    const docente = await crearUsuarioDocente(
+      partes,
+      email,
+      password,
+      idx === 0 ? CODIGO_DEMO_DOCENTE : undefined,
+      codigosDocenteUsados
+    );
     docentePorNombre.set(nombreRaw, docente.id);
   }
 
@@ -754,7 +772,7 @@ async function main() {
   console.log(`  Cursos:       ${new Set(cursos.map((c) => c.codigo)).size} (${cursos.length} secciones)`);
   console.log(`  Matrículas:   ${matCount}`);
   console.log(`  Evaluaciones: ${evalRows.length}`);
-  console.log(`  Reclamos:     ${reclamoCount} (incl. 3 demo ${EMAIL_DEMO_ESTUDIANTE})`);
+  console.log(`  Reclamos:     ${reclamoCount} (incl. 2 demo ${EMAIL_DEMO_ESTUDIANTE})`);
   console.log('');
   console.log('Acceso demo (hackathon):');
   console.log(`  Estudiante: ${EMAIL_DEMO_ESTUDIANTE}`);

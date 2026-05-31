@@ -50,9 +50,10 @@ export function OperativoPanel({ data, semestre, pendientesCierre, todos }: Prop
             <table className="min-w-full text-sm divide-y divide-up-border">
               <thead className="bg-up-surface-muted">
                 <tr>
-                  <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Código</th>
+                  <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Cód. curso</th>
                   <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Curso</th>
                   <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Sección</th>
+                  <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Cód. docente</th>
                   <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Docente</th>
                   <th className="px-4 py-3 text-right font-medium text-up-text-secondary">Pendientes</th>
                 </tr>
@@ -63,6 +64,7 @@ export function OperativoPanel({ data, semestre, pendientesCierre, todos }: Prop
                     <td className="px-4 py-3 font-mono text-xs">{c.codigo}</td>
                     <td className="px-4 py-3">{c.nombre}</td>
                     <td className="px-4 py-3 font-medium">{c.seccion}</td>
+                    <td className="px-4 py-3 font-mono text-xs">{c.docenteCodigo}</td>
                     <td className="px-4 py-3">{c.docenteNombre}</td>
                     <td className="px-4 py-3 text-right">{c.count}</td>
                   </tr>
@@ -169,8 +171,10 @@ export function OperativoPanel({ data, semestre, pendientesCierre, todos }: Prop
             <table className="min-w-full text-sm divide-y divide-up-border">
               <thead className="bg-up-surface-muted">
                 <tr>
+                  <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Cód. alumno</th>
                   <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Estudiante</th>
-                  <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Curso</th>
+                  <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Cód. curso</th>
+                  <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Cód. docente</th>
                   <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Resultado</th>
                   <th className="px-4 py-3 text-left font-medium text-up-text-secondary">Nota</th>
                   <th className="px-4 py-3" />
@@ -179,8 +183,10 @@ export function OperativoPanel({ data, semestre, pendientesCierre, todos }: Prop
               <tbody className="divide-y divide-up-border">
                 {pendientesCierre.map((r) => (
                   <tr key={r.id}>
+                    <td className="px-4 py-3 font-mono text-xs">{r.estudiante.codigo ?? '—'}</td>
                     <td className="px-4 py-3">{r.estudiante.nombre}</td>
-                    <td className="px-4 py-3">{r.evaluacion.curso.nombre}</td>
+                    <td className="px-4 py-3 font-mono text-xs">{r.evaluacion.curso.codigo}</td>
+                    <td className="px-4 py-3 font-mono text-xs">{r.docente.codigo ?? '—'}</td>
                     <td className="px-4 py-3 capitalize">
                       {r.resultadoFinal?.replace(/_/g, ' ') ?? r.decision?.replace('_', ' ') ?? '—'}
                     </td>

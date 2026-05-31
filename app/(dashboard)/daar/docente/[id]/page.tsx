@@ -34,7 +34,7 @@ export default async function DaarDocenteBandejaPage({
 
       <PageHeader
         title="Bandeja del docente"
-        description={`${docente.nombre} · ${docente.email} · Semestre ${semestre}`}
+        description={`${docente.nombre} · Cód. ${docente.codigo} · Semestre ${semestre}`}
       />
 
       {reclamos.length === 0 ? (
@@ -48,7 +48,9 @@ export default async function DaarDocenteBandejaPage({
             <table className="up-table min-w-full">
               <thead>
                 <tr>
+                  <th className={tableHeadClass}>Cód. alumno</th>
                   <th className={tableHeadClass}>Estudiante</th>
+                  <th className={tableHeadClass}>Cód. curso</th>
                   <th className={tableHeadClass}>Curso</th>
                   <th className={tableHeadClass}>Sección</th>
                   <th className={tableHeadClass}>Evaluación</th>
@@ -60,10 +62,10 @@ export default async function DaarDocenteBandejaPage({
               <tbody>
                 {reclamos.map((r) => (
                   <tr key={r.id}>
+                    <td className="font-mono text-xs">{r.estudianteCodigo}</td>
                     <td className="font-medium">{r.estudianteNombre}</td>
+                    <td className="font-mono text-xs">{r.cursoCodigo}</td>
                     <td>
-                      <span className="font-mono text-xs text-up-text-muted">{r.cursoCodigo}</span>
-                      <br />
                       {r.cursoNombre}
                     </td>
                     <td>{r.seccion}</td>

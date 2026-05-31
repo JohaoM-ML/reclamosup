@@ -40,6 +40,7 @@ model Alumno {
 
 model Docente {
   userId          String @id
+  codigo          String @unique
   nombres         String
   apellidoPaterno String
   apellidoMaterno String
@@ -109,7 +110,7 @@ model Reclamo {
   operadorDaarId    String?
   motivo            String
   argumento         String
-  preguntaMarcada   Int?
+  preguntasMarcadas Int[]   @default([])
   examenNoLapiz     Boolean   @default(false)
   estado            String    @default("ENVIADO")
   decision          String?

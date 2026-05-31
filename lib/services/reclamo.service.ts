@@ -108,7 +108,7 @@ export type ReclamoEstudianteInput = {
   evaluacionId: string;
   motivo: MotivoReclamo;
   argumento: string;
-  preguntaMarcada?: number;
+  preguntasMarcadas?: number[];
   examenNoLapiz: boolean;
 };
 
@@ -127,7 +127,7 @@ async function crearReclamoBase(input: ReclamoEstudianteInput) {
       docenteId: evaluacion.curso.docenteId,
       motivo: input.motivo,
       argumento: input.argumento,
-      preguntaMarcada: input.preguntaMarcada,
+      preguntasMarcadas: input.preguntasMarcadas ?? [],
       examenNoLapiz: input.examenNoLapiz,
       notaAnterior: evaluacion.notaPublicada ?? 0,
       semestreAcademico: evaluacion.curso.semestre,
@@ -227,14 +227,7 @@ export async function cancelarReclamoPendienteArchivo(
   await prisma.reclamo.delete({ where: { id: reclamoId } });
 }
 
-/** Estudiante registra reclamo en CAP con PDF (representante de aula presencia el escaneo) */
 export async function crearReclamoEstudiante(input: ReclamoEstudianteInput & {
-  estudianteId: string;
-  evaluacionId: string;
-  motivo: MotivoReclamo;
-  argumento: string;
-  preguntaMarcada?: number;
-  examenNoLapiz: boolean;
   archivo: File;
 }) {
   validarTamanoArchivo(input.archivo.size);
@@ -321,7 +314,7 @@ export async function resolverReclamo(input: {
   rol: Rol;
   resultadoFinal: ResultadoFinal;
   notaNueva?: number;
-  comentario: string;
+  comentario?: string;
 }) {
   const reclamo = await assertAccesoReclamo(
     input.reclamoId,
@@ -369,7 +362,7 @@ export async function resolverReclamo(input: {
       decision,
       resultadoFinal,
       notaNueva,
-      comentarioDocente: input.comentario,
+      comentarioDocente: input.comentario?.trim() || null,
       estado: 'EN_VALIDACION',
     },
   });
