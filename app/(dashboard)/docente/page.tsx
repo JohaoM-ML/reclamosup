@@ -3,8 +3,6 @@ import { redirect } from 'next/navigation';
 import { getSession } from '@/lib/auth';
 import { getBandejaDocente } from '@/lib/services/reclamo.service';
 import { EstadoBadge } from '@/components/reclamos/estado-badge';
-import { tomarReclamoFormAction } from '@/app/actions/reclamo.actions';
-import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { EmptyState } from '@/components/ui/empty-state';
 import { PageHeader } from '@/components/ui/page-header';
@@ -63,14 +61,7 @@ export default async function DocentePage() {
                     <td className="px-4 py-3 capitalize text-up-text-secondary">
                       {r.motivo.replace(/_/g, ' ')}
                     </td>
-                    <td className="space-x-2 px-4 py-3 text-right">
-                      {r.estado === 'ENVIADO' && (
-                        <form action={tomarReclamoFormAction.bind(null, r.id)} className="inline">
-                          <Button type="submit" size="sm" variant="outline">
-                            Tomar caso
-                          </Button>
-                        </form>
-                      )}
+                    <td className="px-4 py-3 text-right">
                       <Link
                         href={`/docente/${r.id}`}
                         className="text-sm font-medium text-up-blue hover:underline"
